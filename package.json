@@ -1,0 +1,40 @@
+{
+  "name": "@aura-stack/ui",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A collection of built-in components, hooks, and utilities for authentication and authorization in Aura Stack application.",
+  "scripts": {
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "dev:docs": "pnpm --filter docs dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aura-stack-ts/ui.git"
+  },
+  "bugs": "https://github.com/aura-stack-ts/ui/issues",
+  "homepage": "https://github.com/aura-stack-ts/ui#readme",
+  "keywords": [
+    "built-in",
+    "components",
+    "hooks",
+    "utilities",
+    "auth",
+    "authentication",
+    "authorization",
+    "clerk-alternative"
+  ],
+  "author": "Aura Stack <aurastackjs@gmail.com> | Hernan Alvarado <halvaradop.dev@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "oxfmt": "^0.51.0",
+    "oxlint": "^1.66.0"
+  },
+  "packageManager": "pnpm@10.15.0",
+  "engines": {
+    "node": ">=22"
+  }
+}

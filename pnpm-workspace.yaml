@@ -1,0 +1,7 @@
+packages:
+  - "docs"
+  - "packages/*"
+
+ignoredBuiltDependencies:
+  - sharp
+  - unrs-resolver

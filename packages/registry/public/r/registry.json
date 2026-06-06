@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "ui",
+  "homepage": "https://github.com/aura-stack-ts/ui",
+  "items": [
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "A button component that can be used to trigger actions or navigate to other pages.",
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    }
+  ]
+}
