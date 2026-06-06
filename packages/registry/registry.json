@@ -6,11 +6,63 @@
     {
       "name": "button",
       "type": "registry:ui",
-      "title": "Button",
-      "description": "A button component that can be used to trigger actions or navigate to other pages.",
+      "dependencies": ["radix-ui"],
       "files": [
         {
           "path": "src/registry/new-york/ui/button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "field",
+      "type": "registry:ui",
+      "registryDependencies": ["label", "separator"],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/field.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "label",
+      "type": "registry:ui",
+      "dependencies": ["radix-ui"],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/label.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "dependencies": ["radix-ui"],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/separator.tsx",
           "type": "registry:ui"
         }
       ]

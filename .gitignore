@@ -145,3 +145,6 @@ vite.config.ts.timestamp-*
 # env files (can opt-in for committing if needed)
 .env*
 !.env.example
+
+# Output registry
+public/r/
