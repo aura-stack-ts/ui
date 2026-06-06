@@ -4,66 +4,38 @@
   "homepage": "https://github.com/aura-stack-ts/ui",
   "items": [
     {
-      "name": "button",
-      "type": "registry:ui",
-      "dependencies": ["radix-ui"],
+      "name": "sign-in-next",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
-          "path": "src/registry/new-york/ui/button.tsx",
-          "type": "registry:ui"
+          "path": "src/registry/new-york/blocks/next/sign-in/sign-in.tsx",
+          "type": "registry:block"
         }
       ]
     },
     {
-      "name": "card",
-      "type": "registry:ui",
+      "name": "sign-in-react",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/react"],
+      "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
-          "path": "src/registry/new-york/ui/card.tsx",
-          "type": "registry:ui"
+          "path": "src/registry/new-york/blocks/react/sign-in/sign-in.tsx",
+          "type": "registry:block"
         }
       ]
     },
     {
-      "name": "field",
-      "type": "registry:ui",
-      "registryDependencies": ["label", "separator"],
+      "name": "sign-in-react-router",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/react-router"],
+      "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
-          "path": "src/registry/new-york/ui/field.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
-      "name": "input",
-      "type": "registry:ui",
-      "files": [
-        {
-          "path": "src/registry/new-york/ui/input.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
-      "name": "label",
-      "type": "registry:ui",
-      "dependencies": ["radix-ui"],
-      "files": [
-        {
-          "path": "src/registry/new-york/ui/label.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
-      "name": "separator",
-      "type": "registry:ui",
-      "dependencies": ["radix-ui"],
-      "files": [
-        {
-          "path": "src/registry/new-york/ui/separator.tsx",
-          "type": "registry:ui"
+          "path": "src/registry/new-york/blocks/react-router/sign-in/sign-in.tsx",
+          "type": "registry:block"
         }
       ]
     }
