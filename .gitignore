@@ -141,3 +141,7 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# env files (can opt-in for committing if needed)
+.env*
+!.env.example

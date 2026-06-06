@@ -8,7 +8,8 @@
     "format": "oxfmt",
     "format:check": "oxfmt --check",
     "lint": "oxlint",
-    "lint:fix": "oxlint --fix"
+    "lint:fix": "oxlint --fix",
+    "dev:docs": "pnpm --filter docs dev"
   },
   "repository": {
     "type": "git",

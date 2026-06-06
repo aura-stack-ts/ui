@@ -2,7 +2,7 @@
 
 <h1>Aura Stack UI</h1>
 
-**A modern**
+**A modern component library for Aura Stack applications**
 
 </div>
 
