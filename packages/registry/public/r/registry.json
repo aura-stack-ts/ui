@@ -5,9 +5,7 @@
   "items": [
     {
       "name": "auth-setup",
-      "dependencies": [
-        "@aura-stack/auth"
-      ],
+      "dependencies": ["@aura-stack/auth"],
       "files": [
         {
           "path": "src/lib/auth/auth.ts",
@@ -22,9 +20,7 @@
     },
     {
       "name": "elysia-setup",
-      "dependencies": [
-        "@aura-stack/elysia"
-      ],
+      "dependencies": ["@aura-stack/elysia"],
       "files": [
         {
           "path": "src/lib/elysia/auth.ts",
@@ -35,9 +31,7 @@
     },
     {
       "name": "express-setup",
-      "dependencies": [
-        "@aura-stack/express"
-      ],
+      "dependencies": ["@aura-stack/express"],
       "files": [
         {
           "path": "src/lib/express/auth.ts",
@@ -48,9 +42,7 @@
     },
     {
       "name": "hono-setup",
-      "dependencies": [
-        "@aura-stack/hono"
-      ],
+      "dependencies": ["@aura-stack/hono"],
       "files": [
         {
           "path": "src/lib/hono/auth.ts",
@@ -61,9 +53,7 @@
     },
     {
       "name": "next-setup",
-      "dependencies": [
-        "@aura-stack/next"
-      ],
+      "dependencies": ["@aura-stack/next"],
       "files": [
         {
           "path": "src/lib/next/auth.ts",
@@ -78,9 +68,7 @@
     },
     {
       "name": "react-setup",
-      "dependencies": [
-        "@aura-stack/react"
-      ],
+      "dependencies": ["@aura-stack/react"],
       "files": [
         {
           "path": "src/lib/react/auth.ts",
@@ -95,9 +83,7 @@
     },
     {
       "name": "react-router-setup",
-      "dependencies": [
-        "@aura-stack/react-router"
-      ],
+      "dependencies": ["@aura-stack/react-router"],
       "files": [
         {
           "path": "src/lib/react-router/auth.ts",
@@ -112,15 +98,8 @@
     },
     {
       "name": "sign-in-next",
-      "dependencies": [
-        "@aura-stack/next"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "card",
-        "field"
-      ],
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/next/sign-in/sign-in.tsx",
@@ -131,15 +110,8 @@
     },
     {
       "name": "sign-in-react",
-      "dependencies": [
-        "@aura-stack/react"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "card",
-        "field"
-      ],
+      "dependencies": ["@aura-stack/react"],
+      "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/react/sign-in/sign-in.tsx",
@@ -150,15 +122,8 @@
     },
     {
       "name": "sign-in-react-router",
-      "dependencies": [
-        "@aura-stack/react-router"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "card",
-        "field"
-      ],
+      "dependencies": ["@aura-stack/react-router"],
+      "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/react-router/sign-in/sign-in.tsx",
