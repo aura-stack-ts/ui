@@ -52,7 +52,7 @@ export const SignIn = () => {
                                 </FieldLabel>
                                 <Input
                                     id="email"
-                                    type="text"
+                                    type="email"
                                     name="email"
                                     placeholder="aurastackjs@gmail.com"
                                     required
