@@ -166,6 +166,63 @@
         }
       ],
       "type": "registry:block"
+    },
+    {
+      "name": "sign-in-2-next",
+      "dependencies": [
+        "@aura-stack/next"
+      ],
+      "registryDependencies": [
+        "input",
+        "button",
+        "card",
+        "field"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/sign-in-2/sign-in.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "sign-in-2-react",
+      "dependencies": [
+        "@aura-stack/react"
+      ],
+      "registryDependencies": [
+        "input",
+        "button",
+        "card",
+        "field"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/react/sign-in-2/sign-in.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "sign-in-2-react-router",
+      "dependencies": [
+        "@aura-stack/react-router"
+      ],
+      "registryDependencies": [
+        "input",
+        "button",
+        "card",
+        "field"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/react-router/sign-in-2/sign-in.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "type": "registry:block"
     }
   ]
 }
