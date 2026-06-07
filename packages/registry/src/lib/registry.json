@@ -1,0 +1,100 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "ui",
+  "homepage": "https://github.com/aura-stack-ts/ui",
+  "items": [
+    {
+      "name": "auth-setup",
+      "type": "registry:lib",
+      "dependencies": ["@aura-stack/auth"],
+      "files": [
+        {
+          "path": "auth/auth.ts",
+          "type": "registry:lib"
+        },
+        {
+          "path": "auth/auth-client.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "elysia-setup",
+      "type": "registry:lib",
+      "dependencies": ["@aura-stack/elysia"],
+      "files": [
+        {
+          "path": "elysia/auth.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "express-setup",
+      "type": "registry:lib",
+      "dependencies": ["@aura-stack/express"],
+      "files": [
+        {
+          "path": "express/auth.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "hono-setup",
+      "type": "registry:lib",
+      "dependencies": ["@aura-stack/hono"],
+      "files": [
+        {
+          "path": "hono/auth.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "next-setup",
+      "type": "registry:lib",
+      "dependencies": ["@aura-stack/next"],
+      "files": [
+        {
+          "path": "next/auth.ts",
+          "type": "registry:lib"
+        },
+        {
+          "path": "next/auth-client.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "react-setup",
+      "type": "registry:lib",
+      "dependencies": ["@aura-stack/react"],
+      "files": [
+        {
+          "path": "react/auth.ts",
+          "type": "registry:lib"
+        },
+        {
+          "path": "react/auth-client.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "react-router-setup",
+      "type": "registry:lib",
+      "dependencies": ["@aura-stack/react-router"],
+      "files": [
+        {
+          "path": "react-router/auth.ts",
+          "type": "registry:lib"
+        },
+        {
+          "path": "react-router/auth-client.ts",
+          "type": "registry:lib"
+        }
+      ]
+    }
+  ]
+}
