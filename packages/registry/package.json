@@ -11,7 +11,7 @@
     "format:check": "oxfmt --check",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
-    "clean:registry": "rm -rf public/r"
+    "clean:shadcn": "rm -rf public/r"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
