@@ -111,6 +111,171 @@
       "type": "registry:lib"
     },
     {
+      "name": "atlassian",
+      "files": [
+        {
+          "path": "src/components/icons/atlassian.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/atlassian.tsx"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "bitbucket",
+      "files": [
+        {
+          "path": "src/components/icons/bitbucket.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/bitbucket.tsx"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "discord",
+      "files": [
+        {
+          "path": "src/components/icons/discord.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/discord.tsx"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "dribbble",
+      "files": [
+        {
+          "path": "src/components/icons/dribbble.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/dribbble.tsx"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "dropbox",
+      "files": [
+        {
+          "path": "src/components/icons/dropbox.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/dropbox.tsx"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "figma",
+      "files": [
+        {
+          "path": "src/components/icons/figma.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/figma.tsx"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "github",
+      "files": [
+        {
+          "path": "src/components/icons/github.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/github.tsx"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "gitlab",
+      "files": [
+        {
+          "path": "src/components/icons/gitlab.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/gitlab.tsx"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "notion",
+      "files": [
+        {
+          "path": "src/components/icons/notion.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/notion.tsx"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "pinterest",
+      "files": [
+        {
+          "path": "src/components/icons/pinterest.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/pinterest.tsx"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "spotify",
+      "files": [
+        {
+          "path": "src/components/icons/spotify.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/spotify.tsx"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "strava",
+      "files": [
+        {
+          "path": "src/components/icons/strava.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/strava.tsx"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "twitch",
+      "files": [
+        {
+          "path": "src/components/icons/twitch.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/twitch.tsx"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "twitter",
+      "files": [
+        {
+          "path": "src/components/icons/x.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/twitter.tsx"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "x",
+      "files": [
+        {
+          "path": "src/components/icons/x.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/x.tsx"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
       "name": "sign-in-next",
       "dependencies": [
         "@aura-stack/next"
@@ -125,6 +290,16 @@
         {
           "path": "src/registry/new-york/blocks/next/sign-in/sign-in.tsx",
           "type": "registry:block"
+        },
+        {
+          "path": "src/components/icons/github.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/github.tsx"
+        },
+        {
+          "path": "src/components/icons/gitlab.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/gitlab.tsx"
         }
       ],
       "type": "registry:block"
@@ -144,6 +319,16 @@
         {
           "path": "src/registry/new-york/blocks/react/sign-in/sign-in.tsx",
           "type": "registry:block"
+        },
+        {
+          "path": "src/components/icons/github.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/github.tsx"
+        },
+        {
+          "path": "src/components/icons/gitlab.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/gitlab.tsx"
         }
       ],
       "type": "registry:block"
@@ -163,6 +348,16 @@
         {
           "path": "src/registry/new-york/blocks/react-router/sign-in/sign-in.tsx",
           "type": "registry:block"
+        },
+        {
+          "path": "src/components/icons/github.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/github.tsx"
+        },
+        {
+          "path": "src/components/icons/gitlab.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/gitlab.tsx"
         }
       ],
       "type": "registry:block"
@@ -182,6 +377,16 @@
         {
           "path": "src/registry/new-york/blocks/next/sign-in-2/sign-in.tsx",
           "type": "registry:block"
+        },
+        {
+          "path": "src/components/icons/github.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/github.tsx"
+        },
+        {
+          "path": "src/components/icons/gitlab.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/gitlab.tsx"
         }
       ],
       "type": "registry:block"
@@ -201,6 +406,16 @@
         {
           "path": "src/registry/new-york/blocks/react/sign-in-2/sign-in.tsx",
           "type": "registry:block"
+        },
+        {
+          "path": "src/components/icons/github.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/github.tsx"
+        },
+        {
+          "path": "src/components/icons/gitlab.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/gitlab.tsx"
         }
       ],
       "type": "registry:block"
@@ -220,6 +435,16 @@
         {
           "path": "src/registry/new-york/blocks/react-router/sign-in-2/sign-in.tsx",
           "type": "registry:block"
+        },
+        {
+          "path": "src/components/icons/github.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/github.tsx"
+        },
+        {
+          "path": "src/components/icons/gitlab.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/gitlab.tsx"
         }
       ],
       "type": "registry:block"

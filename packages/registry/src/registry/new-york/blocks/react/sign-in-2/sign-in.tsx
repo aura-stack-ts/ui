@@ -5,6 +5,8 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Field, FieldGroup, FieldLabel, FieldSeparator, FieldDescription } from "@/components/ui/field"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { GitHubIcon } from "@/components/icons/github"
+import { GitLabIcon } from "@/components/icons/gitlab"
 import type { FormEvent } from "react"
 
 export const SignIn = () => {
@@ -97,18 +99,20 @@ export const SignIn = () => {
                                 type="button"
                                 className="text-sm text-medium text-card-foreground gap-2 dark:bg-background rounded-lg h-9 shadow-xs cursor-pointer"
                                 disabled={isPending}
-                                onClick={onGitLabSignIn}
+                                onClick={onGitHubSignIn}
                             >
-                                Sign in with GitLab
+                                <GitHubIcon />
+                                Sign in with GitHub
                             </Button>
                             <Button
                                 variant="outline"
                                 type="button"
                                 className="text-sm text-medium text-card-foreground gap-2 dark:bg-background rounded-lg h-9 shadow-xs cursor-pointer"
                                 disabled={isPending}
-                                onClick={onGitHubSignIn}
+                                onClick={onGitLabSignIn}
                             >
-                                Sign in with GitHub
+                                <GitLabIcon />
+                                Sign in with GitLab
                             </Button>
                             <FieldDescription className="text-center text-sm font-normal text-muted-foreground">
                                 Don&apos;t have an account?{" "}

@@ -1,0 +1,172 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "icons",
+  "homepage": "https://github.com/aura-stack-ts/ui",
+  "items": [
+    {
+      "name": "atlassian",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "atlassian.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/atlassian.tsx"
+        }
+      ]
+    },
+    {
+      "name": "bitbucket",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "bitbucket.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/bitbucket.tsx"
+        }
+      ]
+    },
+    {
+      "name": "discord",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "discord.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/discord.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dribbble",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "dribbble.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/dribbble.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dropbox",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "dropbox.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/dropbox.tsx"
+        }
+      ]
+    },
+    {
+      "name": "figma",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "figma.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/figma.tsx"
+        }
+      ]
+    },
+    {
+      "name": "github",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "github.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/github.tsx"
+        }
+      ]
+    },
+    {
+      "name": "gitlab",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "gitlab.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/gitlab.tsx"
+        }
+      ]
+    },
+    {
+      "name": "notion",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "notion.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/notion.tsx"
+        }
+      ]
+    },
+    {
+      "name": "pinterest",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "pinterest.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/pinterest.tsx"
+        }
+      ]
+    },
+    {
+      "name": "spotify",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "spotify.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/spotify.tsx"
+        }
+      ]
+    },
+    {
+      "name": "strava",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "strava.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/strava.tsx"
+        }
+      ]
+    },
+    {
+      "name": "twitch",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "twitch.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/twitch.tsx"
+        }
+      ]
+    },
+    {
+      "name": "twitter",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "x.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/twitter.tsx"
+        }
+      ]
+    },
+    {
+      "name": "x",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "x.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/x.tsx"
+        }
+      ]
+    }
+  ]
+}
