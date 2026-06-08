@@ -1,7 +1,7 @@
 "use client"
 
 import { Link } from "react-router"
-import { useSignIn } from "@aura-stack/next/client"
+import { useSignIn } from "@aura-stack/react-router/client"
 import { Button } from "@/components/ui/button"
 import { Field, FieldGroup, FieldDescription } from "@/components/ui/field"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
