@@ -1,10 +1,10 @@
 import { forwardRef, type ComponentProps } from "react"
 
-export interface SpotifyIconProps extends ComponentProps<"svg"> {
+export interface SpotifyIconProps extends Omit<ComponentProps<"svg">, "width" | "height"> {
     size?: number | string
 }
 
-export const SpotifyIcon = forwardRef<SVGSVGElement, SpotifyIconProps>(({ size = 24, className, ...props }, ref) => {
+export const SpotifyIcon = forwardRef<SVGSVGElement, SpotifyIconProps>(({ size = 24, className, style, ...props }, ref) => {
     return (
         <svg
             ref={ref}
@@ -14,6 +14,12 @@ export const SpotifyIcon = forwardRef<SVGSVGElement, SpotifyIconProps>(({ size =
             height={size}
             className={className}
             fill="none"
+            style={{
+                display: "inline-block",
+                verticalAlign: "middle",
+                flexShrink: 0,
+                ...style,
+            }}
             {...props}
         >
             <path
