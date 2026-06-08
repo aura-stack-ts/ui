@@ -1,10 +1,10 @@
 import { forwardRef, type ComponentProps } from "react"
 
-export interface TwitterIconProps extends ComponentProps<"svg"> {
+export interface XIconProps extends Omit<ComponentProps<"svg">, "width" | "height"> {
     size?: number | string
 }
 
-export const TwitterIcon = forwardRef<SVGSVGElement, TwitterIconProps>(({ size = 24, className, ...props }, ref) => {
+export const XIcon = forwardRef<SVGSVGElement, XIconProps>(({ size = 24, className, style, ...props }, ref) => {
     return (
         <svg
             ref={ref}
@@ -12,8 +12,16 @@ export const TwitterIcon = forwardRef<SVGSVGElement, TwitterIconProps>(({ size =
             viewBox="0 0 24 24"
             width={size}
             height={size}
-            className={className}
             fill="none"
+            aria-hidden="true"
+            focusable="false"
+            className={className}
+            style={{
+                display: "inline-block",
+                verticalAlign: "middle",
+                flexShrink: 0,
+                ...style,
+            }}
             {...props}
         >
             <path
@@ -24,6 +32,6 @@ export const TwitterIcon = forwardRef<SVGSVGElement, TwitterIconProps>(({ size =
     )
 })
 
-TwitterIcon.displayName = "TwitterIcon"
+XIcon.displayName = "XIcon"
 
-export default TwitterIcon
+export default XIcon

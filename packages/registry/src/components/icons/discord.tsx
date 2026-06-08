@@ -1,6 +1,6 @@
 import type { ComponentProps } from "react"
 
-export interface DiscordIconProps extends Omit<ComponentProps<"svg">, "width" | "height"> {
+export interface DiscordIconProps extends Omit<ComponentProps<"svg">, "width" | "height" | "color"> {
     size?: number | string
     color?: string
 }

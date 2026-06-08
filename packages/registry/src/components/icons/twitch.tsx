@@ -1,10 +1,10 @@
 import { forwardRef, type ComponentProps } from "react"
 
-export interface TwitchIconProps extends ComponentProps<"svg"> {
+export interface TwitchIconProps extends Omit<ComponentProps<"svg">, "width" | "height"> {
     size?: number | string
 }
 
-export const TwitchIcon = forwardRef<SVGSVGElement, TwitchIconProps>(({ size = 24, className, ...props }, ref) => {
+export const TwitchIcon = forwardRef<SVGSVGElement, TwitchIconProps>(({ size = 24, className, style, ...props }, ref) => {
     return (
         <svg
             ref={ref}
@@ -12,8 +12,16 @@ export const TwitchIcon = forwardRef<SVGSVGElement, TwitchIconProps>(({ size = 2
             viewBox="0 0 15 15"
             width={size}
             height={size}
-            className={className}
             fill="none"
+            aria-hidden="true"
+            focusable="false"
+            className={className}
+            style={{
+                display: "inline-block",
+                verticalAlign: "middle",
+                flexShrink: 0,
+                ...style,
+            }}
             {...props}
         >
             <path

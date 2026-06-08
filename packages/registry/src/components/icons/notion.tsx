@@ -1,6 +1,6 @@
 import { forwardRef, type ComponentProps } from "react"
 
-export interface NotionIconProps extends ComponentProps<"svg"> {
+export interface NotionIconProps extends Omit<ComponentProps<"svg">, "width" | "height"> {
     size?: number | string
 }
 

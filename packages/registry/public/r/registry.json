@@ -290,6 +290,16 @@
         {
           "path": "src/registry/new-york/blocks/next/sign-in/sign-in.tsx",
           "type": "registry:block"
+        },
+        {
+          "path": "src/components/icons/github.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/github.tsx"
+        },
+        {
+          "path": "src/components/icons/gitlab.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/gitlab.tsx"
         }
       ],
       "type": "registry:block"
@@ -309,6 +319,16 @@
         {
           "path": "src/registry/new-york/blocks/react/sign-in/sign-in.tsx",
           "type": "registry:block"
+        },
+        {
+          "path": "src/components/icons/github.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/github.tsx"
+        },
+        {
+          "path": "src/components/icons/gitlab.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/gitlab.tsx"
         }
       ],
       "type": "registry:block"
@@ -328,6 +348,16 @@
         {
           "path": "src/registry/new-york/blocks/react-router/sign-in/sign-in.tsx",
           "type": "registry:block"
+        },
+        {
+          "path": "src/components/icons/github.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/github.tsx"
+        },
+        {
+          "path": "src/components/icons/gitlab.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/gitlab.tsx"
         }
       ],
       "type": "registry:block"
@@ -347,6 +377,16 @@
         {
           "path": "src/registry/new-york/blocks/next/sign-in-2/sign-in.tsx",
           "type": "registry:block"
+        },
+        {
+          "path": "src/components/icons/github.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/github.tsx"
+        },
+        {
+          "path": "src/components/icons/gitlab.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/gitlab.tsx"
         }
       ],
       "type": "registry:block"
@@ -366,6 +406,16 @@
         {
           "path": "src/registry/new-york/blocks/react/sign-in-2/sign-in.tsx",
           "type": "registry:block"
+        },
+        {
+          "path": "src/components/icons/github.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/github.tsx"
+        },
+        {
+          "path": "src/components/icons/gitlab.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/gitlab.tsx"
         }
       ],
       "type": "registry:block"
@@ -385,6 +435,16 @@
         {
           "path": "src/registry/new-york/blocks/react-router/sign-in-2/sign-in.tsx",
           "type": "registry:block"
+        },
+        {
+          "path": "src/components/icons/github.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/github.tsx"
+        },
+        {
+          "path": "src/components/icons/gitlab.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/gitlab.tsx"
         }
       ],
       "type": "registry:block"

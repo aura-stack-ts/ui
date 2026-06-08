@@ -1,10 +1,10 @@
 import { forwardRef, type ComponentProps } from "react"
 
-export interface StravaIconProps extends ComponentProps<"svg"> {
+export interface StravaIconProps extends Omit<ComponentProps<"svg">, "width" | "height"> {
     size?: number | string
 }
 
-export const StravaIcon = forwardRef<SVGSVGElement, StravaIconProps>(({ size = 24, className, ...props }, ref) => {
+export const StravaIcon = forwardRef<SVGSVGElement, StravaIconProps>(({ size = 24, className, style, ...props }, ref) => {
     return (
         <svg
             ref={ref}
@@ -12,8 +12,16 @@ export const StravaIcon = forwardRef<SVGSVGElement, StravaIconProps>(({ size = 2
             viewBox="0 0 24 24"
             width={size}
             height={size}
-            className={className}
             fill="none"
+            aria-hidden="true"
+            focusable="false"
+            className={className}
+            style={{
+                display: "inline-block",
+                verticalAlign: "middle",
+                flexShrink: 0,
+                ...style,
+            }}
             {...props}
         >
             <path

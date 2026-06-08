@@ -1,7 +1,7 @@
 import type { ComponentProps } from "react"
 
-export interface GitLabIconProps extends ComponentProps<"svg"> {
-    size?: number
+export interface GitLabIconProps extends Omit<ComponentProps<"svg">, "width" | "height"> {
+    size?: number | string
 }
 
 export const GitLabIcon = ({ size = 24, className, style, ...props }: GitLabIconProps) => {

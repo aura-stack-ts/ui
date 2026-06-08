@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:shadcn": "shadcn build",
+    "build:shadcn": "pnpm clean:shadcn && pnpm shadcn build",
     "start": "next start",
     "format": "oxfmt",
     "format:check": "oxfmt --check",

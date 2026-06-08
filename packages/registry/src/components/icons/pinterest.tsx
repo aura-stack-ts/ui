@@ -1,6 +1,6 @@
 import { forwardRef, type ComponentProps } from "react"
 
-export interface PinterestIconProps extends ComponentProps<"svg"> {
+export interface PinterestIconProps extends Omit<ComponentProps<"svg">, "width" | "height"> {
     size?: number | string
 }
 

@@ -1,7 +1,8 @@
 import type { ComponentProps } from "react"
 
-export interface GitHubIconProps extends ComponentProps<"svg"> {
+export interface GitHubIconProps extends Omit<ComponentProps<"svg">, "width" | "height" | "color"> {
     size?: number | string
+    color?: string
 }
 
 export const GitHubIcon = ({ size = 24, color = "currentColor", className, style, ...props }: GitHubIconProps) => {
