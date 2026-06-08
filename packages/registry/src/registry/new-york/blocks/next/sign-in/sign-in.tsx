@@ -6,6 +6,8 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Field, FieldDescription, FieldGroup, FieldLabel, FieldSeparator } from "@/components/ui/field"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { GithubIcon } from "@/components/icons/github"
+import { GitlabIcon } from "@/components/icons/gitlab"
 import type { FormEvent } from "react"
 
 export const SignIn = () => {
