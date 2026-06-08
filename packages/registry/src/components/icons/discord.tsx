@@ -1,64 +1,37 @@
-export const DiscordIcon = ({
-    size = 24,
-    color = "#000000",
-    strokeWidth = 2,
-    background = "transparent",
-    opacity = 1,
-    rotation = 0,
-    shadow = 0,
-    flipHorizontal = false,
-    flipVertical = false,
-    padding = 0,
-}) => {
-    const transforms = []
-    if (rotation !== 0) transforms.push(`rotate(${rotation}deg)`)
-    if (flipHorizontal) transforms.push("scaleX(-1)")
-    if (flipVertical) transforms.push("scaleY(-1)")
+import type { ComponentProps } from "react"
 
-    const SVG_SIZE = 14
-    const viewBoxSize = SVG_SIZE + padding * 2
-    const viewBoxOffset = -padding
-    const viewBox = `${viewBoxOffset} ${viewBoxOffset} ${viewBoxSize} ${viewBoxSize}`
+export interface DiscordIconProps extends Omit<ComponentProps<"svg">, "width" | "height"> {
+    size?: number | string
+    color?: string
+}
 
+export const DiscordIcon = ({ size = 24, color = "currentColor", className, style, ...props }: DiscordIconProps) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            viewBox={viewBox}
+            viewBox="0 0 24 24"
             width={size}
             height={size}
             fill="none"
-            stroke={color}
-            strokeWidth={strokeWidth}
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            aria-hidden="true"
+            focusable="false"
+            className={className}
             style={{
-                opacity,
-                transform: transforms.join(" ") || undefined,
-                filter: shadow > 0 ? `drop-shadow(0 ${shadow}px ${shadow * 2}px rgba(0,0,0,0.3))` : undefined,
-                backgroundColor: background !== "transparent" ? background : undefined,
+                display: "inline-block",
+                verticalAlign: "middle",
+                flexShrink: 0,
+                ...style,
             }}
+            {...props}
         >
-            <g fill="none">
-                <path
-                    fill="#d7e0ff"
-                    d="M.858 9.864c0-2.401.858-5.574 1.716-6.86c0 0 .857-.43 4.288-.43s4.288.43 4.288.43c.858 1.286 1.716 4.459 1.716 6.86c-.286.43-1.287 1.373-3.002 1.716L8.355 9.694a6.6 6.6 0 0 1-2.986 0L3.86 11.58c-1.715-.343-2.716-1.287-3.002-1.716"
-                />
-                <path
-                    stroke="#4147d5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M.858 9.864c0-2.401.858-5.574 1.716-6.86c0 0 .857-.43 4.288-.43s4.288.43 4.288.43c.858 1.286 1.716 4.459 1.716 6.86c-.286.43-1.287 1.373-3.002 1.716L8.355 9.694a6.6 6.6 0 0 1-2.986 0L3.86 11.58c-1.715-.343-2.716-1.287-3.002-1.716"
-                />
-                <path
-                    stroke="#4147d5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M3.86 9.007c.261.261.81.523 1.509.687a6.6 6.6 0 0 0 2.986 0c.699-.164 1.247-.426 1.509-.687"
-                />
-                <path stroke="#4147d5" d="M4.112 6.5a.5.5 0 1 0 1 0a.5.5 0 1 0-1 0m4.5 0a.5.5 0 1 0 1 0a.5.5 0 1 0-1 0" />
-            </g>
+            <path
+                fill={color}
+                d="M19.888 7.335a5.13 5.13 0 0 0-2.893-2.418a9 9 0 0 0-2.275-.508q-.284.504-.508 1.038a15 15 0 0 0-4.56 0a11 11 0 0 0-.519-1.038c-.752.082-1.493.249-2.208.497a5.12 5.12 0 0 0-2.904 2.44a16.18 16.18 0 0 0-1.91 9.717a16.6 16.6 0 0 0 4.98 2.528a4.34 4.34 0 0 0 1.104-1.777q-.81-.304-1.557-.74c-.089-.122.254-.32.364-.354a11.83 11.83 0 0 0 10.037 0c.1 0 .453.232.364.354c-.441.342-1.424.585-1.59.828a7.4 7.4 0 0 0 1.105 1.69a16.6 16.6 0 0 0 4.99-2.53a16.23 16.23 0 0 0-2.02-9.727M8.669 14.7a1.943 1.943 0 0 1-1.92-1.955a1.943 1.943 0 0 1 1.92-1.91a1.94 1.94 0 0 1 1.933 1.965a1.943 1.943 0 0 1-1.933 1.9m6.625 0a1.943 1.943 0 0 1-1.932-1.944a1.932 1.932 0 1 1 3.865.034a1.93 1.93 0 0 1-1.933 1.899z"
+            />
         </svg>
     )
 }
+
+DiscordIcon.displayName = "DiscordIcon"
 
 export default DiscordIcon

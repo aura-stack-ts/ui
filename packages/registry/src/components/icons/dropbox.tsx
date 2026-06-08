@@ -1,44 +1,20 @@
-export const DropboxIcon = ({
-    size = 24,
-    color = "#000000",
-    strokeWidth = 2,
-    background = "transparent",
-    opacity = 1,
-    rotation = 0,
-    shadow = 0,
-    flipHorizontal = false,
-    flipVertical = false,
-    padding = 0,
-}) => {
-    const transforms = []
-    if (rotation !== 0) transforms.push(`rotate(${rotation}deg)`)
-    if (flipHorizontal) transforms.push("scaleX(-1)")
-    if (flipVertical) transforms.push("scaleY(-1)")
+import type { ComponentProps } from "react"
 
-    const SVG_SIZE = 48
-    const viewBoxSize = SVG_SIZE + padding * 2
-    const viewBoxOffset = -padding
-    const viewBox = `${viewBoxOffset} ${viewBoxOffset} ${viewBoxSize} ${viewBoxSize}`
+export interface DropboxIconProps extends Omit<ComponentProps<"svg">, "width" | "height"> {
+    size?: number | string
+}
 
+export const DropboxIcon = ({ size = 24, style, ...props }: DropboxIconProps) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            viewBox={viewBox}
+            viewBox="0 0 48 48"
             width={size}
             height={size}
-            fill="none"
-            stroke={color}
-            strokeWidth={strokeWidth}
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            style={{
-                opacity,
-                transform: transforms.join(" ") || undefined,
-                filter: shadow > 0 ? `drop-shadow(0 ${shadow}px ${shadow * 2}px rgba(0,0,0,0.3))` : undefined,
-                backgroundColor: background !== "transparent" ? background : undefined,
-            }}
+            style={{ opacity: 1, ...style }}
+            {...props}
         >
-            <g fill="none" strokeWidth={strokeWidth}>
+            <g fill="none" strokeWidth={3}>
                 <path
                     fill="#8fbffa"
                     d="M12.62 4.21a1.63 1.63 0 0 1 1.612.005c1.572.89 5.193 3.04 8.509 5.737a.718.718 0 0 1-.01 1.112a82 82 0 0 1-8.442 5.7a1.67 1.67 0 0 1-1.713-.002c-1.613-.96-5.22-3.176-8.219-5.51a.946.946 0 0 1-.006-1.476c1.483-1.174 4.623-3.538 8.27-5.565"
@@ -53,25 +29,27 @@ export const DropboxIcon = ({
                 />
                 <path
                     stroke="#2859c5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     d="M12.62 4.21a1.63 1.63 0 0 1 1.612.005c1.572.89 5.193 3.04 8.509 5.737a.718.718 0 0 1-.01 1.112a82 82 0 0 1-8.442 5.7a1.67 1.67 0 0 1-1.713-.002c-1.613-.96-5.22-3.176-8.219-5.51a.946.946 0 0 1-.006-1.476c1.483-1.174 4.623-3.538 8.27-5.565"
                 />
                 <path
                     stroke="#2859c5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     d="M12.62 17.21a1.63 1.63 0 0 1 1.612.005c1.572.89 5.193 3.04 8.509 5.737a.718.718 0 0 1-.01 1.112a82 82 0 0 1-8.442 5.7a1.67 1.67 0 0 1-1.713-.002c-1.613-.96-5.22-3.176-8.219-5.51a.946.946 0 0 1-.006-1.476c1.483-1.174 4.623-3.538 8.27-5.565M23.155 29.21a1.77 1.77 0 0 1 1.684.005c1.642.89 5.426 3.04 8.89 5.737a.698.698 0 0 1-.01 1.112c-1.369 1.019-4.59 3.318-8.82 5.7a1.81 1.81 0 0 1-1.79-.002c-1.73-.985-5.65-3.291-8.83-5.691a.697.697 0 0 1-.006-1.111c1.43-1.096 4.862-3.61 8.882-5.75m11.069-25a1.8 1.8 0 0 1 1.696.005c1.616.87 5.292 2.942 8.715 5.552a.92.92 0 0 1-.015 1.479a87 87 0 0 1-8.64 5.518a1.84 1.84 0 0 1-1.803-.002c-1.743-.985-5.693-3.291-8.896-5.691a.694.694 0 0 1-.006-1.111c1.441-1.096 4.898-3.61 8.949-5.75"
                 />
                 <path
                     stroke="#2859c5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M34.224 17.209a1.8 1.8 0 0 1 1.696.004c1.616.87 5.292 2.942 8.715 5.552a.92.92 0 0 1-.015 1.479a87 87 0 0 1-8.64 5.518a1.84 1.84 0 0 1-1.803-.002c-1.743-.985-5.693-3.291-8.896-5.691a.694.694 0 0 1-.006-1.111c1.441-1.096 4.898-3.61 8.949-5.75"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M34.224 17.209a1.8 1.8 0 0 1 1.696.004c1.616.87 5.292 2.942 8.715 5.552a.92.92 0 0 1-.015 1.479a87 87 0 0 1-8.64 5.518a1.84 1.84 0 0 1-1.803-.002c-1.743-.985-5.693-3.291-8.896-5.691a.694.694 0 0 1-.006-1.111"
                 />
             </g>
         </svg>
     )
 }
+
+DropboxIcon.displayName = "DropboxIcon"
 
 export default DropboxIcon

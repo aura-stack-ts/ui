@@ -1,49 +1,29 @@
-export const SpotifyIcon = ({
-    size = undefined,
-    color = "#000000",
-    strokeWidth = 2,
-    background = "transparent",
-    opacity = 1,
-    rotation = 0,
-    shadow = 0,
-    flipHorizontal = false,
-    flipVertical = false,
-    padding = 0,
-}) => {
-    const transforms = []
-    if (rotation !== 0) transforms.push(`rotate(${rotation}deg)`)
-    if (flipHorizontal) transforms.push("scaleX(-1)")
-    if (flipVertical) transforms.push("scaleY(-1)")
+import { forwardRef, type ComponentProps } from "react"
 
-    const SVG_SIZE = 20
-    const viewBoxSize = SVG_SIZE + padding * 2
-    const viewBoxOffset = -padding
-    const viewBox = `${viewBoxOffset} ${viewBoxOffset} ${viewBoxSize} ${viewBoxSize}`
+export interface SpotifyIconProps extends ComponentProps<"svg"> {
+    size?: number | string
+}
 
+export const SpotifyIcon = forwardRef<SVGSVGElement, SpotifyIconProps>(({ size = 24, className, ...props }, ref) => {
     return (
         <svg
+            ref={ref}
             xmlns="http://www.w3.org/2000/svg"
-            viewBox={viewBox}
+            viewBox="0 0 20 20"
             width={size}
             height={size}
+            className={className}
             fill="none"
-            stroke={color}
-            strokeWidth={strokeWidth}
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            style={{
-                opacity,
-                transform: transforms.join(" ") || undefined,
-                filter: shadow > 0 ? `drop-shadow(0 ${shadow}px ${shadow * 2}px rgba(0,0,0,0.3))` : undefined,
-                backgroundColor: background !== "transparent" ? background : undefined,
-            }}
+            {...props}
         >
             <path
                 fill="currentColor"
-                d="M9.992 0C4.474 0 0 4.474 0 9.992s4.474 9.992 9.992 9.992s9.992-4.474 9.992-9.992S15.51 0 9.992 0m4.348 15.683c-.127.329-.355.512-.59.512a.52.52 0 0 1-.344-.141c-1.796-1.588-3.87-1.843-5.294-1.778c-1.578.073-2.735.544-2.747.549c-.363.15-.74-.174-.839-.724c-.1-.55.114-1.119.477-1.27c.052-.022 1.297-.534 3.029-.62a9 9 0 0 1 2.917.32a8.1 8.1 0 0 1 3.146 1.737c.326.289.436.922.245 1.415m1.27-3.063c-.15.329-.42.512-.699.512a.68.68 0 0 1-.407-.141c-2.127-1.588-4.584-1.843-6.271-1.778c-1.87.073-3.24.544-3.253.549c-.431.15-.876-.174-.995-.724c-.118-.55.135-1.119.566-1.27c.061-.022 1.536-.534 3.587-.62c1.208-.051 2.37.057 3.456.32a10.2 10.2 0 0 1 3.726 1.737c.386.288.516.922.29 1.415m.782-2.996a.96.96 0 0 1-.5-.142C10.835 6.404 4.276 8.234 4.21 8.252c-.528.153-1.075-.17-1.22-.721s.165-1.12.693-1.272c.076-.022 1.885-.534 4.4-.62a18.6 18.6 0 0 1 4.24.32c1.686.333 3.223.917 4.57 1.738c.474.288.633.921.357 1.414a.99.99 0 0 1-.858.513"
+                d="M10 2c-4.4 0-8 3.6-8 8s3.6 8 8 8s8-3.6 8-8s-3.6-8-8-8m3.7 11.5c-.1.2-.5.3-.7.2c-2.1-1.2-4.7-1.5-7-.8c-.3 0-.5-.1-.6-.4c0-.2.1-.5.4-.6c2.6-.8 5.4-.4 7.8.9c.1.2.2.5.1.7m1-2.1q-.15 0 0 0c-.2.3-.6.4-.9.2c-2.4-1.4-5.3-1.7-8-.9c-.3.1-.7-.1-.8-.4c-.1-.4.1-.7.4-.9c3-.9 6.3-.5 9 1.1c.3.2.4.6.3.9m0-2.3c-2.6-1.5-6.8-1.7-9.3-.9c-.4.1-.8-.1-.9-.5s.1-.8.5-1c2.8-.8 7.5-.7 10.5 1.1c.4.2.5.7.3 1c-.3.4-.7.5-1.1.3"
             />
         </svg>
     )
-}
+})
+
+SpotifyIcon.displayName = "SpotifyIcon"
 
 export default SpotifyIcon

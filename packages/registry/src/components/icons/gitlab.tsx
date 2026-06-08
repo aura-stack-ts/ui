@@ -1,61 +1,45 @@
-export const GitlabIcon = ({
-    size = 24,
-    color = "#000000",
-    strokeWidth = 2,
-    background = "transparent",
-    opacity = 1,
-    rotation = 0,
-    shadow = 0,
-    flipHorizontal = false,
-    flipVertical = false,
-    padding = 0,
-}) => {
-    const transforms = []
-    if (rotation !== 0) transforms.push(`rotate(${rotation}deg)`)
-    if (flipHorizontal) transforms.push("scaleX(-1)")
-    if (flipVertical) transforms.push("scaleY(-1)")
+import type { ComponentProps } from "react"
 
-    const SVG_SIZE = 128
-    const viewBoxSize = SVG_SIZE + padding * 2
-    const viewBoxOffset = -padding
-    const viewBox = `${viewBoxOffset} ${viewBoxOffset} ${viewBoxSize} ${viewBoxSize}`
+export interface GitLabIconProps extends ComponentProps<"svg"> {
+    size?: number
+}
 
+export const GitLabIcon = ({ size = 24, className, style, ...props }: GitLabIconProps) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            viewBox={viewBox}
+            viewBox="0 0 32 32"
             width={size}
             height={size}
             fill="none"
-            stroke={color}
-            strokeWidth={strokeWidth}
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            aria-hidden="true"
+            focusable="false"
+            className={className}
             style={{
-                opacity,
-                transform: transforms.join(" ") || undefined,
-                filter: shadow > 0 ? `drop-shadow(0 ${shadow}px ${shadow * 2}px rgba(0,0,0,0.3))` : undefined,
-                backgroundColor: background !== "transparent" ? background : undefined,
+                display: "inline-block",
+                verticalAlign: "middle",
+                flexShrink: 0,
+                ...style,
             }}
+            {...props}
         >
             <path
                 fill="#e24329"
-                d="m124.755 51.382l-.177-.452L107.47 6.282a4.46 4.46 0 0 0-1.761-2.121a4.58 4.58 0 0 0-5.236.281a4.6 4.6 0 0 0-1.518 2.304L87.404 42.088H40.629L29.077 6.746a4.5 4.5 0 0 0-1.518-2.31a4.58 4.58 0 0 0-5.236-.281a4.5 4.5 0 0 0-1.761 2.121L3.422 50.904l-.17.452c-5.059 13.219-.763 28.192 10.537 36.716l.059.046l.157.111l26.061 19.516l12.893 9.758l7.854 5.93a5.28 5.28 0 0 0 6.388 0l7.854-5.93l12.893-9.758l26.218-19.634l.065-.052c11.273-8.526 15.562-23.472 10.524-36.677"
+                d="M29.5 13.2v-.1l-3.8-9.9c-.1-.2-.2-.4-.4-.5c-.4-.2-.8-.2-1.2.1c-.1.1-.3.2-.3.4l-2.6 7.9H10.8L8.2 3.2c0-.2-.2-.3-.3-.5c-.4-.2-.8-.3-1.2 0c-.2.1-.3.2-.4.4L2.5 13v.1c-1.1 2.9-.2 6.3 2.3 8.2l5.8 4.3l2.9 2.2l1.7 1.3c.4.3 1 .3 1.4 0l1.7-1.3l2.9-2.2l5.8-4.4c2.7-1.7 3.7-5.1 2.5-8"
             />
             <path
                 fill="#fc6d26"
-                d="m124.755 51.382l-.177-.452a57.8 57.8 0 0 0-23.005 10.341L64 89.682c12.795 9.68 23.934 18.09 23.934 18.09l26.218-19.634l.065-.052c11.291-8.527 15.586-23.488 10.538-36.704"
+                d="M29.5 13.2v-.1c-1.9.4-3.6 1.2-5.1 2.3L16 21.7c2.9 2.2 5.3 4 5.3 4l5.8-4.4c2.6-1.8 3.6-5.2 2.4-8.1"
             />
             <path
                 fill="#fca326"
-                d="m40.066 107.771l12.893 9.758l7.854 5.93a5.28 5.28 0 0 0 6.388 0l7.854-5.93l12.893-9.758s-11.152-8.436-23.947-18.09a18379 18379 0 0 0-23.935 18.09"
+                d="m10.7 25.8l2.9 2.2l1.7 1.3c.4.3 1 .3 1.4 0l1.7-1.3l2.9-2.2s-2.5-1.9-5.3-4c-2.9 2.1-5.3 4-5.3 4"
             />
-            <path
-                fill="#fc6d26"
-                d="M26.42 61.271A57.7 57.7 0 0 0 3.422 50.904l-.17.452c-5.059 13.219-.763 28.192 10.537 36.716l.059.046l.157.111l26.061 19.516L64 89.655z"
-            />
+            <path fill="#fc6d26" d="M7.6 15.4c-1.5-1.1-3.3-1.9-5.1-2.3v.1c-1.1 2.9-.2 6.3 2.3 8.2l5.8 4.3s2.5-1.9 5.3-4z" />
         </svg>
     )
 }
 
-export default GitlabIcon
+GitLabIcon.displayName = "GitLabIcon"
+
+export default GitLabIcon

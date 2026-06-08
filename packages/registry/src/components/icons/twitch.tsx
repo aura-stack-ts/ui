@@ -1,53 +1,29 @@
-export const TwitchIcon = ({
-    size = undefined,
-    color = "#000000",
-    strokeWidth = 2,
-    background = "transparent",
-    opacity = 1,
-    rotation = 0,
-    shadow = 0,
-    flipHorizontal = false,
-    flipVertical = false,
-    padding = 0,
-}) => {
-    const transforms = []
-    if (rotation !== 0) transforms.push(`rotate(${rotation}deg)`)
-    if (flipHorizontal) transforms.push("scaleX(-1)")
-    if (flipVertical) transforms.push("scaleY(-1)")
+import { forwardRef, type ComponentProps } from "react"
 
-    const SVG_SIZE = 20
-    const viewBoxSize = SVG_SIZE + padding * 2
-    const viewBoxOffset = -padding
-    const viewBox = `${viewBoxOffset} ${viewBoxOffset} ${viewBoxSize} ${viewBoxSize}`
+export interface TwitchIconProps extends ComponentProps<"svg"> {
+    size?: number | string
+}
 
+export const TwitchIcon = forwardRef<SVGSVGElement, TwitchIconProps>(({ size = 24, className, ...props }, ref) => {
     return (
         <svg
+            ref={ref}
             xmlns="http://www.w3.org/2000/svg"
-            viewBox={viewBox}
+            viewBox="0 0 15 15"
             width={size}
             height={size}
+            className={className}
             fill="none"
-            stroke={color}
-            strokeWidth={strokeWidth}
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            style={{
-                opacity,
-                transform: transforms.join(" ") || undefined,
-                filter: shadow > 0 ? `drop-shadow(0 ${shadow}px ${shadow * 2}px rgba(0,0,0,0.3))` : undefined,
-                backgroundColor: background !== "transparent" ? background : undefined,
-            }}
+            {...props}
         >
             <path
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                strokeWidth={strokeWidth}
-                d="M16 7v4m-4-4v4m4-8H8c-1.886 0-2.828 0-3.414.584C4 4.167 4 5.106 4 6.984v6.576c0 .37 0 .555.025.71a2 2 0 0 0 1.662 1.657c.156.024.341.024.713.024c.093 0 .14 0 .178.006a.5.5 0 0 1 .416.414c.006.039.006.085.006.178v1.543c0 1.182 0 1.773.335 1.89c.334.117.705-.344 1.446-1.268l1.919-2.39c.147-.183.221-.275.324-.324c.102-.049.22-.049.457-.049h3.862c.818 0 1.226 0 1.594-.152c.367-.151.656-.44 1.235-1.015l.656-.655c.579-.575.867-.863 1.02-1.23c.152-.366.152-.773.152-1.587V6.985c0-1.879 0-2.818-.586-3.401C18.828 3 17.886 3 16 3"
+                fill="currentColor"
+                d="M.5.5V0a.5.5 0 0 0-.5.5zm14 0h.5a.5.5 0 0 0-.5-.5zm0 8l.354.354A.5.5 0 0 0 15 8.5zm-3 3v.5a.5.5 0 0 0 .354-.146zm-5 0V11a.5.5 0 0 0-.325.12zm-3.5 3h-.5a.5.5 0 0 0 .825.38zm0-3h.5A.5.5 0 0 0 3 11zm-2.5 0H0a.5.5 0 0 0 .5.5zM.5 1h14V0H.5zM14 .5v8h1v-8zm.146 7.646l-3 3l.708.708l3-3zM11.5 11h-5v1h5zm-5.325.12l-3.5 3l.65.76l3.5-3zM3.5 14.5v-3h-1v3zM3 11H.5v1H3zm-2 .5V.5H0v11zM10 3v5h1V3zM7 3v5h1V3z"
             />
         </svg>
     )
-}
+})
+
+TwitchIcon.displayName = "TwitchIcon"
 
 export default TwitchIcon

@@ -1,49 +1,38 @@
-export const GithubIcon = ({
-    size = 24,
-    color = "#000000",
-    strokeWidth = 2,
-    background = "transparent",
-    opacity = 1,
-    rotation = 0,
-    shadow = 0,
-    flipHorizontal = false,
-    flipVertical = false,
-    padding = 0,
-}) => {
-    const transforms = []
-    if (rotation !== 0) transforms.push(`rotate(${rotation}deg)`)
-    if (flipHorizontal) transforms.push("scaleX(-1)")
-    if (flipVertical) transforms.push("scaleY(-1)")
+import type { ComponentProps } from "react"
 
-    const SVG_SIZE = 64
-    const viewBoxSize = SVG_SIZE + padding * 2
-    const viewBoxOffset = -padding
-    const viewBox = `${viewBoxOffset} ${viewBoxOffset} ${viewBoxSize} ${viewBoxSize}`
+export interface GitHubIconProps extends ComponentProps<"svg"> {
+    size?: number | string
+}
 
+export const GitHubIcon = ({ size = 24, color = "currentColor", className, style, ...props }: GitHubIconProps) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            viewBox={viewBox}
+            viewBox="0 0 512 512"
             width={size}
             height={size}
             fill="none"
-            stroke={color}
-            strokeWidth={strokeWidth}
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            aria-hidden="true"
+            focusable="false"
+            className={className}
             style={{
-                opacity,
-                transform: transforms.join(" ") || undefined,
-                filter: shadow > 0 ? `drop-shadow(0 ${shadow}px ${shadow * 2}px rgba(0,0,0,0.3))` : undefined,
-                backgroundColor: background !== "transparent" ? background : undefined,
+                display: "inline-block",
+                verticalAlign: "middle",
+                flexShrink: 0,
+                ...style,
             }}
+            {...props}
         >
             <path
-                fill="currentColor"
-                d="M32 0C14 0 0 14 0 32c0 21 19 30 22 30c2 0 2-1 2-2v-5c-7 2-10-2-11-5c0 0 0-1-2-3c-1-1-5-3-1-3c3 0 5 4 5 4c3 4 7 3 9 2c0-2 2-4 2-4c-8-1-14-4-14-15q0-6 3-9s-2-4 0-9c0 0 5 0 9 4c3-2 13-2 16 0c4-4 9-4 9-4c2 7 0 9 0 9q3 3 3 9c0 11-7 14-14 15c1 1 2 3 2 6v8c0 1 0 2 2 2c3 0 22-9 22-30C64 14 50 0 32 0"
+                fill={color}
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M258.934 42.667c-119.59 0-216.267 97.239-216.267 217.538c0 96.161 61.944 177.559 147.877 206.369c10.744 2.166 14.68-4.681 14.68-10.44c0-5.043-.354-22.33-.354-40.341c-60.161 12.968-72.689-25.932-72.689-25.932c-9.668-25.212-23.993-31.691-23.993-31.691c-19.69-13.327 1.434-13.327 1.434-13.327c21.842 1.441 33.303 22.33 33.303 22.33c19.332 33.132 50.484 23.771 63.016 18.007c1.788-14.047 7.521-23.771 13.608-29.172c-47.982-5.043-98.466-23.771-98.466-107.33c0-23.771 8.588-43.219 22.196-58.344c-2.147-5.401-9.668-27.735 2.152-57.628c0 0 18.26-5.763 59.434 22.33a208.3 208.3 0 0 1 54.069-7.205c18.261 0 36.876 2.524 54.065 7.205c41.178-28.093 59.439-22.33 59.439-22.33c11.82 29.893 4.294 52.227 2.147 57.628c13.967 15.125 22.2 34.573 22.2 58.344c0 83.559-50.483 101.924-98.824 107.33c7.88 6.842 14.68 19.806 14.68 40.337c0 29.172-.355 52.584-.355 59.785c0 5.763 3.94 12.61 14.68 10.448c85.933-28.818 147.877-110.212 147.877-206.373c.355-120.299-96.677-217.538-215.909-217.538"
             />
         </svg>
     )
 }
 
-export default GithubIcon
+GitHubIcon.displayName = "GitHubIcon"
+
+export default GitHubIcon

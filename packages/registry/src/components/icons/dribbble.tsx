@@ -1,42 +1,27 @@
-export const DribbbleIcon = ({
-    size = 24,
-    color = "#000000",
-    strokeWidth = 2,
-    background = "transparent",
-    opacity = 1,
-    rotation = 0,
-    shadow = 0,
-    flipHorizontal = false,
-    flipVertical = false,
-    padding = 0,
-}) => {
-    const transforms = []
-    if (rotation !== 0) transforms.push(`rotate(${rotation}deg)`)
-    if (flipHorizontal) transforms.push("scaleX(-1)")
-    if (flipVertical) transforms.push("scaleY(-1)")
+import type { ComponentProps } from "react"
 
-    const SVG_SIZE = 256
-    const viewBoxSize = SVG_SIZE + padding * 2
-    const viewBoxOffset = -padding
-    const viewBox = `${viewBoxOffset} ${viewBoxOffset} ${viewBoxSize} ${viewBoxSize}`
+export interface DribbbleIconProps extends Omit<ComponentProps<"svg">, "width" | "height"> {
+    size?: number | string
+}
 
+export const DribbbleIcon = ({ size = 24, className, style, ...props }: DribbbleIconProps) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            viewBox={viewBox}
+            viewBox="0 0 256 256"
             width={size}
             height={size}
             fill="none"
-            stroke={color}
-            strokeWidth={strokeWidth}
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            aria-hidden="true"
+            focusable="false"
+            className={className}
             style={{
-                opacity,
-                transform: transforms.join(" ") || undefined,
-                filter: shadow > 0 ? `drop-shadow(0 ${shadow}px ${shadow * 2}px rgba(0,0,0,0.3))` : undefined,
-                backgroundColor: background !== "transparent" ? background : undefined,
+                display: "inline-block",
+                verticalAlign: "middle",
+                flexShrink: 0,
+                ...style,
             }}
+            {...props}
         >
             <path
                 fill="#E74D89"
@@ -49,5 +34,7 @@ export const DribbbleIcon = ({
         </svg>
     )
 }
+
+DribbbleIcon.displayName = "DribbbleIcon"
 
 export default DribbbleIcon

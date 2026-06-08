@@ -1,49 +1,37 @@
-export const AtlassianIcon = ({
-    size = 24,
-    color = "#000000",
-    strokeWidth = 2,
-    background = "transparent",
-    opacity = 1,
-    rotation = 0,
-    shadow = 0,
-    flipHorizontal = false,
-    flipVertical = false,
-    padding = 0,
-}) => {
-    const transforms = []
-    if (rotation !== 0) transforms.push(`rotate(${rotation}deg)`)
-    if (flipHorizontal) transforms.push("scaleX(-1)")
-    if (flipVertical) transforms.push("scaleY(-1)")
+import type { ComponentProps } from "react"
 
-    const SVG_SIZE = 32
-    const viewBoxSize = SVG_SIZE + padding * 2
-    const viewBoxOffset = -padding
-    const viewBox = `${viewBoxOffset} ${viewBoxOffset} ${viewBoxSize} ${viewBoxSize}`
+export interface AtlassianIconProps extends Omit<ComponentProps<"svg">, "width" | "height" | "color"> {
+    size?: number | string
+    color?: string
+}
 
+export const AtlassianIcon = ({ size = 24, color = "currentColor", className, style, ...props }: AtlassianIconProps) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            viewBox={viewBox}
+            viewBox="0 0 24 24"
             width={size}
             height={size}
             fill="none"
-            stroke={color}
-            strokeWidth={strokeWidth}
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            aria-hidden="true"
+            focusable="false"
+            className={className}
             style={{
-                opacity,
-                transform: transforms.join(" ") || undefined,
-                filter: shadow > 0 ? `drop-shadow(0 ${shadow}px ${shadow * 2}px rgba(0,0,0,0.3))` : undefined,
-                backgroundColor: background !== "transparent" ? background : undefined,
+                display: "inline-block",
+                verticalAlign: "middle",
+                flexShrink: 0,
+                ...style,
             }}
+            {...props}
         >
             <path
-                fill="currentColor"
-                d="M25.745 31.943h-4.797a1.68 1.68 0 0 1-1.75-1.057c-1.776-3.552-3.708-7.047-5.318-10.729A20.33 20.33 0 0 1 15.062.865c.219-.375.693-.833 1.052-.833c.365 0 .792.5.99.891q7.258 14.515 14.531 29.047c.719 1.391.385 1.958-1.208 1.974zm-19.427 0H1.386c-1.385 0-1.693-.557-1.083-1.776c2.49-4.922 4.958-9.839 7.401-14.74c.667-1.391 1.193-1.391 2.12-.24a16.3 16.3 0 0 1 3.349 14.896c-.458 1.76-.708 1.875-2.484 1.875z"
+                fill={color}
+                d="M7.892 11.255c-.322-.322-.773-.322-.966.097L2.06 21.114c-.193.354.097.87.548.87h6.797a.62.62 0 0 0 .548-.323c1.45-3.06.548-7.668-2.062-10.406zM11.5 2.331c-4.704 7.539-.323 13.563 2.545 19.33a.62.62 0 0 0 .548.322h6.797a.602.602 0 0 0 .548-.87s-9.116-18.33-9.342-18.781c-.29-.42-.838-.42-1.095 0z"
             />
         </svg>
     )
 }
+
+AtlassianIcon.displayName = "AtlassianIcon"
 
 export default AtlassianIcon
