@@ -1,6 +1,6 @@
 "use client"
 
-import { useAuthActions } from "@aura-stack/react"
+import { useAuthActions } from "@aura-stack/react/hooks"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Field, FieldGroup, FieldLabel, FieldSeparator } from "@/components/ui/field"

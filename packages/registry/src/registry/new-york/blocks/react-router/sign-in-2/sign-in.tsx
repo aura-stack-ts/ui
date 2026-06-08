@@ -1,7 +1,7 @@
 "use client"
 
 import { Link } from "react-router"
-import { useAuthActions } from "@aura-stack/next/client"
+import { useAuthActions } from "@aura-stack/react-router/client"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Field, FieldGroup, FieldLabel, FieldSeparator, FieldDescription } from "@/components/ui/field"
