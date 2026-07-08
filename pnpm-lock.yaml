@@ -98,26 +98,26 @@ importers:
         version: 1.4.0
     devDependencies:
       '@aura-stack/auth':
-        specifier: ^0.7.2
-        version: 0.7.2(typescript@5.9.3)
+        specifier: ^0.8.1
+        version: 0.8.1(typescript@5.9.3)
       '@aura-stack/elysia':
-        specifier: ^0.1.0
-        version: 0.1.0(elysia@1.4.28(@sinclair/typebox@0.34.49)(exact-mirror@1.0.2(typebox@1.2.2))(file-type@22.0.1)(openapi-types@12.1.3)(typescript@5.9.3))(typescript@5.9.3)
+        specifier: ^0.2.1
+        version: 0.2.2(elysia@1.4.28(@sinclair/typebox@0.34.49)(exact-mirror@1.0.2(typebox@1.2.2))(file-type@22.0.1)(openapi-types@12.1.3)(typescript@5.9.3))(typescript@5.9.3)
       '@aura-stack/express':
-        specifier: ^0.1.0
-        version: 0.1.0(express@5.2.1)(typescript@5.9.3)
+        specifier: ^0.2.1
+        version: 0.2.2(express@5.2.1)(typescript@5.9.3)
       '@aura-stack/hono':
-        specifier: ^0.1.0
-        version: 0.1.0(hono@4.12.23)(typescript@5.9.3)
+        specifier: ^0.2.1
+        version: 0.2.2(hono@4.12.23)(typescript@5.9.3)
       '@aura-stack/next':
-        specifier: ^0.1.0
-        version: 0.1.0(@types/react@19.2.17)(next@16.2.7(@babel/core@7.29.7)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.9.3)
+        specifier: ^0.2.1
+        version: 0.2.2(@types/react@19.2.17)(next@16.2.7(@babel/core@7.29.7)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.9.3)
       '@aura-stack/react':
-        specifier: ^0.1.0
-        version: 0.1.0(@types/react@19.2.17)(react@19.2.4)(typescript@5.9.3)
+        specifier: ^0.2.1
+        version: 0.2.2(@types/react@19.2.17)(react@19.2.4)(typescript@5.9.3)
       '@aura-stack/react-router':
-        specifier: ^0.1.0
-        version: 0.1.0(@types/react@19.2.17)(react-router@7.17.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)(typescript@5.9.3)
+        specifier: ^0.2.1
+        version: 0.2.2(@types/react@19.2.17)(react-router@7.17.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)(typescript@5.9.3)
       '@tailwindcss/postcss':
         specifier: ^4
         version: 4.3.0
@@ -155,50 +155,50 @@ packages:
   '@ark/util@0.56.0':
     resolution: {integrity: sha512-BghfRC8b9pNs3vBoDJhcta0/c1J1rsoS1+HgVUreMFPdhz/CRAKReAu57YEllNaSy98rWAdY1gE+gFup7OXpgA==}
 
-  '@aura-stack/auth@0.7.1':
-    resolution: {integrity: sha512-r5j9dOyiVv9x7n9zSVHZIsTi6qXL4oRX6Z3tacCjVezE2/H2+n+EZUtafTPlsinxJNUqr3JhOq8e0/HQT3TEcA==}
+  '@aura-stack/auth@0.8.1':
+    resolution: {integrity: sha512-Rv+/EJ7/UaOQBk02+kpKZABvT0OJBWvymgS82WNRdH0p9fv/D8wAa2D1EbHoN3ojZL+8wga9z1RJZ9fgZMbf7A==}
 
-  '@aura-stack/auth@0.7.2':
-    resolution: {integrity: sha512-fnlE+yIM90/ibGMSdIJRB20cJ1e7P8YYKY0ixCe0zrjYAdolVPUpDKiVEBnYzM9ICT2UNFSV4saGzhUtelIAAg==}
-
-  '@aura-stack/elysia@0.1.0':
-    resolution: {integrity: sha512-ph2HXOUjLKQEiZI53XrddpEpC9MYVUI5+EoSXfnabfZsU38Tc+F65vWIdP38T41JM88Wt5xxX6b6rHs2ymiaYw==}
+  '@aura-stack/elysia@0.2.2':
+    resolution: {integrity: sha512-w8cgiMQAJ0zgXIIRAHF4X9HBvnid7PhudZV2QwiwJHIJ/bk/nlZw65z0PRoaMhN4oAy4TunoxbCCswSveqvN+w==}
     peerDependencies:
       elysia: '>=1.0.0'
 
-  '@aura-stack/express@0.1.0':
-    resolution: {integrity: sha512-xjnJw4zhCG5cTqjrVWerftPuon+MU3XJNhTZ35teEI6Ledqd5pvUkSQYicmEYh4X8jDv3AK7z70oyvI5Ld0MCw==}
+  '@aura-stack/express@0.2.2':
+    resolution: {integrity: sha512-PUpAR0UZYqbg5dtpMQ4V0PmcO1QN1TVnk3RPMnpAsmMvl1n66D8rZiykCAo30XMoUAYavF5FIFIG6Mw5xYa02g==}
     peerDependencies:
       express: '>=4.0.0'
 
-  '@aura-stack/hono@0.1.0':
-    resolution: {integrity: sha512-f4Q4nnT+XbVBbiltzjTT4JE0yVW1AWpz89EYk+33PF3PJuRvzvReTkMgqK4HMTGhwbAPoALCjJy1gaUx0cF2kA==}
+  '@aura-stack/hono@0.2.2':
+    resolution: {integrity: sha512-UN1tjqXeec0kGhblCtStoTv9A8Wp2ouFATRs19mQlPg0mMk/SFkrfOTVfqMiHXuhIqJ6a5g+4PFPiOtdS2LUaQ==}
     peerDependencies:
       hono: '>=4.0.0'
 
   '@aura-stack/jose@0.6.0':
     resolution: {integrity: sha512-wt1Jg6S42x1s9nqftvTBPXK/iYQX6Ihn01Oo5PO3i5ULW+QJNZFww6udicqzXKAFMu5rmez4e8L9qf/sx6uJaA==}
 
-  '@aura-stack/next@0.1.0':
-    resolution: {integrity: sha512-lglUVGMjPzy+s/cG46NFuFGDP36ebLwHwHfno3/N7kws3LNOGCSRKGrb39Se/bhVy9HQgL/ISq+98oI7f/nQ3Q==}
+  '@aura-stack/next@0.2.2':
+    resolution: {integrity: sha512-J/oE2/zjANWIrtpWdqVRrdAoJN+bSAjHwMLsQZNCSxXQMFqfkMNodbkVfWul9/g67i+cePR4keNX5zZGRQyb0Q==}
     peerDependencies:
       next: '>=16.0.0'
       react: '>=19.0.0'
       react-dom: '>=19.0.0'
 
-  '@aura-stack/react-router@0.1.0':
-    resolution: {integrity: sha512-J1kACIcHqvUIQieK9a7cJqA1lx+ve6r4kr2Td2RzfMjmBPLyn9xFonwC1gkMfD0W0pIjTNRVyeTJ5Su1tVmlPQ==}
+  '@aura-stack/rate-limiter@0.1.0':
+    resolution: {integrity: sha512-Vd/frSd2TAPRCBYrh+W66A6tiUtNpMJ3RFszmslwVMnfMir+EnVdRn6+e8wDCTirkCFyYo20Al8W42z8it+xLA==}
+
+  '@aura-stack/react-router@0.2.2':
+    resolution: {integrity: sha512-+AjB1XpngkOC8lICytzhOekyxTQ28fRFnMskqe3PUSgYNfsj7nAIUNfNh9NzUMzL9soTv7gcHJyk+dG08Bc+8w==}
     peerDependencies:
       react-router: '>=7.0.0'
 
-  '@aura-stack/react@0.1.0':
-    resolution: {integrity: sha512-OSHQmypR7u1rdde0xktJj0DRvFKd+R0lYqFB4yKBl29URqq1zLONHj0draE/bfaN6BQmmrImjudOM1QzVUALHQ==}
+  '@aura-stack/react@0.2.2':
+    resolution: {integrity: sha512-vEiSwjjBLBQRv/GpU0bdrJwwoVXcidHWXx0SxzV0Xg5fX2krFnl2h3ueQSVZuPlKOb617xV3K3wcZpFSXnN8qQ==}
     peerDependencies:
       '@types/react': '>=19.0.0'
       react: '>=19.0.0'
 
-  '@aura-stack/router@0.7.2':
-    resolution: {integrity: sha512-Swxm9SDvJEmM+V3rxjyOm7Fvysnnw//e/7ZXS+7Gn01J9MD3EJNJDOOFKmlmtVwlPoLtLf/NVNGCMji4kb5kcw==}
+  '@aura-stack/router@0.9.0':
+    resolution: {integrity: sha512-8yX9GJCAvyUMNawpNB8bCwQL+9ZLYFtsm6+btcj78XegtZ83uv6Ye16MKNhyadaCN5gA8OKAVAAKORzxq22dXg==}
     peerDependencies:
       arktype: ^2.0.0
       typebox: ^1.1.38
@@ -4243,10 +4243,11 @@ snapshots:
 
   '@ark/util@0.56.0': {}
 
-  '@aura-stack/auth@0.7.1(typescript@5.9.3)':
+  '@aura-stack/auth@0.8.1(typescript@5.9.3)':
     dependencies:
       '@aura-stack/jose': 0.6.0
-      '@aura-stack/router': 0.7.2(arktype@2.2.0)(typebox@1.2.2)(valibot@1.4.1(typescript@5.9.3))(zod@4.3.5)
+      '@aura-stack/rate-limiter': 0.1.0
+      '@aura-stack/router': 0.9.0(arktype@2.2.0)(typebox@1.2.2)(valibot@1.4.1(typescript@5.9.3))(zod@4.3.5)
       arktype: 2.2.0
       typebox: 1.2.2
       valibot: 1.4.1(typescript@5.9.3)
@@ -4254,34 +4255,23 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@aura-stack/auth@0.7.2(typescript@5.9.3)':
+  '@aura-stack/elysia@0.2.2(elysia@1.4.28(@sinclair/typebox@0.34.49)(exact-mirror@1.0.2(typebox@1.2.2))(file-type@22.0.1)(openapi-types@12.1.3)(typescript@5.9.3))(typescript@5.9.3)':
     dependencies:
-      '@aura-stack/jose': 0.6.0
-      '@aura-stack/router': 0.7.2(arktype@2.2.0)(typebox@1.2.2)(valibot@1.4.1(typescript@5.9.3))(zod@4.3.5)
-      arktype: 2.2.0
-      typebox: 1.2.2
-      valibot: 1.4.1(typescript@5.9.3)
-      zod: 4.3.5
-    transitivePeerDependencies:
-      - typescript
-
-  '@aura-stack/elysia@0.1.0(elysia@1.4.28(@sinclair/typebox@0.34.49)(exact-mirror@1.0.2(typebox@1.2.2))(file-type@22.0.1)(openapi-types@12.1.3)(typescript@5.9.3))(typescript@5.9.3)':
-    dependencies:
-      '@aura-stack/auth': 0.7.1(typescript@5.9.3)
+      '@aura-stack/auth': 0.8.1(typescript@5.9.3)
       elysia: 1.4.28(@sinclair/typebox@0.34.49)(exact-mirror@1.0.2(typebox@1.2.2))(file-type@22.0.1)(openapi-types@12.1.3)(typescript@5.9.3)
     transitivePeerDependencies:
       - typescript
 
-  '@aura-stack/express@0.1.0(express@5.2.1)(typescript@5.9.3)':
+  '@aura-stack/express@0.2.2(express@5.2.1)(typescript@5.9.3)':
     dependencies:
-      '@aura-stack/auth': 0.7.1(typescript@5.9.3)
+      '@aura-stack/auth': 0.8.1(typescript@5.9.3)
       express: 5.2.1
     transitivePeerDependencies:
       - typescript
 
-  '@aura-stack/hono@0.1.0(hono@4.12.23)(typescript@5.9.3)':
+  '@aura-stack/hono@0.2.2(hono@4.12.23)(typescript@5.9.3)':
     dependencies:
-      '@aura-stack/auth': 0.7.1(typescript@5.9.3)
+      '@aura-stack/auth': 0.8.1(typescript@5.9.3)
       hono: 4.12.23
     transitivePeerDependencies:
       - typescript
@@ -4290,9 +4280,9 @@ snapshots:
     dependencies:
       jose: 6.2.3
 
-  '@aura-stack/next@0.1.0(@types/react@19.2.17)(next@16.2.7(@babel/core@7.29.7)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.9.3)':
+  '@aura-stack/next@0.2.2(@types/react@19.2.17)(next@16.2.7(@babel/core@7.29.7)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.9.3)':
     dependencies:
-      '@aura-stack/react': 0.1.0(@types/react@19.2.17)(react@19.2.4)(typescript@5.9.3)
+      '@aura-stack/react': 0.2.2(@types/react@19.2.17)(react@19.2.4)(typescript@5.9.3)
       next: 16.2.7(@babel/core@7.29.7)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
@@ -4300,24 +4290,26 @@ snapshots:
       - '@types/react'
       - typescript
 
-  '@aura-stack/react-router@0.1.0(@types/react@19.2.17)(react-router@7.17.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)(typescript@5.9.3)':
+  '@aura-stack/rate-limiter@0.1.0': {}
+
+  '@aura-stack/react-router@0.2.2(@types/react@19.2.17)(react-router@7.17.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)(typescript@5.9.3)':
     dependencies:
-      '@aura-stack/react': 0.1.0(@types/react@19.2.17)(react@19.2.4)(typescript@5.9.3)
+      '@aura-stack/react': 0.2.2(@types/react@19.2.17)(react@19.2.4)(typescript@5.9.3)
       react-router: 7.17.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
     transitivePeerDependencies:
       - '@types/react'
       - react
       - typescript
 
-  '@aura-stack/react@0.1.0(@types/react@19.2.17)(react@19.2.4)(typescript@5.9.3)':
+  '@aura-stack/react@0.2.2(@types/react@19.2.17)(react@19.2.4)(typescript@5.9.3)':
     dependencies:
-      '@aura-stack/auth': 0.7.1(typescript@5.9.3)
+      '@aura-stack/auth': 0.8.1(typescript@5.9.3)
       '@types/react': 19.2.17
       react: 19.2.4
     transitivePeerDependencies:
       - typescript
 
-  '@aura-stack/router@0.7.2(arktype@2.2.0)(typebox@1.2.2)(valibot@1.4.1(typescript@5.9.3))(zod@4.3.5)':
+  '@aura-stack/router@0.9.0(arktype@2.2.0)(typebox@1.2.2)(valibot@1.4.1(typescript@5.9.3))(zod@4.3.5)':
     dependencies:
       cookie: 1.1.1
     optionalDependencies:
