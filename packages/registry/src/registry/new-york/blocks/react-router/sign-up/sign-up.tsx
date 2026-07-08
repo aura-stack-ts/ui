@@ -5,8 +5,31 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Field, FieldDescription, FieldGroup, FieldLabel } from "@/components/ui/field"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { useSignUp } from "@aura-stack/react-router/client"
 
 export const SignUp = () => {
+    const { signUp, isPending } = useSignUp()
+
+    const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault()
+        const formData = new FormData(event.currentTarget)
+        const username = formData.get("username") as string
+        const email = formData.get("email") as string
+        const password = formData.get("password") as string
+        const confirmPassword = formData.get("confirmPassword") as string
+
+        if (password !== confirmPassword) {
+            return
+        }
+        await signUp({
+            payload: {
+                username,
+                email,
+                password,
+            },
+        })
+    }
+
     return (
         <Card className="max-w-lg px-6 py-8 sm:p-8 relative gap-6">
             <CardHeader className="text-center gap-6 p-0">
@@ -18,7 +41,7 @@ export const SignUp = () => {
                 </div>
             </CardHeader>
             <CardContent className="p-0">
-                <form>
+                <form method="POST" onSubmit={onSubmit}>
                     <FieldGroup className="gap-6">
                         <div className="flex flex-col gap-4">
                             <Field className="gap-1.5">
@@ -77,7 +100,12 @@ export const SignUp = () => {
                             </Field>
                         </div>
                         <Field className="gap-4">
-                            <Button type="submit" size="lg" className="rounded-lg h-10 hover:bg-primary/80 cursor-pointer">
+                            <Button
+                                type="submit"
+                                size="lg"
+                                className="rounded-lg h-10 hover:bg-primary/80 cursor-pointer"
+                                disabled={isPending}
+                            >
                                 Create Account
                             </Button>
                             <FieldDescription className="px-6 text-center text-sm leading-snug">
