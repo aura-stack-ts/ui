@@ -1,0 +1,6 @@
+{
+  "title": "Core",
+  "description": "Shared primitives, configs, and icons",
+  "pages": ["index", "installation", "components"],
+  "root": true
+}

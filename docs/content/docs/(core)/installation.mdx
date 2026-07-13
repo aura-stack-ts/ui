@@ -1,0 +1,50 @@
+---
+title: Installation
+description: How to install Aura UI in your TypeScript application.
+---
+
+> Aura UI follows the same installation process as [shadcn/ui](https://ui.shadcn.com/docs/installation).
+
+<Steps>
+
+<Step>
+
+## Create a new project
+
+Run the `init` command to create a new scaffolded project. The supported templates are `next`, `vite`, `start`, `react-router` and `astro`.
+
+```npm
+npx shadcn@latest init -t [framework]
+```
+
+</Step>
+
+<Step>
+
+## Add components
+
+Run `add` command to add components to your project.
+
+```npm
+npx shadcn@latest add https://aura-ui.vercel.app/r/{component}.json
+```
+
+</Step>
+
+<Step>
+
+## Import components
+
+Import the installed components in your application and use them as you would normally do.
+
+```tsx
+import { SignIn } from "@/components/sign-in-react"
+
+export const LoginPage = () => {
+  return <SignIn />
+}
+```
+
+</Step>
+
+</Steps>

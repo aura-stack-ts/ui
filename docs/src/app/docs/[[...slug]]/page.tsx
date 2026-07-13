@@ -22,7 +22,7 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
     const markdownUrl = getPageMarkdownUrl(page).url
 
     return (
-        <DocsPage toc={page.data.toc} full={page.data.full}>
+        <DocsPage className="max-w-6xl" toc={page.data.toc} full={page.data.full} tableOfContent={{ enabled: false }}>
             <DocsTitle>{page.data.title}</DocsTitle>
             <DocsDescription className="mb-0">{page.data.description}</DocsDescription>
             <div className="flex flex-row gap-2 items-center border-b pb-6">
@@ -32,7 +32,7 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
                     githubUrl={`https://github.com/${gitConfig.user}/${gitConfig.repo}/blob/${gitConfig.branch}/content/docs/${page.path}`}
                 />
             </div>
-            <DocsBody>
+            <DocsBody className="max-w-none w-full">
                 <MDX
                     components={getMDXComponents({
                         // this allows you to link to other pages with relative file paths
