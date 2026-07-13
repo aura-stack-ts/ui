@@ -1,16 +1,13 @@
-"use client"
-
-import Link from "next/link"
-import { useAuthActions } from "@aura-stack/next/client"
+import { useAuthActions } from "@aura-stack/react/hooks"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import { Field, FieldGroup, FieldLabel, FieldSeparator } from "@/components/ui/field"
+import { Field, FieldDescription, FieldGroup, FieldLabel, FieldSeparator } from "@/components/ui/field"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { GitHubIcon } from "@/components/icons/github"
 import { GitLabIcon } from "@/components/icons/gitlab"
 import type { FormEvent } from "react"
 
-export const SignIn = () => {
+export const SignUp = () => {
     const { signIn, signInCredentials, isPending } = useAuthActions()
 
     const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
@@ -76,7 +73,22 @@ export const SignIn = () => {
                         </FieldSeparator>
                         <div className="flex flex-col gap-4">
                             <Field className="gap-1.5">
-                                <FieldLabel htmlFor="email" className="text-sm text-muted-foreground font-normal">
+                                <FieldLabel htmlFor="name" className="text-sm">
+                                    Name
+                                </FieldLabel>
+                                <Input
+                                    id="name"
+                                    type="text"
+                                    name="name"
+                                    required
+                                    autoComplete="name"
+                                    placeholder="John Doe"
+                                    aria-label="Name"
+                                    className="dark:bg-background h-9 shadow-xs"
+                                />
+                            </Field>
+                            <Field className="gap-1.5">
+                                <FieldLabel htmlFor="email" className="text-sm">
                                     Email
                                 </FieldLabel>
                                 <Input
@@ -84,26 +96,22 @@ export const SignIn = () => {
                                     type="email"
                                     name="email"
                                     required
-                                    placeholder="aurastackjs@gmail.com"
+                                    autoComplete="email"
+                                    placeholder="name@example.com"
                                     aria-label="Email"
                                     className="dark:bg-background h-9 shadow-xs"
                                 />
                             </Field>
                             <Field className="gap-1.5">
-                                <div className="flex items-center">
-                                    <FieldLabel className="text-sm text-muted-foreground font-normal" htmlFor="password">
-                                        Password
-                                    </FieldLabel>
-                                    <Link href="#" className="ml-auto text-sm underline-offset-2 hover:underline">
-                                        Forgot your password?
-                                    </Link>
-                                </div>
+                                <FieldLabel className="text-sm" htmlFor="password">
+                                    Password
+                                </FieldLabel>
                                 <Input
                                     id="password"
                                     type="password"
                                     name="password"
                                     required
-                                    placeholder="••••••••"
+                                    autoComplete="new-password"
                                     aria-label="Password"
                                     className="dark:bg-background h-9 shadow-xs"
                                 />
@@ -116,8 +124,14 @@ export const SignIn = () => {
                                 className="rounded-lg h-10 hover:bg-primary/80 cursor-pointer"
                                 disabled={isPending}
                             >
-                                Sign in
+                                Create account
                             </Button>
+                            <FieldDescription className="mb-0 text-center text-sm font-normal text-muted-foreground">
+                                Already have an account?{" "}
+                                <a href="#" className="font-medium text-card-foreground">
+                                    Sign In
+                                </a>
+                            </FieldDescription>
                         </Field>
                     </FieldGroup>
                 </form>
@@ -126,4 +140,4 @@ export const SignIn = () => {
     )
 }
 
-export default SignIn
+export default SignUp

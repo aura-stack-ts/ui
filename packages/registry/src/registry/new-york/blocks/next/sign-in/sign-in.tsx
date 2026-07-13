@@ -118,7 +118,7 @@ export const SignIn = () => {
                             >
                                 Sign in
                             </Button>
-                            <FieldDescription className="text-center text-sm font-normal text-muted-foreground">
+                            <FieldDescription className="mb-0 text-center text-sm font-normal text-muted-foreground">
                                 Don&apos;t have an account?{" "}
                                 <Link href="#" className="font-medium text-card-foreground">
                                     Sign Up

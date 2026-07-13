@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Field, FieldDescription, FieldGroup, FieldLabel } from "@/components/ui/field"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { useSignUp } from "@aura-stack/react/hooks"
+import { useSignUp } from "@aura-stack/react-router/client"
 
 export const SignUp = () => {
     const { signUp, isPending } = useSignUp()
