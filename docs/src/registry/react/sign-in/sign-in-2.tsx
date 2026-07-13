@@ -1,5 +1,3 @@
-"use client"
-
 import { useAuthActions } from "@aura-stack/react/hooks"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"

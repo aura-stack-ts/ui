@@ -1,8 +1,10 @@
 "use client"
 
-import { BlockPreviewClient } from "./block-preview-client"
+import { MemoryRouter } from "react-router"
 import { registry } from "@/registry/index"
 import { AuthProvider, createAuthClient } from "@aura-stack/react"
+import { BlockPreviewClient } from "@/components/block-preview-client"
+import { useEffect } from "react"
 
 interface BlockPreviewProps {
     name: string
@@ -11,7 +13,13 @@ interface BlockPreviewProps {
     lang?: string
 }
 
-const authClient = createAuthClient({})
+const baseURL =
+    process.env.PUBLIC_NEXT_BASE_URL ?? (process.env.NEXT_URL && `https://${process.env.NEXT_URL}`) ?? "http://localhost:3000"
+
+const authClient = createAuthClient({
+    baseURL,
+    basePath: "/api/auth",
+})
 
 export function BlockPreview({ name, description, installCommand, lang = "tsx" }: BlockPreviewProps) {
     const entry = registry[name]
@@ -19,8 +27,27 @@ export function BlockPreview({ name, description, installCommand, lang = "tsx" }
     if (!entry) {
         throw new Error(`BlockPreview: no block named "${name}" in the registry.`)
     }
-
     const Component = entry
+
+    useEffect(() => {
+        const originalFetch = window.fetch
+
+        window.fetch = async (input, init) => {
+            const url = typeof input === "string" ? input : input instanceof URL ? input.href : input.url
+
+            if (url.includes("/api/auth/")) {
+                return new Response(JSON.stringify({ message: "Blocked by preview" }), {
+                    status: 200,
+                    headers: { "Content-Type": "application/json" },
+                })
+            }
+            return originalFetch(input, init)
+        }
+
+        return () => {
+            window.fetch = originalFetch
+        }
+    }, [])
 
     return (
         <BlockPreviewClient
@@ -31,7 +58,9 @@ export function BlockPreview({ name, description, installCommand, lang = "tsx" }
             lang={lang}
         >
             <AuthProvider client={authClient}>
-                <Component />
+                <MemoryRouter>
+                    <Component />
+                </MemoryRouter>
             </AuthProvider>
         </BlockPreviewClient>
     )

@@ -1,27 +1,28 @@
 import { cn } from "@/lib/cn"
 import { ComponentPreviewContainer } from "./preview-container"
-import { registry } from "@/registry"
+import { registry as defaultRegistry } from "@/registry"
+import type { HTMLAttributes, ComponentType } from "react"
 
-interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
+interface ComponentPreviewProps extends HTMLAttributes<HTMLDivElement> {
     name: string
     align?: "center" | "start" | "end"
     isBgSolid?: boolean
     description?: string
     hideCode?: boolean
     minHeight?: string
+    registry?: Record<string, ComponentType>
 }
 
 export const ComponentPreview = ({
     align = "center",
     className,
     description,
-    hideCode = false,
     isBgSolid = false,
     minHeight,
     name,
     ...props
 }: ComponentPreviewProps) => {
-    const Component = registry[name]
+    const Component = props.registry?.[name] || defaultRegistry[name]
 
     if (!Component) {
         return (
@@ -38,7 +39,6 @@ export const ComponentPreview = ({
             align={align}
             className={className}
             description={description}
-            hideCode={hideCode}
             isBgSolid={isBgSolid}
             minHeight={minHeight}
             name={name}

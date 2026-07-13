@@ -4,6 +4,7 @@ import * as TabsComponents from "fumadocs-ui/components/tabs"
 import * as StepComponents from "fumadocs-ui/components/steps"
 import { ComponentPreview } from "@/components/preview"
 import { BlockPreview } from "@/components/block-preview"
+import { Icons } from "@/registry/icons/index"
 
 export function getMDXComponents(components?: MDXComponents) {
     return {
@@ -13,6 +14,7 @@ export function getMDXComponents(components?: MDXComponents) {
         ...components,
         ComponentPreview,
         BlockPreview,
+        Icons,
     } satisfies MDXComponents
 }
 

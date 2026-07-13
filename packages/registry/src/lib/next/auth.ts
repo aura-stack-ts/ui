@@ -1,4 +1,4 @@
-import { createAuth } from "@aura-stack/react/server"
+import { createAuth } from "@aura-stack/next"
 
 export const auth = createAuth({
     oauth: [],

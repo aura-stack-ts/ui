@@ -5,16 +5,58 @@ description: The authentication configuration for React Router.
 
 ## Installation
 
-Run the following command to install the `auth.ts` and `auth-client.ts` files:
-
-<Tabs items={["CLI"]}>
+<Tabs items={["CLI", "Manual"]}>
 
 <Tab value="CLI">
 
 ```npm
-npx shadcn add https://aura-ui.vercel.app/r/react-router-setup
+npx shadcn add https://aura-ui.vercel.app/r/react-router-setup.json
 ```
 
 </Tab>
 
+<Tab value="Manual">
+
+<Steps>
+
+<Step>
+
+### Create the auth configuration file
+
+```ts title="app/lib/auth.ts" lineNumbers
+import { createAuth } from "@aura-stack/react-router"
+
+export const auth = createAuth({
+  // Add your authentication configuration here
+})
+```
+
+</Step>
+
+<Step>
+
+### Create the auth client file
+
+```ts title="app/lib/auth-client.ts" lineNumbers
+import { createAuthClient } from "@aura-stack/react-router/client"
+
+export const authClient = createAuthClient({
+  // Add your authentication client configuration here
+})
+```
+
+</Step>
+
+</Steps>
+
+</Tab>
+
 </Tabs>
+
+## What goes in `createAuth`
+
+The `createAuth` function initializes the Aura Auth instance with configuration options for OAuth providers, session management, cookie handling, and security settings. For more details, read the [Aura Auth documentation](https://aura-stack-auth.vercel.app/docs/quick-start#auth-instance)
+
+## What goes in `createAuthClient`
+
+The `createAuthClient` function initializes the client-side Aura Auth instance that interacts with the server-side auth instance. For more details, read the [Aura Auth documentation](https://aura-stack-auth.vercel.app/docs/quick-start#client-instance)

@@ -1,5 +1,3 @@
-"use client"
-
 import { useSignIn } from "@aura-stack/react/hooks"
 import { Button } from "@/components/ui/button"
 import { Field, FieldGroup, FieldDescription } from "@/components/ui/field"

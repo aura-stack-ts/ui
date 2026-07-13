@@ -1,5 +1,3 @@
-"use client"
-
 import { useAuthActions } from "@aura-stack/react/hooks"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
@@ -43,7 +41,7 @@ export const SignIn = () => {
                     </CardDescription>
                 </div>
             </CardHeader>
-            <CardContent className="p-0">
+            <CardContent className="@container p-0">
                 <form onSubmit={onSubmit}>
                     <FieldGroup className="gap-6">
                         <Field className="grid md:grid-cols-2 md:gap-6 gap-3">
@@ -55,7 +53,8 @@ export const SignIn = () => {
                                 onClick={onGitHubSignIn}
                             >
                                 <GitHubIcon />
-                                Sign in with GitHub
+                                <span className="@sm:hidden">GitHub</span>
+                                <span className="hidden @sm:block">Sign in with GitHub</span>
                             </Button>
                             <Button
                                 variant="outline"
@@ -65,7 +64,8 @@ export const SignIn = () => {
                                 onClick={onGitLabSignIn}
                             >
                                 <GitLabIcon />
-                                Sign in with GitLab
+                                <span className="@sm:hidden">GitLab</span>
+                                <span className="hidden @sm:block">Sign in with GitLab</span>
                             </Button>
                         </Field>
                         <FieldSeparator className="*:data-[slot=field-separator-content]:bg-card text-sm text-muted-foreground bg-transparent">

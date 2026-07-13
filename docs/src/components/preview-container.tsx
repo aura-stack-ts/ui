@@ -1,6 +1,7 @@
 import { cn } from "@/lib/cn"
+import type { HTMLAttributes, PropsWithChildren } from "react"
 
-interface ComponentPreviewContainerProps extends React.HTMLAttributes<HTMLDivElement> {
+interface ComponentPreviewContainerProps extends HTMLAttributes<HTMLDivElement> {
     align?: "center" | "start" | "end"
     minHeight?: string
     isBgSolid?: boolean
@@ -18,7 +19,7 @@ export const ComponentPreviewContainer = ({
     name,
     style,
     ...props
-}: React.PropsWithChildren<ComponentPreviewContainerProps>) => {
+}: PropsWithChildren<ComponentPreviewContainerProps>) => {
     const alignmentClasses = {
         center: "items-center justify-center",
         end: "items-end justify-end",

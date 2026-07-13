@@ -3,44 +3,48 @@ title: Installation
 description: How to install Aura UI in your TypeScript application.
 ---
 
-> Aura UI follows the same installation process as [shadcn/ui](https://ui.shadcn.com/docs/installation).
+> Aura UI follows the same installation workflow as [shadcn/ui](https://ui.shadcn.com/docs/installation). Components are copied into your project, allowing you to fully customize them.
 
 <Steps>
 
 <Step>
 
-## Create a new project
+## Initialize your project
 
-Run the `init` command to create a new scaffolded project. The supported templates are `next`, `vite`, `start`, `react-router` and `astro`.
+Initialize shadcn/ui if you haven't already. Aura UI uses the same registry and installation workflow.
 
 ```npm
-npx shadcn@latest init -t [framework]
+npx shadcn@latest init
 ```
+
+Refer to the shadcn/ui documentation if you need help configuring your project for your framework.
 
 </Step>
 
 <Step>
 
-## Add components
+## Add a component
 
-Run `add` command to add components to your project.
+Install any Aura UI component directly from the registry.
 
 ```npm
-npx shadcn@latest add https://aura-ui.vercel.app/r/{component}.json
+npx shadcn@latest add https://aura-ui.vercel.app/r/sign-in-react.json
 ```
+
+This command downloads the component source code and places it inside your project, allowing you to modify it as needed.
 
 </Step>
 
 <Step>
 
-## Import components
+## Use the component
 
-Import the installed components in your application and use them as you would normally do.
+Import the component into your application and render it like any other React component.
 
-```tsx
+```tsx title="login/page.tsx" lineNumbers
 import { SignIn } from "@/components/sign-in-react"
 
-export const LoginPage = () => {
+export function LoginPage() {
   return <SignIn />
 }
 ```
@@ -48,3 +52,27 @@ export const LoginPage = () => {
 </Step>
 
 </Steps>
+
+## Framework support
+
+Aura UI provides framework-specific components optimized for each supported Aura Auth integration.
+
+<Cards>
+
+<Card title="Next.js" href="/docs/next">
+  Built for the App Router and Pages Router with client and server integrations.
+</Card>
+
+<Card title="React" href="/docs/react">
+  Authentication components for React applications.
+</Card>
+
+<Card title="React Router" href="/docs/react-router">
+  Components integrated with React Router navigation and routing.
+</Card>
+
+</Cards>
+
+## What's next?
+
+Now that Aura UI is installed, browse the available authentication blocks and add them to your application.

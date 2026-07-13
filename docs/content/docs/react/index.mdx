@@ -1,14 +1,15 @@
 ---
 title: Introduction
-description: IDK
+description: Aura UI components for plain React applications (Vite, CRA, or any bundler-based setup).
 ---
 
-Aura UI is a collection of re-usable components, blocks and hooks that you could copy and paste on your TypeScript applications, it is built on top of [Aura Auth](https://aura-stack-auth.vercel.app/) authentication library for TypeScript.
+The React package is Aura UI's baseline: framework-agnostic components built on `@aura-stack/react`, for any React app that isn't running inside Next.js or React Router's own data APIs — typically a Vite project, but anything with a plain client-side router works.
 
-Aura UI is designed to be simple, flexible and easy to use. It provides a set of pre-built components that can be easily integrated into your application, allowing you to focus on building your application logic rather than worrying about the UI.
+If you're on Next.js or React Router, use their dedicated packages instead ([Next.js](/docs/next), [React Router](/docs/react-router)) — they wrap the same components with framework-specific routing and server integration (redirects, middleware, server-side session reads) that the plain React package doesn't attempt.
 
-## Why Aura UI?
+## What you get
 
-The collection was created as Clerk alternative for developers who want to build their own authentication system and UI components without relying on third-party services. It is open-source and free to use, making it a great choice for developers who want to have full control over their authentication and UI components and it is completely integrated with the Auth Auth library offered by Aura Stack.
-
-The library is inspired by [shadcn/ui](https://ui.shadcn.com/) and [Tailwind UI](https://tailwindcss.com/), and it is built with TypeScript in the major of the supported frameworks and libraries by Aura Auth, and Tailwind CSS. It is designed to be easy to use and customize, allowing developers to quickly build beautiful and responsive user interfaces.
+- `SignIn` and `SignUp` blocks in several layout variants, each a copy-paste starting point rather than a fixed component.
+- An `auth.ts` / `auth-client.ts` pair scaffolded by the CLI, wiring `createAuth` and `createAuthClient` from `@aura-stack/react`.
+- The shared [icon set](/docs/icons) for OAuth provider buttons.
+  Start with [Config](/docs/react/config) to set up your auth client, then add your first block from [Sign In](/docs/react/sign-in).
