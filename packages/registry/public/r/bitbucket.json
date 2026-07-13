@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "bitbucket",
+  "files": [
+    {
+      "path": "src/components/icons/bitbucket.tsx",
+      "content": "import { useId, type ComponentProps } from \"react\"\n\nexport interface BitbucketIconProps extends Omit<ComponentProps<\"svg\">, \"width\" | \"height\"> {\n    size?: number | string\n}\n\nexport const BitbucketIcon = ({ size = 24, className, style, ...props }: BitbucketIconProps) => {\n    const gradientId = useId()\n\n    return (\n        <svg\n            xmlns=\"http://www.w3.org/2000/svg\"\n            viewBox=\"0 0 128 128\"\n            width={size}\n            height={size}\n            fill=\"none\"\n            aria-hidden=\"true\"\n            focusable=\"false\"\n            className={className}\n            style={{\n                display: \"inline-block\",\n                verticalAlign: \"middle\",\n                flexShrink: 0,\n                ...style,\n            }}\n            {...props}\n        >\n            <defs>\n                <linearGradient\n                    id={gradientId}\n                    x1=\"28.593\"\n                    x2=\"16.672\"\n                    y1=\"14.226\"\n                    y2=\"23.532\"\n                    gradientTransform=\"scale(4)\"\n                    gradientUnits=\"userSpaceOnUse\"\n                >\n                    <stop offset=\".176\" stopColor=\"#0052cc\" />\n                    <stop offset=\"1\" stopColor=\"#2684ff\" />\n                </linearGradient>\n            </defs>\n            <path\n                fill=\"#2684ff\"\n                d=\"M19.082 20c-1.918 0-3.355 1.758-3.039 3.516l12.95 79.289c.32 2.078 2.077 3.515 4.155 3.515h62.66c1.442 0 2.72-1.12 3.04-2.558l13.109-80.086c.316-1.918-1.121-3.516-3.039-3.516zM74.07 77.227H54.09l-5.278-28.293h30.215zm0 0\"\n            />\n            <path\n                fill={`url(#${gradientId})`}\n                d=\"M107.64 48.934H78.868L74.07 77.227H54.09l-23.5 27.972s1.12.961 2.719.961h62.66c1.441 0 2.719-1.12 3.039-2.558zm0 0\"\n            />\n        </svg>\n    )\n}\n\nBitbucketIcon.displayName = \"BitbucketIcon\"\n\nexport default BitbucketIcon\n",
+      "type": "registry:ui",
+      "target": "@components/icons/bitbucket.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}
