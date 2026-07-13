@@ -333,6 +333,42 @@
           "type": "registry:block"
         }
       ]
+    },
+    {
+      "name": "sign-up-2-next",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["input", "button", "card", "field"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/sign-up-2/sign-up.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "sign-up-2-react",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/react"],
+      "registryDependencies": ["input", "button", "card", "field"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/react/sign-up-2/sign-up.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "sign-up-2-react-router",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/react-router"],
+      "registryDependencies": ["input", "button", "card", "field"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/react-router/sign-up-2/sign-up.tsx",
+          "type": "registry:block"
+        }
+      ]
     }
   ]
 }

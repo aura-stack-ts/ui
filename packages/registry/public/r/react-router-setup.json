@@ -1,7 +1,9 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "react-router-setup",
-  "dependencies": ["@aura-stack/react-router"],
+  "dependencies": [
+    "@aura-stack/react-router"
+  ],
   "files": [
     {
       "path": "src/lib/react-router/auth.ts",
