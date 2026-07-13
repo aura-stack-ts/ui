@@ -148,3 +148,4 @@ vite.config.ts.timestamp-*
 
 # Output registry
 public/r/
+.vercel
