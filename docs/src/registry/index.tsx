@@ -1,5 +1,5 @@
 import { NextSignIn1, NextSignIn2, NextSignIn3, NextSignIn4 } from "@/registry/next/sign-in/index"
-import { NextSignUp1, NextSignUp2 } from "@/registry/next/sign-up/index"
+import { NextSignUp1, NextSignUp2, NextSignUp3 } from "@/registry/next/sign-up/index"
 import { ReactSignIn1, ReactSignIn2, ReactSignIn3, ReactSignIn4 } from "@/registry/react/sign-in/index"
 import { ReactSignUp1, ReactSignUp2 } from "@/registry/react/sign-up/index"
 import {
@@ -17,6 +17,7 @@ export const registry: Record<string, React.ComponentType> = {
     "sign-in-4-next": NextSignIn4,
     "sign-up-1-next": NextSignUp1,
     "sign-up-2-next": NextSignUp2,
+    "sign-up-3-next": NextSignUp3,
     "sign-in-1-react": ReactSignIn1,
     "sign-in-2-react": ReactSignIn2,
     "sign-in-3-react": ReactSignIn3,

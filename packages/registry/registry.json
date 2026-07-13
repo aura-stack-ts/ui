@@ -369,6 +369,72 @@
           "type": "registry:block"
         }
       ]
+    },
+    {
+      "name": "sign-up-3-next",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["input", "button", "card", "field"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/sign-up-3/sign-up.tsx",
+          "type": "registry:block"
+        },
+        {
+          "path": "src/components/icons/github.tsx",
+          "target": "@components/icons/github.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/gitlab.tsx",
+          "target": "@components/icons/gitlab.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sign-up-3-react",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/react"],
+      "registryDependencies": ["input", "button", "card", "field"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/react/sign-up-3/sign-up.tsx",
+          "type": "registry:block"
+        },
+        {
+          "path": "src/components/icons/github.tsx",
+          "target": "@components/icons/github.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/gitlab.tsx",
+          "target": "@components/icons/gitlab.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sign-up-3-react-router",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/react-router"],
+      "registryDependencies": ["input", "button", "card", "field"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/react-router/sign-up-3/sign-up.tsx",
+          "type": "registry:block"
+        },
+        {
+          "path": "src/components/icons/github.tsx",
+          "target": "@components/icons/github.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/gitlab.tsx",
+          "target": "@components/icons/gitlab.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

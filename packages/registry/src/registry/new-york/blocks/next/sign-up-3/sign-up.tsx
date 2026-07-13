@@ -1,16 +1,15 @@
 "use client"
-
 import { Link } from "react-router"
 import { useAuthActions } from "@aura-stack/react-router/client"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import { Field, FieldGroup, FieldLabel, FieldSeparator, FieldDescription } from "@/components/ui/field"
+import { Field, FieldDescription, FieldGroup, FieldLabel, FieldSeparator } from "@/components/ui/field"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { GitHubIcon } from "@/components/icons/github"
 import { GitLabIcon } from "@/components/icons/gitlab"
 import type { FormEvent } from "react"
 
-export const SignIn = () => {
+export const SignUp = () => {
     const { signIn, signInCredentials, isPending } = useAuthActions()
 
     const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
@@ -23,7 +22,6 @@ export const SignIn = () => {
                 username: email,
                 password,
             },
-            redirect: false,
         })
     }
 
@@ -45,56 +43,10 @@ export const SignIn = () => {
                     </CardDescription>
                 </div>
             </CardHeader>
-            <CardContent className="p-0">
+            <CardContent className="@container p-0">
                 <form onSubmit={onSubmit}>
                     <FieldGroup className="gap-6">
-                        <div className="flex flex-col gap-4">
-                            <Field className="gap-1.5">
-                                <FieldLabel htmlFor="email" className="text-sm text-muted-foreground font-normal">
-                                    Email
-                                </FieldLabel>
-                                <Input
-                                    id="email"
-                                    type="email"
-                                    name="email"
-                                    placeholder="aurastackjs@gmail.com"
-                                    required
-                                    className="dark:bg-background h-9 shadow-xs"
-                                />
-                            </Field>
-                            <Field className="gap-1.5">
-                                <div className="flex items-center">
-                                    <FieldLabel className="text-sm text-muted-foreground font-normal" htmlFor="password">
-                                        Password
-                                    </FieldLabel>
-                                    <Link to="#" className="ml-auto text-sm underline-offset-2 hover:underline">
-                                        Forgot your password?
-                                    </Link>
-                                </div>
-                                <Input
-                                    id="password"
-                                    type="password"
-                                    name="password"
-                                    placeholder="••••••••"
-                                    required
-                                    className="dark:bg-background h-9 shadow-xs"
-                                />
-                            </Field>
-                        </div>
-                        <Field>
-                            <Button
-                                type="submit"
-                                size="lg"
-                                className="rounded-lg h-10 hover:bg-primary/80 cursor-pointer"
-                                disabled={isPending}
-                            >
-                                Sign in
-                            </Button>
-                        </Field>
-                        <FieldSeparator className="*:data-[slot=field-separator-content]:bg-card text-sm text-muted-foreground bg-transparent">
-                            <span className="px-4">or continue with</span>
-                        </FieldSeparator>
-                        <Field className="space-y-2">
+                        <Field className="grid md:grid-cols-2 md:gap-6 gap-3">
                             <Button
                                 variant="outline"
                                 type="button"
@@ -103,7 +55,8 @@ export const SignIn = () => {
                                 onClick={onGitHubSignIn}
                             >
                                 <GitHubIcon />
-                                Sign in with GitHub
+                                <span className="@sm:hidden">GitHub</span>
+                                <span className="hidden @sm:block">Sign in with GitHub</span>
                             </Button>
                             <Button
                                 variant="outline"
@@ -113,12 +66,72 @@ export const SignIn = () => {
                                 onClick={onGitLabSignIn}
                             >
                                 <GitLabIcon />
-                                Sign in with GitLab
+                                <span className="@sm:hidden">GitLab</span>
+                                <span className="hidden @sm:block">Sign in with GitLab</span>
+                            </Button>
+                        </Field>
+                        <FieldSeparator className="*:data-[slot=field-separator-content]:bg-card text-sm text-muted-foreground bg-transparent">
+                            <span className="px-4">or continue with</span>
+                        </FieldSeparator>
+                        <div className="flex flex-col gap-4">
+                            <Field className="gap-1.5">
+                                <FieldLabel htmlFor="name" className="text-sm">
+                                    Name
+                                </FieldLabel>
+                                <Input
+                                    id="name"
+                                    type="text"
+                                    name="name"
+                                    required
+                                    autoComplete="name"
+                                    placeholder="John Doe"
+                                    aria-label="Name"
+                                    className="dark:bg-background h-9 shadow-xs"
+                                />
+                            </Field>
+                            <Field className="gap-1.5">
+                                <FieldLabel htmlFor="email" className="text-sm">
+                                    Email
+                                </FieldLabel>
+                                <Input
+                                    id="email"
+                                    type="email"
+                                    name="email"
+                                    required
+                                    autoComplete="email"
+                                    placeholder="name@example.com"
+                                    aria-label="Email"
+                                    className="dark:bg-background h-9 shadow-xs"
+                                />
+                            </Field>
+                            <Field className="gap-1.5">
+                                <FieldLabel className="text-sm" htmlFor="password">
+                                    Password
+                                </FieldLabel>
+                                <Input
+                                    id="password"
+                                    type="password"
+                                    name="password"
+                                    required
+                                    autoComplete="new-password"
+                                    aria-label="Password"
+                                    className="dark:bg-background h-9 shadow-xs"
+                                />
+                            </Field>
+                        </div>
+                        <Field className="gap-4">
+                            <Button
+                                type="submit"
+                                size="lg"
+                                className="rounded-lg h-10 hover:bg-primary/80 cursor-pointer"
+                                disabled={isPending}
+                            >
+                                Create account
                             </Button>
                             <FieldDescription className="mb-0 text-center text-sm font-normal text-muted-foreground">
-                                Don&apos;t have an account?{" "}
+                                Already have an account?{" "}
                                 <Link to="#" className="font-medium text-card-foreground">
-                                    Sign Up
+                                    Sign In
                                 </Link>
                             </FieldDescription>
                         </Field>
@@ -129,4 +142,4 @@ export const SignIn = () => {
     )
 }
 
-export default SignIn
+export default SignUp

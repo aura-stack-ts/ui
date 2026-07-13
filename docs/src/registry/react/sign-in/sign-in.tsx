@@ -1,7 +1,7 @@
 import { useAuthActions } from "@aura-stack/react/hooks"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import { Field, FieldGroup, FieldLabel, FieldSeparator } from "@/components/ui/field"
+import { Field, FieldDescription, FieldGroup, FieldLabel, FieldSeparator } from "@/components/ui/field"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { GitHubIcon } from "@/components/icons/github"
 import { GitLabIcon } from "@/components/icons/gitlab"
@@ -115,6 +115,12 @@ export const SignIn = () => {
                             >
                                 Sign in
                             </Button>
+                            <FieldDescription className="mb-0 text-center text-sm font-normal text-muted-foreground">
+                                Don&apos;t have an account?{" "}
+                                <a href="#" className="font-medium text-card-foreground">
+                                    Sign Up
+                                </a>
+                            </FieldDescription>
                         </Field>
                     </FieldGroup>
                 </form>
