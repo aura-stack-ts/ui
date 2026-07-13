@@ -1,0 +1,16 @@
+---
+title: Introduction
+description: Aura UI components for Next.js, with App Router-aware server utilities built in.
+---
+
+The Next.js package builds on the same blocks as [React](/docs/react), with one difference: it's wired for the App Router. `SignIn` and `SignUp` call `useSignIn`/`useSignUp` from `@aura-stack/next` on the client, and `redirectTo` resolves through `next/navigation` — no extra routing glue required.
+
+`@aura-stack/next` also re-exports Aura Auth's API functions (`getSession`, `signIn`, `signOut`) for use in Server Components, Route Handlers, and middleware, so a page can read the session server-side and a block can read it client-side without duplicating config.
+
+## What you get
+
+- `SignIn` and `SignUp` blocks in several layout variants.
+- An `auth.ts` / `auth-client.ts` pair scaffolded for the App Router.
+- Server-side session helpers for gating pages and API routes.
+- The shared [icon set](/docs/icons) for OAuth provider buttons.
+  Start with [Config](/docs/next/config), then add your first block from [Sign In](/docs/next/sign-in).

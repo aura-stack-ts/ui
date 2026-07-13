@@ -30,7 +30,7 @@ export const SignUp = () => {
     }
 
     return (
-        <Card className="max-w-lg px-6 py-8 sm:p-8 relative gap-6">
+        <Card className="w-full max-w-lg px-6 py-8 sm:p-8 relative gap-6">
             <CardHeader className="text-center gap-6 p-0">
                 <div className="flex flex-col gap-1">
                     <CardTitle className="text-2xl font-medium text-card-foreground">Welcome to Aura Stack</CardTitle>

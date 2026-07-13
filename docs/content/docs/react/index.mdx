@@ -1,0 +1,15 @@
+---
+title: Introduction
+description: Aura UI components for plain React applications (Vite, CRA, or any bundler-based setup).
+---
+
+The React package is Aura UI's baseline: framework-agnostic components built on `@aura-stack/react`, for any React app that isn't running inside Next.js or React Router's own data APIs — typically a Vite project, but anything with a plain client-side router works.
+
+If you're on Next.js or React Router, use their dedicated packages instead ([Next.js](/docs/next), [React Router](/docs/react-router)) — they wrap the same components with framework-specific routing and server integration (redirects, middleware, server-side session reads) that the plain React package doesn't attempt.
+
+## What you get
+
+- `SignIn` and `SignUp` blocks in several layout variants, each a copy-paste starting point rather than a fixed component.
+- An `auth.ts` / `auth-client.ts` pair scaffolded by the CLI, wiring `createAuth` and `createAuthClient` from `@aura-stack/react`.
+- The shared [icon set](/docs/icons) for OAuth provider buttons.
+  Start with [Config](/docs/react/config) to set up your auth client, then add your first block from [Sign In](/docs/react/sign-in).

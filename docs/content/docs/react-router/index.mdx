@@ -1,0 +1,16 @@
+---
+title: Introduction
+description: Aura UI components for React Router, with loader- and action-aware helpers built in.
+---
+
+The React Router package builds on the same blocks as [React](/docs/react), wired for React Router's data APIs. `SignIn` and `SignUp` call `useSignIn`/`useSignUp` from `@aura-stack/react-router`, and `redirectTo` resolves through `useNavigate` — no extra routing glue required.
+
+`@aura-stack/react-router` also exposes session helpers for use inside loaders and actions, so a route can require authentication before it ever renders, and a block can read the session on the client without duplicating config.
+
+## What you get
+
+- `SignIn` and `SignUp` blocks in several layout variants.
+- An `auth.ts` / `auth-client.ts` pair scaffolded for React Router.
+- Loader/action-friendly session helpers for protecting routes.
+- The shared [icon set](/docs/icons) for OAuth provider buttons.
+  Start with [Config](/docs/react-router/config), then add your first block from [Sign In](/docs/react-router/sign-in).

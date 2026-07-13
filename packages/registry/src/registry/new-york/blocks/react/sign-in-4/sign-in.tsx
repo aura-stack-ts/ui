@@ -23,7 +23,7 @@ export const SignIn = () => {
     }
 
     return (
-        <form className="mx-auto px-6 max-w-md" onSubmit={onSubmit}>
+        <form className="w-full mx-auto px-6 max-w-md" onSubmit={onSubmit}>
             <FieldGroup className="gap-6">
                 <div className="flex flex-col gap-1 text-center">
                     <h1 className="text-2xl font-medium text-card-foreground">Welcome to Aura Stack</h1>

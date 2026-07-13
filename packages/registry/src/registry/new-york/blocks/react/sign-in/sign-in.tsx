@@ -34,7 +34,7 @@ export const SignIn = () => {
     }
 
     return (
-        <Card className="max-w-lg px-6 py-8 sm:p-12 relative gap-6">
+        <Card className="w-full max-w-lg px-6 py-8 sm:p-12 relative gap-6">
             <CardHeader className="text-center gap-6 p-0">
                 <div className="flex flex-col gap-1">
                     <CardTitle className="text-2xl font-medium text-card-foreground">Welcome to Aura Stack</CardTitle>
@@ -43,7 +43,7 @@ export const SignIn = () => {
                     </CardDescription>
                 </div>
             </CardHeader>
-            <CardContent className="p-0">
+            <CardContent className="@container p-0">
                 <form onSubmit={onSubmit}>
                     <FieldGroup className="gap-6">
                         <Field className="grid md:grid-cols-2 md:gap-6 gap-3">
@@ -56,6 +56,8 @@ export const SignIn = () => {
                             >
                                 <GitHubIcon />
                                 Sign in with GitHub
+                                <span className="@sm:hidden">GitHub</span>
+                                <span className="hidden @sm:block">Sign in with GitHub</span>
                             </Button>
                             <Button
                                 variant="outline"
@@ -65,7 +67,8 @@ export const SignIn = () => {
                                 onClick={onGitLabSignIn}
                             >
                                 <GitLabIcon />
-                                Sign in with GitLab
+                                <span className="@sm:hidden">GitLab</span>
+                                <span className="hidden @sm:block">Sign in with GitLab</span>
                             </Button>
                         </Field>
                         <FieldSeparator className="*:data-[slot=field-separator-content]:bg-card text-sm text-muted-foreground bg-transparent">
