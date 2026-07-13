@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "react-router-setup",
+  "dependencies": ["@aura-stack/react-router"],
+  "files": [
+    {
+      "path": "src/lib/react-router/auth.ts",
+      "content": "import { createAuth } from \"@aura-stack/react-router\"\n\nexport const auth = createAuth({\n    oauth: [],\n    basePath: \"/api/auth\",\n    baseURL: \"http://localhost:5173\",\n})\n\nexport const { api, handlers } = auth\n",
+      "type": "registry:lib"
+    },
+    {
+      "path": "src/lib/react-router/auth-client.ts",
+      "content": "import { createAuthClient } from \"@aura-stack/react-router/client\"\n\nexport const authClient = createAuthClient({\n    basePath: \"/api/auth\",\n    baseURL: \"http://localhost:5173\",\n})\n",
+      "type": "registry:lib"
+    }
+  ],
+  "type": "registry:lib"
+}

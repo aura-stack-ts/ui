@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "strava",
+  "files": [
+    {
+      "path": "src/components/icons/strava.tsx",
+      "content": "import { forwardRef, type ComponentProps } from \"react\"\n\nexport interface StravaIconProps extends Omit<ComponentProps<\"svg\">, \"width\" | \"height\"> {\n    size?: number | string\n}\n\nexport const StravaIcon = forwardRef<SVGSVGElement, StravaIconProps>(({ size = 24, className, style, ...props }, ref) => {\n    return (\n        <svg\n            ref={ref}\n            xmlns=\"http://www.w3.org/2000/svg\"\n            viewBox=\"0 0 24 24\"\n            width={size}\n            height={size}\n            fill=\"none\"\n            aria-hidden=\"true\"\n            focusable=\"false\"\n            className={className}\n            style={{\n                display: \"inline-block\",\n                verticalAlign: \"middle\",\n                flexShrink: 0,\n                ...style,\n            }}\n            {...props}\n        >\n            <path\n                fill=\"currentColor\"\n                d=\"M6.731 0L2 9.125h2.788L6.73 5.497l1.93 3.628h2.766zm4.694 9.125l-1.372 2.756L8.66 9.125H6.547L10.053 16l3.484-6.875z\"\n            />\n        </svg>\n    )\n})\n\nStravaIcon.displayName = \"StravaIcon\"\n\nexport default StravaIcon\n",
+      "type": "registry:ui",
+      "target": "@components/icons/strava.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pinterest",
+  "files": [
+    {
+      "path": "src/components/icons/pinterest.tsx",
+      "content": "import { forwardRef, type ComponentProps } from \"react\"\n\nexport interface PinterestIconProps extends Omit<ComponentProps<\"svg\">, \"width\" | \"height\"> {\n    size?: number | string\n}\n\nexport const PinterestIcon = forwardRef<SVGSVGElement, PinterestIconProps>(({ size = 24, className, ...props }, ref) => {\n    return (\n        <svg\n            ref={ref}\n            xmlns=\"http://www.w3.org/2000/svg\"\n            viewBox=\"0 0 24 24\"\n            width={size}\n            height={size}\n            className={className}\n            fill=\"none\"\n            stroke=\"currentColor\"\n            strokeWidth={2}\n            strokeLinecap=\"round\"\n            strokeLinejoin=\"round\"\n            {...props}\n        >\n            <path d=\"M8 14.5c-3-4.5 1.462-8 4.5-8S18 8.154 18 12c0 3.038-2 5-4 5s-3-2-2.5-5m.5-2L9 21.5\" />\n            <path d=\"M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12s4.477 10 10 10\" />\n        </svg>\n    )\n})\n\nPinterestIcon.displayName = \"PinterestIcon\"\n\nexport default PinterestIcon\n",
+      "type": "registry:ui",
+      "target": "@components/icons/pinterest.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}
