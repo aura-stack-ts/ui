@@ -20,9 +20,10 @@ export const ComponentPreview = ({
     isBgSolid = false,
     minHeight,
     name,
+    registry,
     ...props
 }: ComponentPreviewProps) => {
-    const Component = props.registry?.[name] || defaultRegistry[name]
+    const Component = registry?.[name] || defaultRegistry[name]
 
     if (!Component) {
         return (

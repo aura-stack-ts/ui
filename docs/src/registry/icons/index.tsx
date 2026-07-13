@@ -36,12 +36,9 @@ export const Icons = () => {
     return (
         <figure className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
             {Object.values(icons).map((Icon, index) => (
-                <figcaption
-                    className="flex items-center justify-center aspect-square border border-border rounded-md"
-                    key={index}
-                >
+                <div className="flex items-center justify-center aspect-square border border-border rounded-md" key={index}>
                     <Icon key={index} />
-                </figcaption>
+                </div>
             ))}
         </figure>
     )

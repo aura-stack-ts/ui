@@ -21,16 +21,15 @@ const authClient = createAuthClient({
     basePath: "/api/auth",
 })
 
-export function BlockPreview({ name, description, installCommand, lang = "tsx" }: BlockPreviewProps) {
-    const entry = registry[name]
+let activeInstances = 0
+let savedFetch: typeof window.fetch | undefined
 
-    if (!entry) {
-        throw new Error(`BlockPreview: no block named "${name}" in the registry.`)
-    }
-    const Component = entry
-
+export const BlockPreview = ({ name, description, installCommand, lang = "tsx" }: BlockPreviewProps) => {
     useEffect(() => {
-        const originalFetch = window.fetch
+        if (activeInstances === 0) {
+            savedFetch = window.fetch
+        }
+        activeInstances++
 
         window.fetch = async (input, init) => {
             const url = typeof input === "string" ? input : input instanceof URL ? input.href : input.url
@@ -41,13 +40,23 @@ export function BlockPreview({ name, description, installCommand, lang = "tsx" }
                     headers: { "Content-Type": "application/json" },
                 })
             }
-            return originalFetch(input, init)
+            return savedFetch!(input, init)
         }
 
         return () => {
-            window.fetch = originalFetch
+            activeInstances--
+            if (activeInstances === 0 && savedFetch) {
+                window.fetch = savedFetch
+                savedFetch = undefined
+            }
         }
     }, [])
+
+    const entry = registry[name]
+    if (!entry) {
+        throw new Error(`BlockPreview: no block named "${name}" in the registry.`)
+    }
+    const Component = entry
 
     return (
         <BlockPreviewClient
