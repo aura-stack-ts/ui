@@ -7,15 +7,15 @@ import {
 } from "@/registry/next/pages-router/sign-in/index"
 import { SignUpNextApp1, SignUpNextApp2, SignUpNextApp3 } from "@/registry/next/app-router/sign-up/index"
 import { SignUpNextPages1, SignUpNextPages2, SignUpNextPages3 } from "@/registry/next/pages-router/sign-up/index"
-import { ReactSignIn1, ReactSignIn2, ReactSignIn3, ReactSignIn4 } from "@/registry/react/sign-in/index"
-import { ReactSignUp1, ReactSignUp2, ReactSignUp3 } from "@/registry/react/sign-up/index"
+import { SignInReact1, SignInReact2, SignInReact3, SignInReact4 } from "@/registry/react/sign-in/index"
+import { SignUpReact1, SignUpReact2, SignUpReact3 } from "@/registry/react/sign-up/index"
 import {
-    ReactRouterSignIn1,
-    ReactRouterSignIn2,
-    ReactRouterSignIn3,
-    ReactRouterSignIn4,
+    SignInReactRouter1,
+    SignInReactRouter2,
+    SignInReactRouter3,
+    SignInReactRouter4,
 } from "@/registry/react-router/sign-in/index"
-import { ReactRouterSignUp1, ReactRouterSignUp2 } from "@/registry/react-router/sign-up/index"
+import { SignUpReactRouter1, SignUpReactRouter2, SignUpReactRouter3 } from "@/registry/react-router/sign-up/index"
 
 export const registry: Record<string, React.ComponentType> = {
     "sign-in-next-app": SignInNextApp1,
@@ -32,17 +32,18 @@ export const registry: Record<string, React.ComponentType> = {
     "sign-up-next-pages": SignUpNextPages1,
     "sign-up-2-next-pages": SignUpNextPages2,
     "sign-up-3-next-pages": SignUpNextPages3,
-    "sign-in-react": ReactSignIn1,
-    "sign-in-2-react": ReactSignIn2,
-    "sign-in-3-react": ReactSignIn3,
-    "sign-in-4-react": ReactSignIn4,
-    "sign-up-react": ReactSignUp1,
-    "sign-up-2-react": ReactSignUp2,
-    "sign-up-3-react": ReactSignUp3,
-    "sign-in-react-router": ReactRouterSignIn1,
-    "sign-in-2-react-router": ReactRouterSignIn2,
-    "sign-in-3-react-router": ReactRouterSignIn3,
-    "sign-in-4-react-router": ReactRouterSignIn4,
-    "sign-up-react-router": ReactRouterSignUp1,
-    "sign-up-2-react-router": ReactRouterSignUp2,
+    "sign-in-react": SignInReact1,
+    "sign-in-2-react": SignInReact2,
+    "sign-in-3-react": SignInReact3,
+    "sign-in-4-react": SignInReact4,
+    "sign-up-react": SignUpReact1,
+    "sign-up-2-react": SignUpReact2,
+    "sign-up-3-react": SignUpReact3,
+    "sign-in-react-router": SignInReactRouter1,
+    "sign-in-2-react-router": SignInReactRouter2,
+    "sign-in-3-react-router": SignInReactRouter3,
+    "sign-in-4-react-router": SignInReactRouter4,
+    "sign-up-react-router": SignUpReactRouter1,
+    "sign-up-2-react-router": SignUpReactRouter2,
+    "sign-up-3-react-router": SignUpReactRouter3,
 }
