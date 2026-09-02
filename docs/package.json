@@ -10,9 +10,9 @@
     "postinstall": "fumadocs-mdx"
   },
   "dependencies": {
-    "@aura-stack/next": "^0.2.2",
-    "@aura-stack/react": "^0.2.2",
-    "@aura-stack/react-router": "^0.2.2",
+    "@aura-stack/next": "catalog:",
+    "@aura-stack/react": "catalog:",
+    "@aura-stack/react-router": "catalog:",
     "@base-ui/react": "^1.6.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",

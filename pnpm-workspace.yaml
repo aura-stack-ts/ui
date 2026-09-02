@@ -5,3 +5,12 @@ packages:
 ignoredBuiltDependencies:
   - sharp
   - unrs-resolver
+
+catalog:
+  "@aura-stack/auth": ^0.9.2
+  "@aura-stack/elysia": ^0.3.2
+  "@aura-stack/express": ^0.3.2
+  "@aura-stack/hono": ^0.3.2
+  "@aura-stack/next": ^0.3.2
+  "@aura-stack/react": ^0.3.2
+  "@aura-stack/react-router": ^0.3.2
