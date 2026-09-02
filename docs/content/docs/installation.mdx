@@ -1,0 +1,304 @@
+---
+title: Installation
+description: How to install Aura UI in your TypeScript application.
+---
+
+> Aura UI follows the same installation workflow as [shadcn/ui](https://ui.shadcn.com/docs/installation). Components are copied into your project, allowing you to fully customize them.
+
+<Steps>
+
+<Step>
+
+## Initialize your project
+
+Initialize shadcn/ui if you haven't already. Aura UI uses the same registry and installation workflow.
+
+```npm
+npx shadcn@latest init
+```
+
+Refer to the shadcn/ui documentation if you need help configuring your project for your framework.
+
+</Step>
+
+<Step>
+
+## Add a component
+
+Install any Aura UI component directly from the registry.
+
+```npm
+npx shadcn@latest add https://aura-stack-ui.vercel.app/r/sign-in-react.json
+```
+
+This command downloads the component source code and places it inside your project, allowing you to modify it as needed.
+
+</Step>
+
+<Step>
+
+## Use the component
+
+Import the component into your application and render it like any other React component.
+
+```tsx title="login/page.tsx" lineNumbers
+import { SignIn } from "@/components/sign-in-react"
+
+export function LoginPage() {
+  return <SignIn />
+}
+```
+
+</Step>
+
+<Step>
+
+## Create Auth Instance
+
+<Tabs items={["react", "react-router", "next-app", "next-pages"]}>
+
+<Tab value="react">
+
+<Tabs items={["CLI", "Manual"]}>
+
+<Tab value="CLI">
+
+```npm
+npx shadcn add https://aura-stack-ui.vercel.app/r/react-setup.json
+```
+
+</Tab>
+
+<Tab value="Manual">
+
+<Steps>
+
+<Step>
+
+### Create the auth configuration file
+
+```ts title="src/lib/auth.ts" lineNumbers
+import { createAuth } from "@aura-stack/react/server"
+
+export const auth = createAuth({
+  // Add your authentication configuration here
+})
+```
+
+</Step>
+
+<Step>
+
+### Create the auth client file
+
+```ts title="src/lib/auth-client.ts" lineNumbers
+import { createAuthClient } from "@aura-stack/react"
+
+export const authClient = createAuthClient({
+  // Add your authentication client configuration here
+})
+```
+
+</Step>
+
+</Steps>
+
+</Tab>
+
+</Tabs>
+
+</Tab>
+
+<Tab value="react-router">
+
+<Tabs items={["CLI", "Manual"]}>
+
+<Tab value="CLI">
+
+```npm
+npx shadcn add https://aura-stack-ui.vercel.app/r/react-router-setup.json
+```
+
+</Tab>
+
+<Tab value="Manual">
+
+<Steps>
+
+<Step>
+
+### Create the auth configuration file
+
+```ts title="app/lib/auth.ts" lineNumbers
+import { createAuth } from "@aura-stack/react-router"
+
+export const auth = createAuth({
+  // Add your authentication configuration here
+})
+```
+
+</Step>
+
+<Step>
+
+### Create the auth client file
+
+```ts title="app/lib/auth-client.ts" lineNumbers
+import { createAuthClient } from "@aura-stack/react-router/client"
+
+export const authClient = createAuthClient({
+  // Add your authentication client configuration here
+})
+```
+
+</Step>
+
+</Steps>
+
+</Tab>
+
+</Tabs>
+
+</Tab>
+
+<Tab value="next-app">
+
+<Tabs items={["CLI", "Manual"]}>
+
+<Tab value="CLI">
+
+```npm
+npx shadcn add https://aura-stack-ui.vercel.app/r/next-app-setup.json
+```
+
+</Tab>
+
+<Tab value="Manual">
+
+<Steps>
+
+<Step>
+
+### Create the auth configuration file
+
+```ts title="lib/auth.ts" lineNumbers
+import { createAuth } from "@aura-stack/next"
+
+export const auth = createAuth({
+  // Add your authentication configuration here
+})
+```
+
+</Step>
+
+<Step>
+
+### Create the auth client file
+
+```ts title="lib/auth-client.ts" lineNumbers
+import { createAuthClient } from "@aura-stack/next/client"
+
+export const authClient = createAuthClient({
+  // Add your authentication client configuration here
+})
+```
+
+</Step>
+
+</Steps>
+
+</Tab>
+
+</Tabs>
+
+</Tab>
+
+<Tab value="next-pages">
+
+<Tabs items={["CLI", "Manual"]}>
+
+<Tab value="CLI">
+
+```npm
+npx shadcn add https://aura-stack-ui.vercel.app/r/next-app-setup.json
+```
+
+</Tab>
+
+<Tab value="Manual">
+
+<Steps>
+
+<Step>
+
+### Create the auth configuration file
+
+```ts title="lib/auth.ts" lineNumbers
+import { createAuth } from "@aura-stack/next/pages"
+
+export const auth = createAuth({
+  // Add your authentication configuration here
+})
+```
+
+</Step>
+
+<Step>
+
+### Create the auth client file
+
+```ts title="lib/auth-client.ts" lineNumbers
+import { createAuthClient } from "@aura-stack/next/pages/client"
+
+export const authClient = createAuthClient({
+  // Add your authentication client configuration here
+})
+```
+
+</Step>
+
+</Steps>
+
+</Tab>
+
+</Tabs>
+
+</Tab>
+
+</Tabs>
+
+### What goes in `createAuth`
+
+The `createAuth` function initializes the Aura Auth instance with configuration options for OAuth providers, session management, cookie handling, and security settings. For more details, read the [Aura Auth documentation](https://aura-stack-auth.vercel.app/docs/quick-start#auth-instance)
+
+### What goes in `createAuthClient`
+
+The `createAuthClient` function initializes the client-side Aura Auth instance that interacts with the server-side auth instance. For more details, read the [Aura Auth documentation](https://aura-stack-auth.vercel.app/docs/quick-start#client-instance)
+
+</Step>
+
+</Steps>
+
+## Framework support
+
+Aura UI provides framework-specific components optimized for each supported Aura Auth integration.
+
+<Cards>
+
+<Card title="Next.js" href="/docs/next">
+  Built for the App Router and Pages Router with client and server integrations.
+</Card>
+
+<Card title="React" href="/docs/react">
+  Authentication components for React applications.
+</Card>
+
+<Card title="React Router" href="/docs/react-router">
+  Components integrated with React Router navigation and routing.
+</Card>
+
+</Cards>
+
+## What's next?
+
+Now that Aura UI is installed, browse the available authentication blocks and add them to your application.

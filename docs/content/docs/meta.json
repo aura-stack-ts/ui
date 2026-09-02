@@ -1,3 +1,17 @@
 {
-  "pages": ["(core)", "react", "next", "react-router"]
+  "title": "Core",
+  "description": "Shared primitives, configs, and icons",
+  "pages": [
+    "---Getting Started---",
+    "index",
+    "installation",
+    "---Components---",
+    "icons",
+    "---Blocks---",
+    "sign-in",
+    "sign-up",
+    "ai-resources",
+    "api-reference"
+  ],
+  "root": true
 }

@@ -14,6 +14,7 @@
     "@aura-stack/react": "catalog:",
     "@aura-stack/react-router": "catalog:",
     "@base-ui/react": "^1.6.0",
+    "@radix-ui/react-select": "^2.3.7",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "fumadocs-core": "16.9.3",

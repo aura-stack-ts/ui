@@ -4,11 +4,19 @@ import { useEffect, useRef, useState, type ReactNode } from "react"
 import { Monitor, Tablet, Smartphone, Minimize2, Terminal, Copy, Check, Expand, RotateCcw } from "lucide-react"
 import { DynamicCodeBlock } from "fumadocs-ui/components/dynamic-codeblock"
 import { Button } from "@/components/ui/button"
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select"
 
 const DEVICES = [
     { id: "desktop", icon: Monitor, widthClass: "w-full" },
     { id: "tablet", icon: Tablet, widthClass: "w-[700px]" },
     { id: "mobile", icon: Smartphone, widthClass: "w-[380px]" },
+] as const
+
+const FRAMEWORKS = [
+    { id: "react", label: "React / Vite", slug: "react" },
+    { id: "next-app", label: "Next.js App Router", slug: "next-app" },
+    { id: "next-pages", label: "Next.js Pages Router", slug: "next-pages" },
+    { id: "react-router", label: "React Router", slug: "react-router" },
 ] as const
 
 type DeviceId = (typeof DEVICES)[number]["id"]
@@ -19,10 +27,20 @@ interface BlockPreviewClientProps {
     installCommand: string
     code: string
     lang: string
+    selectedFramework: string
+    onFrameworkChange: (framework: string) => void
     children: ReactNode
 }
 
-export function BlockPreviewClient({ name, description, installCommand, code, lang, children }: BlockPreviewClientProps) {
+export function BlockPreviewClient({
+    name,
+    description,
+    code,
+    lang,
+    selectedFramework,
+    onFrameworkChange,
+    children,
+}: BlockPreviewClientProps) {
     const [tab, setTab] = useState<"Preview" | "Code">("Preview")
     const [device, setDevice] = useState<DeviceId>("desktop")
     const [copied, setCopied] = useState(false)
@@ -31,6 +49,10 @@ export function BlockPreviewClient({ name, description, installCommand, code, la
     const frameRef = useRef<HTMLDivElement>(null)
 
     const activeDevice = DEVICES.find((d) => d.id === device)!
+    const currentFramework = FRAMEWORKS.find((f) => f.id === selectedFramework) ?? FRAMEWORKS[0]
+
+    const compactCommand = `npx shadcn add ${name}-${currentFramework.slug}`
+    const installCommand = `npx shadcn add https://aura-stack-ui.vercel.app/r/${name}-${currentFramework.slug}.json`
     const label = description ?? name
 
     useEffect(() => {
@@ -138,6 +160,18 @@ export function BlockPreviewClient({ name, description, installCommand, code, la
                             >
                                 <RotateCcw size={14} />
                             </Button>
+                            <Select value={selectedFramework} onValueChange={(val) => onFrameworkChange(val)}>
+                                <SelectTrigger className="h-8 w-40">
+                                    <SelectValue placeholder="Framework" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    {FRAMEWORKS.map((fw) => (
+                                        <SelectItem key={fw.id} value={fw.id}>
+                                            {fw.label}
+                                        </SelectItem>
+                                    ))}
+                                </SelectContent>
+                            </Select>
                             <Button
                                 className="lg:flex hidden gap-x-3 dark:bg-background"
                                 type="button"
@@ -146,7 +180,7 @@ export function BlockPreviewClient({ name, description, installCommand, code, la
                                 onClick={handleCopy}
                             >
                                 <Terminal size={13} className="text-neutral-500" />
-                                <span className="whitespace-nowrap">{installCommand}</span>
+                                <span className="whitespace-nowrap">{compactCommand}</span>
                                 {copied ? (
                                     <Check size={12} className="text-green-400" />
                                 ) : (

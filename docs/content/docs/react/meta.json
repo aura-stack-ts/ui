@@ -1,6 +1,0 @@
-{
-  "title": "React",
-  "description": "React UI components for Aura Stack",
-  "pages": ["index", "config", "---Blocks---", "sign-in", "sign-up"],
-  "root": true
-}
