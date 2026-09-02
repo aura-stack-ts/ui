@@ -1,12 +1,11 @@
-"use client"
-import { Link } from "react-router"
-import { useAuthActions } from "@aura-stack/react-router/client"
+import Link from "next/link"
+import { useAuthActions } from "@aura-stack/next/pages/client"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import { Field, FieldDescription, FieldGroup, FieldLabel, FieldSeparator } from "@/components/ui/field"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { GitHubIcon } from "@/components/icons/github"
 import { GitLabIcon } from "@/components/icons/gitlab"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Field, FieldDescription, FieldGroup, FieldLabel, FieldSeparator } from "@/components/ui/field"
 import type { FormEvent } from "react"
 
 export const SignUp = () => {
@@ -130,7 +129,7 @@ export const SignUp = () => {
                             </Button>
                             <FieldDescription className="mb-0 text-center text-sm font-normal text-muted-foreground">
                                 Already have an account?{" "}
-                                <Link to="#" className="font-medium text-card-foreground">
+                                <Link href="#" className="font-medium text-card-foreground">
                                     Sign In
                                 </Link>
                             </FieldDescription>
