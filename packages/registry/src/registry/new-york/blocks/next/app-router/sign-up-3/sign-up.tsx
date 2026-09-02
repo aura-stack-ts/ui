@@ -4,10 +4,10 @@ import Link from "next/link"
 import { useAuthActions } from "@aura-stack/next/client"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import { Field, FieldDescription, FieldGroup, FieldLabel, FieldSeparator } from "@/components/ui/field"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { GitHubIcon } from "@/components/icons/github"
 import { GitLabIcon } from "@/components/icons/gitlab"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Field, FieldDescription, FieldGroup, FieldLabel, FieldSeparator } from "@/components/ui/field"
 import type { FormEvent } from "react"
 
 export const SignUp = () => {
@@ -21,8 +21,8 @@ export const SignUp = () => {
         const password = formData.get("password") as string
         await signUp({
             payload: {
+                username: name,
                 email,
-                name,
                 password,
             },
         })
@@ -59,7 +59,7 @@ export const SignUp = () => {
                             >
                                 <GitHubIcon />
                                 <span className="@sm:hidden">GitHub</span>
-                                <span className="hidden @sm:block">Sign up with GitHub</span>
+                                <span className="hidden @sm:block">Sign in with GitHub</span>
                             </Button>
                             <Button
                                 variant="outline"
@@ -70,7 +70,7 @@ export const SignUp = () => {
                             >
                                 <GitLabIcon />
                                 <span className="@sm:hidden">GitLab</span>
-                                <span className="hidden @sm:block">Sign up with GitLab</span>
+                                <span className="hidden @sm:block">Sign in with GitLab</span>
                             </Button>
                         </Field>
                         <FieldSeparator className="*:data-[slot=field-separator-content]:bg-card text-sm text-muted-foreground bg-transparent">

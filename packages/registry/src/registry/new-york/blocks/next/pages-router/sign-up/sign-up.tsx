@@ -1,94 +1,58 @@
-"use client"
-
 import Link from "next/link"
-import { useAuthActions } from "@aura-stack/next/client"
+import { useSignUp } from "@aura-stack/next/pages/client"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import { Field, FieldDescription, FieldGroup, FieldLabel, FieldSeparator } from "@/components/ui/field"
+import { Field, FieldDescription, FieldGroup, FieldLabel } from "@/components/ui/field"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { GitHubIcon } from "@/components/icons/github"
-import { GitLabIcon } from "@/components/icons/gitlab"
-import type { FormEvent } from "react"
 
 export const SignUp = () => {
-    const { signIn, signUp, isPending } = useAuthActions()
+    const { signUp, isPending } = useSignUp()
 
-    const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
         const formData = new FormData(event.currentTarget)
-        const name = formData.get("name") as string
+        const username = formData.get("username") as string
         const email = formData.get("email") as string
         const password = formData.get("password") as string
+        const confirmPassword = formData.get("confirmPassword") as string
+
+        if (password !== confirmPassword) {
+            return
+        }
         await signUp({
             payload: {
+                username,
                 email,
-                name,
                 password,
             },
         })
     }
 
-    const onGitLabSignIn = async () => {
-        await signIn("gitlab", { redirect: true })
-    }
-
-    const onGitHubSignIn = async () => {
-        await signIn("github", { redirect: true })
-    }
-
     return (
-        <Card className="w-full max-w-lg px-6 py-8 sm:p-12 relative gap-6">
+        <Card className="w-full max-w-lg px-6 py-8 sm:p-8 relative gap-6">
             <CardHeader className="text-center gap-6 p-0">
                 <div className="flex flex-col gap-1">
                     <CardTitle className="text-2xl font-medium text-card-foreground">Welcome to Aura Stack</CardTitle>
                     <CardDescription className="text-sm text-muted-foreground font-normal">
-                        Enter your credentials below to log in to your account
+                        Fill in the form below to create your account
                     </CardDescription>
                 </div>
             </CardHeader>
-            <CardContent className="@container p-0">
-                <form onSubmit={onSubmit}>
+            <CardContent className="p-0">
+                <form method="POST" onSubmit={onSubmit}>
                     <FieldGroup className="gap-6">
-                        <Field className="grid md:grid-cols-2 md:gap-6 gap-3">
-                            <Button
-                                variant="outline"
-                                type="button"
-                                className="text-sm text-medium text-card-foreground gap-2 dark:bg-background rounded-lg h-9 shadow-xs cursor-pointer"
-                                disabled={isPending}
-                                onClick={onGitHubSignIn}
-                            >
-                                <GitHubIcon />
-                                <span className="@sm:hidden">GitHub</span>
-                                <span className="hidden @sm:block">Sign up with GitHub</span>
-                            </Button>
-                            <Button
-                                variant="outline"
-                                type="button"
-                                className="text-sm text-medium text-card-foreground gap-2 dark:bg-background rounded-lg h-9 shadow-xs cursor-pointer"
-                                disabled={isPending}
-                                onClick={onGitLabSignIn}
-                            >
-                                <GitLabIcon />
-                                <span className="@sm:hidden">GitLab</span>
-                                <span className="hidden @sm:block">Sign up with GitLab</span>
-                            </Button>
-                        </Field>
-                        <FieldSeparator className="*:data-[slot=field-separator-content]:bg-card text-sm text-muted-foreground bg-transparent">
-                            <span className="px-4">or continue with</span>
-                        </FieldSeparator>
                         <div className="flex flex-col gap-4">
                             <Field className="gap-1.5">
-                                <FieldLabel htmlFor="name" className="text-sm">
-                                    Name
+                                <FieldLabel htmlFor="username" className="text-sm">
+                                    Username
                                 </FieldLabel>
                                 <Input
-                                    id="name"
+                                    id="username"
                                     type="text"
-                                    name="name"
+                                    name="username"
                                     required
-                                    autoComplete="name"
-                                    placeholder="John Doe"
-                                    aria-label="Name"
+                                    placeholder="johndoe"
+                                    aria-label="Username"
                                     className="dark:bg-background h-9 shadow-xs"
                                 />
                             </Field>
@@ -101,7 +65,6 @@ export const SignUp = () => {
                                     type="email"
                                     name="email"
                                     required
-                                    autoComplete="email"
                                     placeholder="name@example.com"
                                     aria-label="Email"
                                     className="dark:bg-background h-9 shadow-xs"
@@ -116,8 +79,20 @@ export const SignUp = () => {
                                     type="password"
                                     name="password"
                                     required
-                                    autoComplete="new-password"
                                     aria-label="Password"
+                                    className="dark:bg-background h-9 shadow-xs"
+                                />
+                            </Field>
+                            <Field className="gap-1.5">
+                                <FieldLabel className="text-sm" htmlFor="confirmPassword">
+                                    Confirm Password
+                                </FieldLabel>
+                                <Input
+                                    id="confirmPassword"
+                                    type="password"
+                                    name="confirmPassword"
+                                    required
+                                    aria-label="Confirm Password"
                                     className="dark:bg-background h-9 shadow-xs"
                                 />
                             </Field>
@@ -129,12 +104,16 @@ export const SignUp = () => {
                                 className="rounded-lg h-10 hover:bg-primary/80 cursor-pointer"
                                 disabled={isPending}
                             >
-                                Create account
+                                Create Account
                             </Button>
-                            <FieldDescription className="mb-0 text-center text-sm font-normal text-muted-foreground">
+                            <FieldDescription className="px-6 text-center text-sm leading-snug">
+                                By creating an account, you agree to our <Link href="#">Terms of Service</Link> and{" "}
+                                <Link href="#">Privacy Policy</Link>.
+                            </FieldDescription>
+                            <FieldDescription className="text-center text-sm font-normal text-muted-foreground">
                                 Already have an account?{" "}
                                 <Link href="#" className="font-medium text-card-foreground">
-                                    Sign In
+                                    Sign in
                                 </Link>
                             </FieldDescription>
                         </Field>

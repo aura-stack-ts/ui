@@ -1,15 +1,14 @@
-"use client"
-import { Link } from "react-router"
-import { useAuthActions } from "@aura-stack/react-router/client"
+import Link from "next/link"
+import { useAuthActions } from "@aura-stack/next/pages/client"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import { Field, FieldDescription, FieldGroup, FieldLabel, FieldSeparator } from "@/components/ui/field"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { GitHubIcon } from "@/components/icons/github"
 import { GitLabIcon } from "@/components/icons/gitlab"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Field, FieldDescription, FieldGroup, FieldLabel, FieldSeparator } from "@/components/ui/field"
 import type { FormEvent } from "react"
 
-export const SignUp = () => {
+export const SignIn = () => {
     const { signIn, signInCredentials, isPending } = useAuthActions()
 
     const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
@@ -75,22 +74,7 @@ export const SignUp = () => {
                         </FieldSeparator>
                         <div className="flex flex-col gap-4">
                             <Field className="gap-1.5">
-                                <FieldLabel htmlFor="name" className="text-sm">
-                                    Name
-                                </FieldLabel>
-                                <Input
-                                    id="name"
-                                    type="text"
-                                    name="name"
-                                    required
-                                    autoComplete="name"
-                                    placeholder="John Doe"
-                                    aria-label="Name"
-                                    className="dark:bg-background h-9 shadow-xs"
-                                />
-                            </Field>
-                            <Field className="gap-1.5">
-                                <FieldLabel htmlFor="email" className="text-sm">
+                                <FieldLabel htmlFor="email" className="text-sm text-muted-foreground font-normal">
                                     Email
                                 </FieldLabel>
                                 <Input
@@ -98,22 +82,26 @@ export const SignUp = () => {
                                     type="email"
                                     name="email"
                                     required
-                                    autoComplete="email"
-                                    placeholder="name@example.com"
+                                    placeholder="aurastackjs@gmail.com"
                                     aria-label="Email"
                                     className="dark:bg-background h-9 shadow-xs"
                                 />
                             </Field>
                             <Field className="gap-1.5">
-                                <FieldLabel className="text-sm" htmlFor="password">
-                                    Password
-                                </FieldLabel>
+                                <div className="flex items-center">
+                                    <FieldLabel className="text-sm text-muted-foreground font-normal" htmlFor="password">
+                                        Password
+                                    </FieldLabel>
+                                    <Link href="#" className="ml-auto text-sm underline-offset-2 hover:underline">
+                                        Forgot your password?
+                                    </Link>
+                                </div>
                                 <Input
                                     id="password"
                                     type="password"
                                     name="password"
                                     required
-                                    autoComplete="new-password"
+                                    placeholder="••••••••"
                                     aria-label="Password"
                                     className="dark:bg-background h-9 shadow-xs"
                                 />
@@ -126,12 +114,12 @@ export const SignUp = () => {
                                 className="rounded-lg h-10 hover:bg-primary/80 cursor-pointer"
                                 disabled={isPending}
                             >
-                                Create account
+                                Sign in
                             </Button>
                             <FieldDescription className="mb-0 text-center text-sm font-normal text-muted-foreground">
-                                Already have an account?{" "}
-                                <Link to="#" className="font-medium text-card-foreground">
-                                    Sign In
+                                Don&apos;t have an account?{" "}
+                                <Link href="#" className="font-medium text-card-foreground">
+                                    Sign Up
                                 </Link>
                             </FieldDescription>
                         </Field>
@@ -142,4 +130,4 @@ export const SignUp = () => {
     )
 }
 
-export default SignUp
+export default SignIn

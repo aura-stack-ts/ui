@@ -5,13 +5,35 @@
   "include": ["src/lib/registry.json", "src/components/icons/registry.json"],
   "items": [
     {
-      "name": "sign-in-next",
+      "name": "sign-in-next-app",
       "type": "registry:block",
       "dependencies": ["@aura-stack/next"],
       "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
-          "path": "src/registry/new-york/blocks/next/sign-in/sign-in.tsx",
+          "path": "src/registry/new-york/blocks/next/app-router/sign-in/sign-in.tsx",
+          "type": "registry:block"
+        },
+        {
+          "path": "src/components/icons/github.tsx",
+          "target": "@components/icons/github.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/gitlab.tsx",
+          "target": "@components/icons/gitlab.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sign-in-next-pages",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["input", "button", "card", "field"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/pages-router/sign-in/sign-in.tsx",
           "type": "registry:block"
         },
         {
@@ -71,13 +93,35 @@
       ]
     },
     {
-      "name": "sign-in-2-next",
+      "name": "sign-in-2-next-app",
       "type": "registry:block",
       "dependencies": ["@aura-stack/next"],
       "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
-          "path": "src/registry/new-york/blocks/next/sign-in-2/sign-in.tsx",
+          "path": "src/registry/new-york/blocks/next/app-router/sign-in-2/sign-in.tsx",
+          "type": "registry:block"
+        },
+        {
+          "path": "src/components/icons/github.tsx",
+          "target": "@components/icons/github.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/gitlab.tsx",
+          "target": "@components/icons/gitlab.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sign-in-2-next-pages",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["input", "button", "card", "field"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/pages-router/sign-in-2/sign-in.tsx",
           "type": "registry:block"
         },
         {
@@ -137,13 +181,55 @@
       ]
     },
     {
-      "name": "sign-in-3-next",
+      "name": "sign-in-3-next-app",
       "type": "registry:block",
       "dependencies": ["@aura-stack/next"],
       "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
-          "path": "src/registry/new-york/blocks/next/sign-in-3/sign-in.tsx",
+          "path": "src/registry/new-york/blocks/next/app-router/sign-in-3/sign-in.tsx",
+          "type": "registry:block"
+        },
+        {
+          "path": "src/components/icons/github.tsx",
+          "target": "@components/icons/github.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/gitlab.tsx",
+          "target": "@components/icons/gitlab.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/bitbucket.tsx",
+          "target": "@components/icons/bitbucket.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/atlassian.tsx",
+          "target": "@components/icons/atlassian.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/figma.tsx",
+          "target": "@components/icons/figma.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/notion.tsx",
+          "target": "@components/icons/notion.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sign-in-3-next-pages",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["input", "button", "card", "field"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/pages-router/sign-in-3/sign-in.tsx",
           "type": "registry:block"
         },
         {
@@ -263,13 +349,25 @@
       ]
     },
     {
-      "name": "sign-in-4-next",
+      "name": "sign-in-4-next-app",
       "type": "registry:block",
       "dependencies": ["@aura-stack/next"],
       "registryDependencies": ["input", "button", "field"],
       "files": [
         {
-          "path": "src/registry/new-york/blocks/next/sign-in-4/sign-in.tsx",
+          "path": "src/registry/new-york/blocks/next/app-router/sign-in-4/sign-in.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "sign-in-4-next-pages",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["input", "button", "field"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/pages-router/sign-in-4/sign-in.tsx",
           "type": "registry:block"
         }
       ]
@@ -299,13 +397,25 @@
       ]
     },
     {
-      "name": "sign-up-next",
+      "name": "sign-up-next-app",
       "type": "registry:block",
       "dependencies": ["@aura-stack/next"],
       "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
-          "path": "src/registry/new-york/blocks/next/sign-up/sign-up.tsx",
+          "path": "src/registry/new-york/blocks/next/app-router/sign-up/sign-up.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "sign-up-next-pages",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["input", "button", "card", "field"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/pages-router/sign-up/sign-up.tsx",
           "type": "registry:block"
         }
       ]
@@ -335,13 +445,25 @@
       ]
     },
     {
-      "name": "sign-up-2-next",
+      "name": "sign-up-2-next-app",
       "type": "registry:block",
       "dependencies": ["@aura-stack/next"],
       "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
-          "path": "src/registry/new-york/blocks/next/sign-up-2/sign-up.tsx",
+          "path": "src/registry/new-york/blocks/next/app-router/sign-up-2/sign-up.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "sign-up-2-next-pages",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["input", "button", "card", "field"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/pages-router/sign-up-2/sign-up.tsx",
           "type": "registry:block"
         }
       ]
@@ -371,13 +493,35 @@
       ]
     },
     {
-      "name": "sign-up-3-next",
+      "name": "sign-up-3-next-app",
       "type": "registry:block",
       "dependencies": ["@aura-stack/next"],
       "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
-          "path": "src/registry/new-york/blocks/next/sign-up-3/sign-up.tsx",
+          "path": "src/registry/new-york/blocks/next/app-router/sign-up-3/sign-up.tsx",
+          "type": "registry:block"
+        },
+        {
+          "path": "src/components/icons/github.tsx",
+          "target": "@components/icons/github.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/gitlab.tsx",
+          "target": "@components/icons/gitlab.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sign-up-3-next-pages",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["input", "button", "card", "field"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/pages-router/sign-up-3/sign-up.tsx",
           "type": "registry:block"
         },
         {

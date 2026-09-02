@@ -52,16 +52,31 @@
       ]
     },
     {
-      "name": "next-setup",
+      "name": "next-app-setup",
       "type": "registry:lib",
       "dependencies": ["@aura-stack/next"],
       "files": [
         {
-          "path": "next/auth.ts",
+          "path": "next-app/auth.ts",
           "type": "registry:lib"
         },
         {
-          "path": "next/auth-client.ts",
+          "path": "next-app/auth-client.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "next-pages-setup",
+      "type": "registry:lib",
+      "dependencies": ["@aura-stack/next"],
+      "files": [
+        {
+          "path": "next-pages/auth.ts",
+          "type": "registry:lib"
+        },
+        {
+          "path": "next-pages/auth-client.ts",
           "type": "registry:lib"
         }
       ]
