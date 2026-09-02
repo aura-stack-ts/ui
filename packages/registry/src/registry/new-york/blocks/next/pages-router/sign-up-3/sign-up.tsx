@@ -9,16 +9,18 @@ import { Field, FieldDescription, FieldGroup, FieldLabel, FieldSeparator } from 
 import type { FormEvent } from "react"
 
 export const SignUp = () => {
-    const { signIn, signInCredentials, isPending } = useAuthActions()
+    const { signIn, signUp, isPending } = useAuthActions()
 
     const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault()
         const formData = new FormData(event.currentTarget)
+        const name = formData.get("name") as string
         const email = formData.get("email") as string
         const password = formData.get("password") as string
-        await signInCredentials({
+        await signUp({
             payload: {
-                username: email,
+                username: name,
+                email,
                 password,
             },
         })
