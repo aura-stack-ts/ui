@@ -4,7 +4,8 @@ import { MemoryRouter } from "react-router"
 import { registry } from "@/registry/index"
 import { AuthProvider, createAuthClient } from "@aura-stack/react"
 import { BlockPreviewClient } from "@/components/block-preview-client"
-import { useEffect } from "react"
+import { AuthPreviewInterceptor } from "@/components/preview-interceptor"
+import { useState } from "react"
 
 interface BlockPreviewProps {
     name: string
@@ -21,56 +22,31 @@ const authClient = createAuthClient({
     basePath: "/api/auth",
 })
 
-let activeInstances = 0
-let savedFetch: typeof window.fetch | undefined
-
 export const BlockPreview = ({ name, description, installCommand, lang = "tsx" }: BlockPreviewProps) => {
-    useEffect(() => {
-        if (activeInstances === 0) {
-            savedFetch = window.fetch
-        }
-        activeInstances++
+    const [framework, setFramework] = useState("react")
+    const registryKey = `${name}-${framework}`
+    const Component = registry[registryKey] ?? registry[name]
 
-        window.fetch = async (input, init) => {
-            const url = typeof input === "string" ? input : input instanceof URL ? input.href : input.url
-
-            if (url.includes("/api/auth/")) {
-                return new Response(JSON.stringify({ message: "Blocked by preview" }), {
-                    status: 200,
-                    headers: { "Content-Type": "application/json" },
-                })
-            }
-            return savedFetch!(input, init)
-        }
-
-        return () => {
-            activeInstances--
-            if (activeInstances === 0 && savedFetch) {
-                window.fetch = savedFetch
-                savedFetch = undefined
-            }
-        }
-    }, [])
-
-    const entry = registry[name]
-    if (!entry) {
-        throw new Error(`BlockPreview: no block named "${name}" in the registry.`)
+    if (!Component) {
+        throw new Error(`BlockPreview: Component for "${registryKey}" or "${name}" not found in registry.`)
     }
-    const Component = entry
-
     return (
         <BlockPreviewClient
             name={name}
             description={description}
             installCommand={installCommand ?? `npx shadcn add ${name}`}
             code={`import { source } from "@aura-ui/registry"`}
+            selectedFramework={framework}
+            onFrameworkChange={setFramework}
             lang={lang}
         >
-            <AuthProvider client={authClient}>
-                <MemoryRouter>
-                    <Component />
-                </MemoryRouter>
-            </AuthProvider>
+            <AuthPreviewInterceptor>
+                <AuthProvider client={authClient}>
+                    <MemoryRouter>
+                        <Component />
+                    </MemoryRouter>
+                </AuthProvider>
+            </AuthPreviewInterceptor>
         </BlockPreviewClient>
     )
 }

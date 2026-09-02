@@ -1,6 +1,0 @@
-{
-  "title": "Next.js",
-  "description": "Next.js UI components for Aura Stack",
-  "pages": ["index", "config", "---Blocks---", "sign-in", "sign-up"],
-  "root": true
-}
