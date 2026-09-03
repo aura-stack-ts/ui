@@ -2,3 +2,4 @@ export { Profile as ProfileNextPages1 } from "@/registry/next/pages-router/profi
 export { Profile as ProfileNextPages2 } from "@/registry/next/pages-router/profile/profile-2"
 export { Profile as ProfileNextPages3 } from "@/registry/next/pages-router/profile/profile-3"
 export { Profile as ProfileNextPages4 } from "@/registry/next/pages-router/profile/profile-4"
+export { Profile as ProfileNextPages5 } from "@/registry/next/pages-router/profile/profile-5"

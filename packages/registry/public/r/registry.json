@@ -1118,6 +1118,70 @@
         }
       ],
       "type": "registry:block"
+    },
+    {
+      "name": "profile-5-react",
+      "dependencies": ["@aura-stack/react", "lucide-react"],
+      "registryDependencies": ["input", "button", "textarea", "avatar", "card", "input-group", "select", "field"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/react/profile-4/profile.tsx",
+          "type": "registry:block"
+        },
+        {
+          "path": "src/hooks/use-file-upload.tsx",
+          "type": "registry:hook"
+        }
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "profile-5-next",
+      "dependencies": ["@aura-stack/next", "lucide-react"],
+      "registryDependencies": ["input", "button", "textarea", "avatar", "card", "input-group", "select", "field"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/app-router/profile-5/profile.tsx",
+          "type": "registry:block"
+        },
+        {
+          "path": "src/hooks/use-file-upload.tsx",
+          "type": "registry:hook"
+        }
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "profile-5-next-pages",
+      "dependencies": ["@aura-stack/next", "lucide-react"],
+      "registryDependencies": ["input", "button", "textarea", "avatar", "card", "input-group", "select", "field"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/pages-router/profile-5/profile.tsx",
+          "type": "registry:block"
+        },
+        {
+          "path": "src/hooks/use-file-upload.tsx",
+          "type": "registry:hook"
+        }
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "profile-5-react-router",
+      "dependencies": ["@aura-stack/react-router", "lucide-react"],
+      "registryDependencies": ["input", "button", "textarea", "avatar", "card", "input-group", "select", "field"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/react-router/profile-5/profile.tsx",
+          "type": "registry:block"
+        },
+        {
+          "path": "src/hooks/use-file-upload.tsx",
+          "type": "registry:hook"
+        }
+      ],
+      "type": "registry:block"
     }
   ]
 }
