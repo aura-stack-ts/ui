@@ -1,7 +1,9 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "hono-setup",
-  "dependencies": ["@aura-stack/hono"],
+  "dependencies": [
+    "@aura-stack/hono"
+  ],
   "files": [
     {
       "path": "src/lib/hono/auth.ts",

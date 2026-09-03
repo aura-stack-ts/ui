@@ -1,7 +1,9 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "express-setup",
-  "dependencies": ["@aura-stack/express"],
+  "dependencies": [
+    "@aura-stack/express"
+  ],
   "files": [
     {
       "path": "src/lib/express/auth.ts",
