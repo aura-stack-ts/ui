@@ -4,114 +4,6 @@
   "homepage": "https://github.com/aura-stack-ts/ui",
   "items": [
     {
-      "name": "auth-setup",
-      "dependencies": ["@aura-stack/auth"],
-      "files": [
-        {
-          "path": "src/lib/auth/auth.ts",
-          "type": "registry:lib"
-        },
-        {
-          "path": "src/lib/auth/auth-client.ts",
-          "type": "registry:lib"
-        }
-      ],
-      "type": "registry:lib"
-    },
-    {
-      "name": "elysia-setup",
-      "dependencies": ["@aura-stack/elysia"],
-      "files": [
-        {
-          "path": "src/lib/elysia/auth.ts",
-          "type": "registry:lib"
-        }
-      ],
-      "type": "registry:lib"
-    },
-    {
-      "name": "express-setup",
-      "dependencies": ["@aura-stack/express"],
-      "files": [
-        {
-          "path": "src/lib/express/auth.ts",
-          "type": "registry:lib"
-        }
-      ],
-      "type": "registry:lib"
-    },
-    {
-      "name": "hono-setup",
-      "dependencies": ["@aura-stack/hono"],
-      "files": [
-        {
-          "path": "src/lib/hono/auth.ts",
-          "type": "registry:lib"
-        }
-      ],
-      "type": "registry:lib"
-    },
-    {
-      "name": "next-app-setup",
-      "dependencies": ["@aura-stack/next"],
-      "files": [
-        {
-          "path": "src/lib/next-app/auth.ts",
-          "type": "registry:lib"
-        },
-        {
-          "path": "src/lib/next-app/auth-client.ts",
-          "type": "registry:lib"
-        }
-      ],
-      "type": "registry:lib"
-    },
-    {
-      "name": "next-pages-setup",
-      "dependencies": ["@aura-stack/next"],
-      "files": [
-        {
-          "path": "src/lib/next-pages/auth.ts",
-          "type": "registry:lib"
-        },
-        {
-          "path": "src/lib/next-pages/auth-client.ts",
-          "type": "registry:lib"
-        }
-      ],
-      "type": "registry:lib"
-    },
-    {
-      "name": "react-setup",
-      "dependencies": ["@aura-stack/react"],
-      "files": [
-        {
-          "path": "src/lib/react/auth.ts",
-          "type": "registry:lib"
-        },
-        {
-          "path": "src/lib/react/auth-client.ts",
-          "type": "registry:lib"
-        }
-      ],
-      "type": "registry:lib"
-    },
-    {
-      "name": "react-router-setup",
-      "dependencies": ["@aura-stack/react-router"],
-      "files": [
-        {
-          "path": "src/lib/react-router/auth.ts",
-          "type": "registry:lib"
-        },
-        {
-          "path": "src/lib/react-router/auth-client.ts",
-          "type": "registry:lib"
-        }
-      ],
-      "type": "registry:lib"
-    },
-    {
       "name": "atlassian",
       "files": [
         {
@@ -275,6 +167,125 @@
         }
       ],
       "type": "registry:ui"
+    },
+    {
+      "name": "use-file-upload",
+      "dependencies": ["react"],
+      "files": [
+        {
+          "path": "src/hooks/use-file-upload.tsx",
+          "type": "registry:hook"
+        }
+      ],
+      "type": "registry:hook"
+    },
+    {
+      "name": "auth-setup",
+      "dependencies": ["@aura-stack/auth"],
+      "files": [
+        {
+          "path": "src/lib/auth/auth.ts",
+          "type": "registry:lib"
+        },
+        {
+          "path": "src/lib/auth/auth-client.ts",
+          "type": "registry:lib"
+        }
+      ],
+      "type": "registry:lib"
+    },
+    {
+      "name": "elysia-setup",
+      "dependencies": ["@aura-stack/elysia"],
+      "files": [
+        {
+          "path": "src/lib/elysia/auth.ts",
+          "type": "registry:lib"
+        }
+      ],
+      "type": "registry:lib"
+    },
+    {
+      "name": "express-setup",
+      "dependencies": ["@aura-stack/express"],
+      "files": [
+        {
+          "path": "src/lib/express/auth.ts",
+          "type": "registry:lib"
+        }
+      ],
+      "type": "registry:lib"
+    },
+    {
+      "name": "hono-setup",
+      "dependencies": ["@aura-stack/hono"],
+      "files": [
+        {
+          "path": "src/lib/hono/auth.ts",
+          "type": "registry:lib"
+        }
+      ],
+      "type": "registry:lib"
+    },
+    {
+      "name": "next-app-setup",
+      "dependencies": ["@aura-stack/next"],
+      "files": [
+        {
+          "path": "src/lib/next-app/auth.ts",
+          "type": "registry:lib"
+        },
+        {
+          "path": "src/lib/next-app/auth-client.ts",
+          "type": "registry:lib"
+        }
+      ],
+      "type": "registry:lib"
+    },
+    {
+      "name": "next-pages-setup",
+      "dependencies": ["@aura-stack/next"],
+      "files": [
+        {
+          "path": "src/lib/next-pages/auth.ts",
+          "type": "registry:lib"
+        },
+        {
+          "path": "src/lib/next-pages/auth-client.ts",
+          "type": "registry:lib"
+        }
+      ],
+      "type": "registry:lib"
+    },
+    {
+      "name": "react-setup",
+      "dependencies": ["@aura-stack/react"],
+      "files": [
+        {
+          "path": "src/lib/react/auth.ts",
+          "type": "registry:lib"
+        },
+        {
+          "path": "src/lib/react/auth-client.ts",
+          "type": "registry:lib"
+        }
+      ],
+      "type": "registry:lib"
+    },
+    {
+      "name": "react-router-setup",
+      "dependencies": ["@aura-stack/react-router"],
+      "files": [
+        {
+          "path": "src/lib/react-router/auth.ts",
+          "type": "registry:lib"
+        },
+        {
+          "path": "src/lib/react-router/auth-client.ts",
+          "type": "registry:lib"
+        }
+      ],
+      "type": "registry:lib"
     },
     {
       "name": "sign-in-next-app",
@@ -848,6 +859,70 @@
           "path": "src/components/icons/gitlab.tsx",
           "type": "registry:ui",
           "target": "@components/icons/gitlab.tsx"
+        }
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "profile-react",
+      "dependencies": ["@aura-stack/react", "lucide-react"],
+      "registryDependencies": ["input", "button", "textarea", "avatar", "field"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/react/profile/profile.tsx",
+          "type": "registry:block"
+        },
+        {
+          "path": "src/hooks/use-file-upload.tsx",
+          "type": "registry:hook"
+        }
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "profile-next-app",
+      "dependencies": ["@aura-stack/next", "lucide-react"],
+      "registryDependencies": ["input", "button", "textarea", "avatar", "field"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/app-router/profile/profile.tsx",
+          "type": "registry:block"
+        },
+        {
+          "path": "src/hooks/use-file-upload.tsx",
+          "type": "registry:hook"
+        }
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "profile-next-pages",
+      "dependencies": ["@aura-stack/next", "lucide-react"],
+      "registryDependencies": ["input", "button", "textarea", "avatar", "field"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/pages-router/profile/profile.tsx",
+          "type": "registry:block"
+        },
+        {
+          "path": "src/hooks/use-file-upload.tsx",
+          "type": "registry:hook"
+        }
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "profile-react-router",
+      "dependencies": ["@aura-stack/react-router", "lucide-react"],
+      "registryDependencies": ["input", "button", "textarea", "avatar", "field"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/react-router/profile/profile.tsx",
+          "type": "registry:block"
+        },
+        {
+          "path": "src/hooks/use-file-upload.tsx",
+          "type": "registry:hook"
         }
       ],
       "type": "registry:block"

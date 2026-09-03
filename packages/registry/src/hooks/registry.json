@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "ui",
+  "homepage": "https://github.com/aura-stack-ts/ui",
+  "items": [
+    {
+      "name": "use-file-upload",
+      "type": "registry:hook",
+      "dependencies": ["react"],
+      "files": [
+        {
+          "path": "use-file-upload.tsx",
+          "type": "registry:hook"
+        }
+      ]
+    }
+  ]
+}
