@@ -584,7 +584,7 @@
       "name": "profile-react",
       "type": "registry:block",
       "dependencies": ["@aura-stack/react", "lucide-react"],
-      "registryDependencies": ["input", "button", "textarea", "avatar", "field"],
+      "registryDependencies": ["input", "button", "textarea", "avatar", "separator", "field", "card"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/react/profile/profile.tsx",
@@ -600,7 +600,7 @@
       "name": "profile-next-app",
       "type": "registry:block",
       "dependencies": ["@aura-stack/next", "lucide-react"],
-      "registryDependencies": ["input", "button", "textarea", "avatar", "field"],
+      "registryDependencies": ["input", "button", "textarea", "avatar", "separator", "field", "card"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/next/app-router/profile/profile.tsx",
@@ -616,7 +616,7 @@
       "name": "profile-next-pages",
       "type": "registry:block",
       "dependencies": ["@aura-stack/next", "lucide-react"],
-      "registryDependencies": ["input", "button", "textarea", "avatar", "field"],
+      "registryDependencies": ["input", "button", "textarea", "avatar", "separator", "field", "card"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/next/pages-router/profile/profile.tsx",
@@ -632,7 +632,7 @@
       "name": "profile-react-router",
       "type": "registry:block",
       "dependencies": ["@aura-stack/react-router", "lucide-react"],
-      "registryDependencies": ["input", "button", "textarea", "avatar", "field"],
+      "registryDependencies": ["input", "button", "textarea", "avatar", "separator", "field", "card"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/react-router/profile/profile.tsx",
