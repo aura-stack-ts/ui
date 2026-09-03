@@ -1,14 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "sign-in-4-react-router",
-  "dependencies": [
-    "@aura-stack/react-router"
-  ],
-  "registryDependencies": [
-    "input",
-    "button",
-    "field"
-  ],
+  "dependencies": ["@aura-stack/react-router"],
+  "registryDependencies": ["input", "button", "field"],
   "files": [
     {
       "path": "src/registry/new-york/blocks/react-router/sign-in-4/sign-in.tsx",
