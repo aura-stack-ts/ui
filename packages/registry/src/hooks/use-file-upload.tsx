@@ -148,7 +148,7 @@ export const useFileUpload = (options: FileUploadOptions = {}): [FileUploadState
     const clearFiles = useCallback(() => {
         setState((prev) => {
             for (const file of prev.files) {
-                if (file.preview && file.file instanceof File && file.file.type.startsWith("image/")) {
+                if (file.preview && file.file instanceof File) {
                     URL.revokeObjectURL(file.preview)
                 }
             }
@@ -196,7 +196,7 @@ export const useFileUpload = (options: FileUploadOptions = {}): [FileUploadState
                     )
 
                     if (isDuplicate) {
-                        return
+                        continue
                     }
                 }
 
