@@ -1,9 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "elysia-setup",
-  "dependencies": [
-    "@aura-stack/elysia"
-  ],
+  "dependencies": ["@aura-stack/elysia"],
   "files": [
     {
       "path": "src/lib/elysia/auth.ts",

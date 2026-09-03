@@ -1,15 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "sign-in-react",
-  "dependencies": [
-    "@aura-stack/react"
-  ],
-  "registryDependencies": [
-    "input",
-    "button",
-    "card",
-    "field"
-  ],
+  "dependencies": ["@aura-stack/react"],
+  "registryDependencies": ["input", "button", "card", "field"],
   "files": [
     {
       "path": "src/registry/new-york/blocks/react/sign-in/sign-in.tsx",
