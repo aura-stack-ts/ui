@@ -9,7 +9,8 @@
     "format:check": "oxfmt --check",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
-    "dev:docs": "pnpm --filter docs dev"
+    "dev:docs": "pnpm --filter docs dev",
+    "build:shadcn": "pnpm --filter registry build:shadcn"
   },
   "repository": {
     "type": "git",
