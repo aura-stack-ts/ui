@@ -16,10 +16,20 @@ import {
     SignInReactRouter4,
 } from "@/registry/react-router/sign-in/index"
 import { SignUpReactRouter1, SignUpReactRouter2, SignUpReactRouter3 } from "@/registry/react-router/sign-up/index"
-import { ProfileReact1, ProfileReact2, ProfileReact3 } from "@/registry/react/profile/index"
-import { ProfileNextApp1, ProfileNextApp2, ProfileNextApp3 } from "@/registry/next/app-router/profile/index"
-import { ProfileNextPages1, ProfileNextPages2, ProfileNextPages3 } from "@/registry/next/pages-router/profile/index"
-import { ProfileReactRouter1, ProfileReactRouter2, ProfileReactRouter3 } from "@/registry/react-router/profile/index"
+import { ProfileReact1, ProfileReact2, ProfileReact3, ProfileReact4 } from "@/registry/react/profile/index"
+import { ProfileNextApp1, ProfileNextApp2, ProfileNextApp3, ProfileNextApp4 } from "@/registry/next/app-router/profile/index"
+import {
+    ProfileNextPages1,
+    ProfileNextPages2,
+    ProfileNextPages3,
+    ProfileNextPages4,
+} from "@/registry/next/pages-router/profile/index"
+import {
+    ProfileReactRouter1,
+    ProfileReactRouter2,
+    ProfileReactRouter3,
+    ProfileReactRouter4,
+} from "@/registry/react-router/profile/index"
 
 export const registry: Record<string, React.ComponentType> = {
     "sign-in-next-app": SignInNextApp1,
@@ -62,4 +72,8 @@ export const registry: Record<string, React.ComponentType> = {
     "profile-3-next-app": ProfileNextApp3,
     "profile-3-next-pages": ProfileNextPages3,
     "profile-3-react-router": ProfileReactRouter3,
+    "profile-4-react": ProfileReact4,
+    "profile-4-next-app": ProfileNextApp4,
+    "profile-4-next-pages": ProfileNextPages4,
+    "profile-4-react-router": ProfileReactRouter4,
 }
