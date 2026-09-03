@@ -10,7 +10,9 @@
     "button",
     "textarea",
     "avatar",
-    "field"
+    "separator",
+    "field",
+    "card"
   ],
   "files": [
     {
