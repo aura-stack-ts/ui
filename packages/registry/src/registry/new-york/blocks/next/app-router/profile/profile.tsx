@@ -49,7 +49,7 @@ export const Profile = () => {
                             </div>
                             <div className="space-x-2">
                                 <div className="relative inline-block">
-                                    <Button onClick={openFileDialog} aria-haspopup="dialog">
+                                    <Button type="button" onClick={openFileDialog} aria-haspopup="dialog">
                                         <Upload />
                                         {previewURL ? "Change" : "Upload"}
                                     </Button>
@@ -64,6 +64,7 @@ export const Profile = () => {
                                 <Button
                                     size="icon"
                                     variant="destructive"
+                                    type="button"
                                     onClick={() => removeFile(files[0]?.id)}
                                     aria-label="Remove avatar"
                                 >
@@ -124,7 +125,9 @@ export const Profile = () => {
                         </Field>
                     </FieldGroup>
                     <div className="space-x-2">
-                        <Button variant="outline">Cancel</Button>
+                        <Button variant="outline" type="button">
+                            Cancel
+                        </Button>
                         <Button type="submit" disabled={isPending}>
                             {isPending ? "Saving..." : "Save Changes"}
                         </Button>
