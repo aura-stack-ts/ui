@@ -16,10 +16,10 @@ import {
     SignInReactRouter4,
 } from "@/registry/react-router/sign-in/index"
 import { SignUpReactRouter1, SignUpReactRouter2, SignUpReactRouter3 } from "@/registry/react-router/sign-up/index"
-import { ProfileReact1 } from "@/registry/react/profile/index"
-import { ProfileNextApp1 } from "@/registry/next/app-router/profile/index"
-import { ProfileNextPages1 } from "@/registry/next/pages-router/profile/index"
-import { ProfileReactRouter1 } from "@/registry/react-router/profile/index"
+import { ProfileReact1, ProfileReact2 } from "@/registry/react/profile/index"
+import { ProfileNextApp1, ProfileNextApp2 } from "@/registry/next/app-router/profile/index"
+import { ProfileNextPages1, ProfileNextPages2 } from "@/registry/next/pages-router/profile/index"
+import { ProfileReactRouter1, ProfileReactRouter2 } from "@/registry/react-router/profile/index"
 
 export const registry: Record<string, React.ComponentType> = {
     "sign-in-next-app": SignInNextApp1,
@@ -54,4 +54,8 @@ export const registry: Record<string, React.ComponentType> = {
     "profile-react-router": ProfileReactRouter1,
     "profile-next-app": ProfileNextApp1,
     "profile-next-pages": ProfileNextPages1,
+    "profile-2-react": ProfileReact2,
+    "profile-2-next-app": ProfileNextApp2,
+    "profile-2-next-pages": ProfileNextPages2,
+    "profile-2-react-router": ProfileReactRouter2,
 }
