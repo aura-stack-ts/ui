@@ -1,8 +1,19 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "profile-next-pages",
-  "dependencies": ["@aura-stack/next", "lucide-react"],
-  "registryDependencies": ["input", "button", "textarea", "avatar", "separator", "field", "card"],
+  "dependencies": [
+    "@aura-stack/next",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "input",
+    "button",
+    "textarea",
+    "avatar",
+    "separator",
+    "field",
+    "card"
+  ],
   "files": [
     {
       "path": "src/registry/new-york/blocks/next/pages-router/profile/profile.tsx",
