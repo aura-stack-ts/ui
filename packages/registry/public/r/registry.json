@@ -170,9 +170,7 @@
     },
     {
       "name": "use-file-upload",
-      "dependencies": [
-        "react"
-      ],
+      "dependencies": ["react"],
       "files": [
         {
           "path": "src/hooks/use-file-upload.tsx",
@@ -183,9 +181,7 @@
     },
     {
       "name": "auth-setup",
-      "dependencies": [
-        "@aura-stack/auth"
-      ],
+      "dependencies": ["@aura-stack/auth"],
       "files": [
         {
           "path": "src/lib/auth/auth.ts",
@@ -200,9 +196,7 @@
     },
     {
       "name": "elysia-setup",
-      "dependencies": [
-        "@aura-stack/elysia"
-      ],
+      "dependencies": ["@aura-stack/elysia"],
       "files": [
         {
           "path": "src/lib/elysia/auth.ts",
@@ -213,9 +207,7 @@
     },
     {
       "name": "express-setup",
-      "dependencies": [
-        "@aura-stack/express"
-      ],
+      "dependencies": ["@aura-stack/express"],
       "files": [
         {
           "path": "src/lib/express/auth.ts",
@@ -226,9 +218,7 @@
     },
     {
       "name": "hono-setup",
-      "dependencies": [
-        "@aura-stack/hono"
-      ],
+      "dependencies": ["@aura-stack/hono"],
       "files": [
         {
           "path": "src/lib/hono/auth.ts",
@@ -239,9 +229,7 @@
     },
     {
       "name": "next-app-setup",
-      "dependencies": [
-        "@aura-stack/next"
-      ],
+      "dependencies": ["@aura-stack/next"],
       "files": [
         {
           "path": "src/lib/next-app/auth.ts",
@@ -256,9 +244,7 @@
     },
     {
       "name": "next-pages-setup",
-      "dependencies": [
-        "@aura-stack/next"
-      ],
+      "dependencies": ["@aura-stack/next"],
       "files": [
         {
           "path": "src/lib/next-pages/auth.ts",
@@ -273,9 +259,7 @@
     },
     {
       "name": "react-setup",
-      "dependencies": [
-        "@aura-stack/react"
-      ],
+      "dependencies": ["@aura-stack/react"],
       "files": [
         {
           "path": "src/lib/react/auth.ts",
@@ -290,9 +274,7 @@
     },
     {
       "name": "react-router-setup",
-      "dependencies": [
-        "@aura-stack/react-router"
-      ],
+      "dependencies": ["@aura-stack/react-router"],
       "files": [
         {
           "path": "src/lib/react-router/auth.ts",
@@ -307,15 +289,8 @@
     },
     {
       "name": "sign-in-next-app",
-      "dependencies": [
-        "@aura-stack/next"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "card",
-        "field"
-      ],
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/next/app-router/sign-in/sign-in.tsx",
@@ -336,15 +311,8 @@
     },
     {
       "name": "sign-in-next-pages",
-      "dependencies": [
-        "@aura-stack/next"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "card",
-        "field"
-      ],
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/next/pages-router/sign-in/sign-in.tsx",
@@ -365,15 +333,8 @@
     },
     {
       "name": "sign-in-react",
-      "dependencies": [
-        "@aura-stack/react"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "card",
-        "field"
-      ],
+      "dependencies": ["@aura-stack/react"],
+      "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/react/sign-in/sign-in.tsx",
@@ -394,15 +355,8 @@
     },
     {
       "name": "sign-in-react-router",
-      "dependencies": [
-        "@aura-stack/react-router"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "card",
-        "field"
-      ],
+      "dependencies": ["@aura-stack/react-router"],
+      "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/react-router/sign-in/sign-in.tsx",
@@ -423,15 +377,8 @@
     },
     {
       "name": "sign-in-2-next-app",
-      "dependencies": [
-        "@aura-stack/next"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "card",
-        "field"
-      ],
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/next/app-router/sign-in-2/sign-in.tsx",
@@ -452,15 +399,8 @@
     },
     {
       "name": "sign-in-2-next-pages",
-      "dependencies": [
-        "@aura-stack/next"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "card",
-        "field"
-      ],
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/next/pages-router/sign-in-2/sign-in.tsx",
@@ -481,15 +421,8 @@
     },
     {
       "name": "sign-in-2-react",
-      "dependencies": [
-        "@aura-stack/react"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "card",
-        "field"
-      ],
+      "dependencies": ["@aura-stack/react"],
+      "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/react/sign-in-2/sign-in.tsx",
@@ -510,15 +443,8 @@
     },
     {
       "name": "sign-in-2-react-router",
-      "dependencies": [
-        "@aura-stack/react-router"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "card",
-        "field"
-      ],
+      "dependencies": ["@aura-stack/react-router"],
+      "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/react-router/sign-in-2/sign-in.tsx",
@@ -539,15 +465,8 @@
     },
     {
       "name": "sign-in-3-next-app",
-      "dependencies": [
-        "@aura-stack/next"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "card",
-        "field"
-      ],
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/next/app-router/sign-in-3/sign-in.tsx",
@@ -588,15 +507,8 @@
     },
     {
       "name": "sign-in-3-next-pages",
-      "dependencies": [
-        "@aura-stack/next"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "card",
-        "field"
-      ],
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/next/pages-router/sign-in-3/sign-in.tsx",
@@ -637,15 +549,8 @@
     },
     {
       "name": "sign-in-3-react",
-      "dependencies": [
-        "@aura-stack/react"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "card",
-        "field"
-      ],
+      "dependencies": ["@aura-stack/react"],
+      "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/react/sign-in-3/sign-in.tsx",
@@ -686,15 +591,8 @@
     },
     {
       "name": "sign-in-3-react-router",
-      "dependencies": [
-        "@aura-stack/react-router"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "card",
-        "field"
-      ],
+      "dependencies": ["@aura-stack/react-router"],
+      "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/react-router/sign-in-3/sign-in.tsx",
@@ -735,14 +633,8 @@
     },
     {
       "name": "sign-in-4-next-app",
-      "dependencies": [
-        "@aura-stack/next"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "field"
-      ],
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["input", "button", "field"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/next/app-router/sign-in-4/sign-in.tsx",
@@ -753,14 +645,8 @@
     },
     {
       "name": "sign-in-4-next-pages",
-      "dependencies": [
-        "@aura-stack/next"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "field"
-      ],
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["input", "button", "field"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/next/pages-router/sign-in-4/sign-in.tsx",
@@ -771,14 +657,8 @@
     },
     {
       "name": "sign-in-4-react",
-      "dependencies": [
-        "@aura-stack/react"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "field"
-      ],
+      "dependencies": ["@aura-stack/react"],
+      "registryDependencies": ["input", "button", "field"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/react/sign-in-4/sign-in.tsx",
@@ -789,14 +669,8 @@
     },
     {
       "name": "sign-in-4-react-router",
-      "dependencies": [
-        "@aura-stack/react-router"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "field"
-      ],
+      "dependencies": ["@aura-stack/react-router"],
+      "registryDependencies": ["input", "button", "field"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/react-router/sign-in-4/sign-in.tsx",
@@ -807,15 +681,8 @@
     },
     {
       "name": "sign-up-next-app",
-      "dependencies": [
-        "@aura-stack/next"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "card",
-        "field"
-      ],
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/next/app-router/sign-up/sign-up.tsx",
@@ -826,15 +693,8 @@
     },
     {
       "name": "sign-up-next-pages",
-      "dependencies": [
-        "@aura-stack/next"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "card",
-        "field"
-      ],
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/next/pages-router/sign-up/sign-up.tsx",
@@ -845,15 +705,8 @@
     },
     {
       "name": "sign-up-react",
-      "dependencies": [
-        "@aura-stack/react"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "card",
-        "field"
-      ],
+      "dependencies": ["@aura-stack/react"],
+      "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/react/sign-up/sign-up.tsx",
@@ -864,15 +717,8 @@
     },
     {
       "name": "sign-up-react-router",
-      "dependencies": [
-        "@aura-stack/react-router"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "card",
-        "field"
-      ],
+      "dependencies": ["@aura-stack/react-router"],
+      "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/react-router/sign-up/sign-up.tsx",
@@ -883,15 +729,8 @@
     },
     {
       "name": "sign-up-2-next-app",
-      "dependencies": [
-        "@aura-stack/next"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "card",
-        "field"
-      ],
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/next/app-router/sign-up-2/sign-up.tsx",
@@ -902,15 +741,8 @@
     },
     {
       "name": "sign-up-2-next-pages",
-      "dependencies": [
-        "@aura-stack/next"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "card",
-        "field"
-      ],
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/next/pages-router/sign-up-2/sign-up.tsx",
@@ -921,15 +753,8 @@
     },
     {
       "name": "sign-up-2-react",
-      "dependencies": [
-        "@aura-stack/react"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "card",
-        "field"
-      ],
+      "dependencies": ["@aura-stack/react"],
+      "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/react/sign-up-2/sign-up.tsx",
@@ -940,15 +765,8 @@
     },
     {
       "name": "sign-up-2-react-router",
-      "dependencies": [
-        "@aura-stack/react-router"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "card",
-        "field"
-      ],
+      "dependencies": ["@aura-stack/react-router"],
+      "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/react-router/sign-up-2/sign-up.tsx",
@@ -959,15 +777,8 @@
     },
     {
       "name": "sign-up-3-next-app",
-      "dependencies": [
-        "@aura-stack/next"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "card",
-        "field"
-      ],
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/next/app-router/sign-up-3/sign-up.tsx",
@@ -988,15 +799,8 @@
     },
     {
       "name": "sign-up-3-next-pages",
-      "dependencies": [
-        "@aura-stack/next"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "card",
-        "field"
-      ],
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/next/pages-router/sign-up-3/sign-up.tsx",
@@ -1017,15 +821,8 @@
     },
     {
       "name": "sign-up-3-react",
-      "dependencies": [
-        "@aura-stack/react"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "card",
-        "field"
-      ],
+      "dependencies": ["@aura-stack/react"],
+      "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/react/sign-up-3/sign-up.tsx",
@@ -1046,15 +843,8 @@
     },
     {
       "name": "sign-up-3-react-router",
-      "dependencies": [
-        "@aura-stack/react-router"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "card",
-        "field"
-      ],
+      "dependencies": ["@aura-stack/react-router"],
+      "registryDependencies": ["input", "button", "card", "field"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/react-router/sign-up-3/sign-up.tsx",
@@ -1075,19 +865,8 @@
     },
     {
       "name": "profile-react",
-      "dependencies": [
-        "@aura-stack/react",
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "textarea",
-        "avatar",
-        "separator",
-        "field",
-        "card"
-      ],
+      "dependencies": ["@aura-stack/react", "lucide-react"],
+      "registryDependencies": ["input", "button", "textarea", "avatar", "separator", "field", "card"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/react/profile/profile.tsx",
@@ -1102,19 +881,8 @@
     },
     {
       "name": "profile-next-app",
-      "dependencies": [
-        "@aura-stack/next",
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "textarea",
-        "avatar",
-        "separator",
-        "field",
-        "card"
-      ],
+      "dependencies": ["@aura-stack/next", "lucide-react"],
+      "registryDependencies": ["input", "button", "textarea", "avatar", "separator", "field", "card"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/next/app-router/profile/profile.tsx",
@@ -1129,19 +897,8 @@
     },
     {
       "name": "profile-next-pages",
-      "dependencies": [
-        "@aura-stack/next",
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "textarea",
-        "avatar",
-        "separator",
-        "field",
-        "card"
-      ],
+      "dependencies": ["@aura-stack/next", "lucide-react"],
+      "registryDependencies": ["input", "button", "textarea", "avatar", "separator", "field", "card"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/next/pages-router/profile/profile.tsx",
@@ -1156,19 +913,8 @@
     },
     {
       "name": "profile-react-router",
-      "dependencies": [
-        "@aura-stack/react-router",
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "textarea",
-        "avatar",
-        "separator",
-        "field",
-        "card"
-      ],
+      "dependencies": ["@aura-stack/react-router", "lucide-react"],
+      "registryDependencies": ["input", "button", "textarea", "avatar", "separator", "field", "card"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/react-router/profile/profile.tsx",
@@ -1183,17 +929,8 @@
     },
     {
       "name": "profile-2-react",
-      "dependencies": [
-        "@aura-stack/react"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "separator",
-        "field",
-        "card",
-        "select"
-      ],
+      "dependencies": ["@aura-stack/react"],
+      "registryDependencies": ["input", "button", "separator", "field", "card", "select"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/react/profile-2/profile.tsx",
@@ -1208,17 +945,8 @@
     },
     {
       "name": "profile-2-next-app",
-      "dependencies": [
-        "@aura-stack/next"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "separator",
-        "field",
-        "card",
-        "select"
-      ],
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["input", "button", "separator", "field", "card", "select"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/next/app-router/profile-2/profile.tsx",
@@ -1233,17 +961,8 @@
     },
     {
       "name": "profile-2-next-pages",
-      "dependencies": [
-        "@aura-stack/next"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "separator",
-        "field",
-        "card",
-        "select"
-      ],
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["input", "button", "separator", "field", "card", "select"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/next/pages-router/profile-2/profile.tsx",
@@ -1258,20 +977,75 @@
     },
     {
       "name": "profile-2-react-router",
-      "dependencies": [
-        "@aura-stack/react-router"
-      ],
-      "registryDependencies": [
-        "input",
-        "button",
-        "separator",
-        "field",
-        "card",
-        "select"
-      ],
+      "dependencies": ["@aura-stack/react-router"],
+      "registryDependencies": ["input", "button", "separator", "field", "card", "select"],
       "files": [
         {
           "path": "src/registry/new-york/blocks/react-router/profile-2/profile.tsx",
+          "type": "registry:block"
+        },
+        {
+          "path": "src/hooks/use-file-upload.tsx",
+          "type": "registry:hook"
+        }
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "profile-3-react",
+      "dependencies": ["@aura-stack/react"],
+      "registryDependencies": ["input", "button", "textarea", "avatar", "field", "card", "select"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/react/profile-3/profile.tsx",
+          "type": "registry:block"
+        },
+        {
+          "path": "src/hooks/use-file-upload.tsx",
+          "type": "registry:hook"
+        }
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "profile-3-next-app",
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["input", "button", "textarea", "avatar", "field", "card", "select"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/app-router/profile-3/profile.tsx",
+          "type": "registry:block"
+        },
+        {
+          "path": "src/hooks/use-file-upload.tsx",
+          "type": "registry:hook"
+        }
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "profile-3-next-pages",
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["input", "button", "textarea", "avatar", "field", "card", "select"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/pages-router/profile-3/profile.tsx",
+          "type": "registry:block"
+        },
+        {
+          "path": "src/hooks/use-file-upload.tsx",
+          "type": "registry:hook"
+        }
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "profile-3-react-router",
+      "dependencies": ["@aura-stack/react-router"],
+      "registryDependencies": ["input", "button", "textarea", "avatar", "field", "card", "select"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/react-router/profile-3/profile.tsx",
           "type": "registry:block"
         },
         {
