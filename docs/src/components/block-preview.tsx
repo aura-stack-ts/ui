@@ -31,22 +31,22 @@ export const BlockPreview = ({ name, description, installCommand, lang = "tsx" }
         throw new Error(`BlockPreview: Component for "${registryKey}" or "${name}" not found in registry.`)
     }
     return (
-        <BlockPreviewClient
-            name={name}
-            description={description}
-            installCommand={installCommand ?? `npx shadcn add ${name}`}
-            code={`import { source } from "@aura-ui/registry"`}
-            selectedFramework={framework}
-            onFrameworkChange={setFramework}
-            lang={lang}
-        >
-            <AuthPreviewInterceptor>
+        <AuthPreviewInterceptor>
+            <BlockPreviewClient
+                name={name}
+                description={description}
+                installCommand={installCommand ?? `npx shadcn add ${name}`}
+                code={`import { source } from "@aura-ui/registry"`}
+                selectedFramework={framework}
+                onFrameworkChange={setFramework}
+                lang={lang}
+            >
                 <AuthProvider client={authClient}>
                     <MemoryRouter>
                         <Component />
                     </MemoryRouter>
                 </AuthProvider>
-            </AuthPreviewInterceptor>
-        </BlockPreviewClient>
+            </BlockPreviewClient>
+        </AuthPreviewInterceptor>
     )
 }
