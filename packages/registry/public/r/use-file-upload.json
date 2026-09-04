@@ -1,9 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "use-file-upload",
-  "dependencies": [
-    "react"
-  ],
+  "dependencies": ["react"],
   "files": [
     {
       "path": "src/hooks/use-file-upload.tsx",

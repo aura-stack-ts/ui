@@ -1,9 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "next-app-setup",
-  "dependencies": [
-    "@aura-stack/next"
-  ],
+  "dependencies": ["@aura-stack/next"],
   "files": [
     {
       "path": "src/lib/next-app/auth.ts",

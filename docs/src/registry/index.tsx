@@ -38,7 +38,7 @@ import {
     ProfileReactRouter4,
     ProfileReactRouter5,
 } from "@/registry/react-router/profile/index"
-import { PreferencesReact1, PreferencesReact2 } from "@/registry/react/preferences/index"
+import { PreferencesReact1, PreferencesReact2, PreferencesReact3 } from "@/registry/react/preferences/index"
 import { PreferencesNextApp1, PreferencesNextApp2 } from "@/registry/next/app-router/preferences/index"
 import { PreferencesNextPages1, PreferencesNextPages2 } from "@/registry/next/pages-router/preferences/index"
 import { PreferencesReactRouter1, PreferencesReactRouter2 } from "@/registry/react-router/preferences/index"
@@ -100,4 +100,8 @@ export const registry: Record<string, React.ComponentType> = {
     "preferences-2-next-app": PreferencesNextApp2,
     "preferences-2-next-pages": PreferencesNextPages2,
     "preferences-2-react-router": PreferencesReactRouter2,
+    "preferences-3-react": PreferencesReact3,
+    "preferences-3-react-router": PreferencesReactRouter2,
+    "preferences-3-next-app": PreferencesNextApp2,
+    "preferences-3-next-pages": PreferencesNextPages2,
 }
