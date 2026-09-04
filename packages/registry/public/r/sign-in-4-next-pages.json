@@ -1,8 +1,14 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "sign-in-4-next-pages",
-  "dependencies": ["@aura-stack/next"],
-  "registryDependencies": ["input", "button", "field"],
+  "dependencies": [
+    "@aura-stack/next"
+  ],
+  "registryDependencies": [
+    "input",
+    "button",
+    "field"
+  ],
   "files": [
     {
       "path": "src/registry/new-york/blocks/next/pages-router/sign-in-4/sign-in.tsx",

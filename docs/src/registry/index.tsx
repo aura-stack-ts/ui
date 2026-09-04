@@ -66,6 +66,7 @@ import {
     PreferencesReactRouter4,
     PreferencesReactRouter5,
 } from "@/registry/react-router/preferences/index"
+import { IntegrationsReact1 } from "@/registry/react/integrations/index"
 
 export const registry: Record<string, React.ComponentType> = {
     "sign-in-next-app": SignInNextApp1,
@@ -136,4 +137,8 @@ export const registry: Record<string, React.ComponentType> = {
     "preferences-5-react-router": PreferencesReactRouter5,
     "preferences-5-next-app": PreferencesNextApp5,
     "preferences-5-next-pages": PreferencesNextPages5,
+    "integrations-react": IntegrationsReact1,
+    "integrations-react-router": IntegrationsReact1,
+    "integrations-next-app": IntegrationsReact1,
+    "integrations-next-pages": IntegrationsReact1,
 }

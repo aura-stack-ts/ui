@@ -1,6 +1,0 @@
-{
-  "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "ui",
-  "homepage": "https://github.com/aura-stack-ts/ui",
-  "include": ["react/registry.json"]
-}

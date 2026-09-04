@@ -1,8 +1,17 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "profile-2-react",
-  "dependencies": ["@aura-stack/react"],
-  "registryDependencies": ["input", "button", "separator", "field", "card", "select"],
+  "dependencies": [
+    "@aura-stack/react"
+  ],
+  "registryDependencies": [
+    "input",
+    "button",
+    "separator",
+    "field",
+    "card",
+    "select"
+  ],
   "files": [
     {
       "path": "src/registry/new-york/blocks/react/profile-2/profile.tsx",
