@@ -38,6 +38,10 @@ import {
     ProfileReactRouter4,
     ProfileReactRouter5,
 } from "@/registry/react-router/profile/index"
+import { PreferencesReact1 } from "@/registry/react/preferences/index"
+import { PreferencesNextApp1 } from "@/registry/next/app-router/preferences/index"
+import { PreferencesNextPages1 } from "@/registry/next/pages-router/preferences/index"
+import { PreferencesReactRouter1 } from "@/registry/react-router/preferences/index"
 
 export const registry: Record<string, React.ComponentType> = {
     "sign-in-next-app": SignInNextApp1,
@@ -88,4 +92,8 @@ export const registry: Record<string, React.ComponentType> = {
     "profile-5-next-app": ProfileNextApp5,
     "profile-5-next-pages": ProfileNextPages5,
     "profile-5-react-router": ProfileReactRouter5,
+    "preferences-react": PreferencesReact1,
+    "preferences-react-router": PreferencesReactRouter1,
+    "preferences-next-app": PreferencesNextApp1,
+    "preferences-next-pages": PreferencesNextPages1,
 }
