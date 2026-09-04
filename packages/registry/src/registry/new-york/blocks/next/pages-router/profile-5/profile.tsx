@@ -66,7 +66,7 @@ export const Profile = () => {
                     <CardTitle>Profile</CardTitle>
                     <CardDescription>Update your personal information and account settings below.</CardDescription>
                 </CardHeader>
-                <Card className="m-1">
+                <Card className="mx-4">
                     <FieldGroup>
                         <Field className="px-4 grid grid-cols-2" orientation="horizontal">
                             <FieldContent>

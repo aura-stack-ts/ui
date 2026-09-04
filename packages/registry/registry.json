@@ -899,6 +899,54 @@
           "type": "registry:hook"
         }
       ]
+    },
+    {
+      "name": "preferences-react",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/react"],
+      "registryDependencies": ["button", "card", "field", "select"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/react/preferences/preferences.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "preferences-next-app",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["button", "card", "field", "select"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/app-router/preferences/preferences.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "preferences-next-pages",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["button", "card", "field", "select"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/pages-router/preferences/preferences.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "preferences-react-router",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/react-router"],
+      "registryDependencies": ["button", "card", "field", "select"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/react-router/preferences/preferences.tsx",
+          "type": "registry:block"
+        }
+      ]
     }
   ]
 }
