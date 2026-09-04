@@ -1,2 +1,4 @@
 export { Preferences as PreferencesNextApp1 } from "@/registry/next/app-router/preferences/preferences"
 export { Preferences as PreferencesNextApp2 } from "@/registry/next/app-router/preferences/preferences-2"
+export { Preferences as PreferencesNextApp3 } from "@/registry/next/app-router/preferences/preferences-3"
+export { Preferences as PreferencesNextApp4 } from "@/registry/next/app-router/preferences/preferences-4"

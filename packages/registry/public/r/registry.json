@@ -1868,6 +1868,90 @@
         }
       ],
       "type": "registry:block"
+    },
+    {
+      "name": "preferences-4-react",
+      "dependencies": [
+        "@aura-stack/react"
+      ],
+      "registryDependencies": [
+        "button",
+        "switch",
+        "separator",
+        "toggle-group",
+        "card",
+        "field"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/react/preferences-4/preferences.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "preferences-4-next-app",
+      "dependencies": [
+        "@aura-stack/next"
+      ],
+      "registryDependencies": [
+        "button",
+        "switch",
+        "separator",
+        "toggle-group",
+        "card",
+        "field"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/app-router/preferences-4/preferences.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "preferences-4-next-pages",
+      "dependencies": [
+        "@aura-stack/next"
+      ],
+      "registryDependencies": [
+        "button",
+        "switch",
+        "separator",
+        "toggle-group",
+        "card",
+        "field"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/pages-router/preferences-4/preferences.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "preferences-4-react-router",
+      "dependencies": [
+        "@aura-stack/react-router"
+      ],
+      "registryDependencies": [
+        "button",
+        "switch",
+        "separator",
+        "toggle-group",
+        "card",
+        "field"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/react-router/preferences-4/preferences.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "type": "registry:block"
     }
   ]
 }

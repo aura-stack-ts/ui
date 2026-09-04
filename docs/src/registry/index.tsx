@@ -38,10 +38,25 @@ import {
     ProfileReactRouter4,
     ProfileReactRouter5,
 } from "@/registry/react-router/profile/index"
-import { PreferencesReact1, PreferencesReact2, PreferencesReact3 } from "@/registry/react/preferences/index"
-import { PreferencesNextApp1, PreferencesNextApp2 } from "@/registry/next/app-router/preferences/index"
-import { PreferencesNextPages1, PreferencesNextPages2 } from "@/registry/next/pages-router/preferences/index"
-import { PreferencesReactRouter1, PreferencesReactRouter2 } from "@/registry/react-router/preferences/index"
+import { PreferencesReact1, PreferencesReact2, PreferencesReact3, PreferencesReact4 } from "@/registry/react/preferences/index"
+import {
+    PreferencesNextApp1,
+    PreferencesNextApp2,
+    PreferencesNextApp3,
+    PreferencesNextApp4,
+} from "@/registry/next/app-router/preferences/index"
+import {
+    PreferencesNextPages1,
+    PreferencesNextPages2,
+    PreferencesNextPages3,
+    PreferencesNextPages4,
+} from "@/registry/next/pages-router/preferences/index"
+import {
+    PreferencesReactRouter1,
+    PreferencesReactRouter2,
+    PreferencesReactRouter3,
+    PreferencesReactRouter4,
+} from "@/registry/react-router/preferences/index"
 
 export const registry: Record<string, React.ComponentType> = {
     "sign-in-next-app": SignInNextApp1,
@@ -101,7 +116,11 @@ export const registry: Record<string, React.ComponentType> = {
     "preferences-2-next-pages": PreferencesNextPages2,
     "preferences-2-react-router": PreferencesReactRouter2,
     "preferences-3-react": PreferencesReact3,
-    "preferences-3-react-router": PreferencesReactRouter2,
-    "preferences-3-next-app": PreferencesNextApp2,
-    "preferences-3-next-pages": PreferencesNextPages2,
+    "preferences-3-react-router": PreferencesReactRouter3,
+    "preferences-3-next-app": PreferencesNextApp3,
+    "preferences-3-next-pages": PreferencesNextPages3,
+    "preferences-4-react": PreferencesReact4,
+    "preferences-4-react-router": PreferencesReactRouter4,
+    "preferences-4-next-app": PreferencesNextApp4,
+    "preferences-4-next-pages": PreferencesNextPages4,
 }
