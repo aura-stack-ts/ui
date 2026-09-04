@@ -1684,6 +1684,190 @@
         }
       ],
       "type": "registry:block"
+    },
+    {
+      "name": "preferences-2-react",
+      "dependencies": [
+        "@aura-stack/react",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "switch",
+        "separator",
+        "toggle-group",
+        "card",
+        "field",
+        "select"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/react/preferences-2/preferences.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "preferences-2-next-app",
+      "dependencies": [
+        "@aura-stack/next",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "switch",
+        "separator",
+        "toggle-group",
+        "card",
+        "field",
+        "select"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/app-router/preferences-2/preferences.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "preferences-2-next-pages",
+      "dependencies": [
+        "@aura-stack/next",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "switch",
+        "separator",
+        "toggle-group",
+        "card",
+        "field",
+        "select"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/pages-router/preferences-2/preferences.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "preferences-2-react-router",
+      "dependencies": [
+        "@aura-stack/2-react-router",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "switch",
+        "separator",
+        "toggle-group",
+        "card",
+        "field",
+        "select"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/react-router/preferences-2/preferences.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "preferences-3-react",
+      "dependencies": [
+        "@aura-stack/react",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "separator",
+        "radio-group",
+        "toggle-group",
+        "card",
+        "field",
+        "select"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/react/preferences-3/preferences.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "preferences-3-next-app",
+      "dependencies": [
+        "@aura-stack/next",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "separator",
+        "radio-group",
+        "toggle-group",
+        "card",
+        "field",
+        "select"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/app-router/preferences-3/preferences.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "preferences-3-next-pages",
+      "dependencies": [
+        "@aura-stack/next",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "separator",
+        "radio-group",
+        "toggle-group",
+        "card",
+        "field",
+        "select"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/pages-router/preferences-3/preferences.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "preferences-3-react-router",
+      "dependencies": [
+        "@aura-stack/react-router",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "separator",
+        "radio-group",
+        "toggle-group",
+        "card",
+        "field",
+        "select"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/react-router/preferences-3/preferences.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "type": "registry:block"
     }
   ]
 }
