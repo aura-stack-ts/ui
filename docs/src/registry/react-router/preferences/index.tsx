@@ -2,3 +2,4 @@ export { Preferences as PreferencesReactRouter1 } from "@/registry/react-router/
 export { Preferences as PreferencesReactRouter2 } from "@/registry/react-router/preferences/preferences-2"
 export { Preferences as PreferencesReactRouter3 } from "@/registry/react-router/preferences/preferences-3"
 export { Preferences as PreferencesReactRouter4 } from "@/registry/react-router/preferences/preferences-4"
+export { Preferences as PreferencesReactRouter5 } from "@/registry/react-router/preferences/preferences-5"

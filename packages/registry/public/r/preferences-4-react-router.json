@@ -1,17 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "preferences-4-react-router",
-  "dependencies": [
-    "@aura-stack/react-router"
-  ],
-  "registryDependencies": [
-    "button",
-    "switch",
-    "separator",
-    "toggle-group",
-    "card",
-    "field"
-  ],
+  "dependencies": ["@aura-stack/react-router"],
+  "registryDependencies": ["button", "switch", "separator", "toggle-group", "card", "field"],
   "files": [
     {
       "path": "src/registry/new-york/blocks/react-router/preferences-4/preferences.tsx",

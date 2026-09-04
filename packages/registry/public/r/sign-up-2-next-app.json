@@ -1,15 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "sign-up-2-next-app",
-  "dependencies": [
-    "@aura-stack/next"
-  ],
-  "registryDependencies": [
-    "input",
-    "button",
-    "card",
-    "field"
-  ],
+  "dependencies": ["@aura-stack/next"],
+  "registryDependencies": ["input", "button", "card", "field"],
   "files": [
     {
       "path": "src/registry/new-york/blocks/next/app-router/sign-up-2/sign-up.tsx",

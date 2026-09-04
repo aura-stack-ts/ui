@@ -38,24 +38,33 @@ import {
     ProfileReactRouter4,
     ProfileReactRouter5,
 } from "@/registry/react-router/profile/index"
-import { PreferencesReact1, PreferencesReact2, PreferencesReact3, PreferencesReact4 } from "@/registry/react/preferences/index"
+import {
+    PreferencesReact1,
+    PreferencesReact2,
+    PreferencesReact3,
+    PreferencesReact4,
+    PreferencesReact5,
+} from "@/registry/react/preferences/index"
 import {
     PreferencesNextApp1,
     PreferencesNextApp2,
     PreferencesNextApp3,
     PreferencesNextApp4,
+    PreferencesNextApp5,
 } from "@/registry/next/app-router/preferences/index"
 import {
     PreferencesNextPages1,
     PreferencesNextPages2,
     PreferencesNextPages3,
     PreferencesNextPages4,
+    PreferencesNextPages5,
 } from "@/registry/next/pages-router/preferences/index"
 import {
     PreferencesReactRouter1,
     PreferencesReactRouter2,
     PreferencesReactRouter3,
     PreferencesReactRouter4,
+    PreferencesReactRouter5,
 } from "@/registry/react-router/preferences/index"
 
 export const registry: Record<string, React.ComponentType> = {
@@ -123,4 +132,8 @@ export const registry: Record<string, React.ComponentType> = {
     "preferences-4-react-router": PreferencesReactRouter4,
     "preferences-4-next-app": PreferencesNextApp4,
     "preferences-4-next-pages": PreferencesNextPages4,
+    "preferences-5-react": PreferencesReact5,
+    "preferences-5-react-router": PreferencesReactRouter5,
+    "preferences-5-next-app": PreferencesNextApp5,
+    "preferences-5-next-pages": PreferencesNextPages5,
 }
