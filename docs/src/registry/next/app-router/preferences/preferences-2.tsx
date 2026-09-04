@@ -33,7 +33,6 @@ const TIMEZONES = [
             { value: "utc+0", label: "UTC+0 (Greenwich Zone)" },
             { value: "utc+1", label: "UTC+1 (Central European Zone)" },
             { value: "utc+2", label: "UTC+2 (Eastern European Zone)" },
-            { value: "utc+1", label: "UTC+1 (Central Africa Zone)" },
         ],
     },
     {
