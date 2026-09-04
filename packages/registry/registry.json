@@ -1139,6 +1139,115 @@
           "type": "registry:block"
         }
       ]
+    },
+
+    {
+      "name": "integrations-react",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/react"],
+      "registryDependencies": ["badge", "button", "card", "item"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/react/integrations/integrations.tsx",
+          "type": "registry:block"
+        },
+        {
+          "path": "src/components/icons/github.tsx",
+          "target": "@components/icons/github.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/notion.tsx",
+          "target": "@components/icons/notion.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/figma.tsx",
+          "target": "@components/icons/figma.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "integrations-next-app",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["badge", "button", "card", "item"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/app-router/integrations/integrations.tsx",
+          "type": "registry:block"
+        },
+        {
+          "path": "src/components/icons/github.tsx",
+          "target": "@components/icons/github.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/notion.tsx",
+          "target": "@components/icons/notion.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/figma.tsx",
+          "target": "@components/icons/figma.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "integrations-next-pages",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["badge", "button", "card", "item"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/pages-router/integrations/integrations.tsx",
+          "type": "registry:block"
+        },
+        {
+          "path": "src/components/icons/github.tsx",
+          "target": "@components/icons/github.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/notion.tsx",
+          "target": "@components/icons/notion.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/figma.tsx",
+          "target": "@components/icons/figma.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "integrations-react-router",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/react-router"],
+      "registryDependencies": ["badge", "button", "card", "item"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/react-router/integrations/integrations.tsx",
+          "type": "registry:block"
+        },
+        {
+          "path": "src/components/icons/github.tsx",
+          "target": "@components/icons/github.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/notion.tsx",
+          "target": "@components/icons/notion.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/figma.tsx",
+          "target": "@components/icons/figma.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }
