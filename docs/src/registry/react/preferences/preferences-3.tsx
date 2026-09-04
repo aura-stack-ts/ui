@@ -75,7 +75,7 @@ export const Preferences = () => {
                 <CardDescription>Manage your application preferences.</CardDescription>
             </CardHeader>
             <Separator />
-            <CardContent className="space-y-8">
+            <CardContent className="space-y-10">
                 <FieldSet>
                     <FieldLegend>Appearance</FieldLegend>
                     <FieldDescription>Customize the look and feel of the application.</FieldDescription>

@@ -1,9 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "auth-setup",
-  "dependencies": [
-    "@aura-stack/auth"
-  ],
+  "dependencies": ["@aura-stack/auth"],
   "files": [
     {
       "path": "src/lib/auth/auth.ts",

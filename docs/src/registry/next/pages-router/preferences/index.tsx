@@ -2,3 +2,4 @@ export { Preferences as PreferencesNextPages1 } from "@/registry/next/pages-rout
 export { Preferences as PreferencesNextPages2 } from "@/registry/next/pages-router/preferences/preferences-2"
 export { Preferences as PreferencesNextPages3 } from "@/registry/next/pages-router/preferences/preferences-3"
 export { Preferences as PreferencesNextPages4 } from "@/registry/next/pages-router/preferences/preferences-4"
+export { Preferences as PreferencesNextPages5 } from "@/registry/next/pages-router/preferences/preferences-5"

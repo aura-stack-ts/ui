@@ -1,19 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "preferences-3-react",
-  "dependencies": [
-    "@aura-stack/react",
-    "lucide-react"
-  ],
-  "registryDependencies": [
-    "button",
-    "separator",
-    "radio-group",
-    "toggle-group",
-    "card",
-    "field",
-    "select"
-  ],
+  "dependencies": ["@aura-stack/react", "lucide-react"],
+  "registryDependencies": ["button", "separator", "radio-group", "toggle-group", "card", "field", "select"],
   "files": [
     {
       "path": "src/registry/new-york/blocks/react/preferences-3/preferences.tsx",
