@@ -1,7 +1,13 @@
 "use client"
 
-import type { ComponentType, SVGProps } from "react"
-import { useDisconnectProvider, useRevokeToken, useRefreshUserInfo, useSignIn } from "@aura-stack/next/client"
+import { useEffect, useState, type ComponentType, type SVGProps } from "react"
+import {
+    useDisconnectProvider,
+    useRevokeToken,
+    useRefreshUserInfo,
+    useSignIn,
+    useIsProviderConnected,
+} from "@aura-stack/next/client"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { FigmaIcon } from "@/components/icons/figma"
@@ -33,7 +39,6 @@ interface Integration {
     id: string
     name: string
     description: string
-    status: ConnectionStatus
     icon: ComponentType<SVGProps<SVGSVGElement>>
 }
 
@@ -52,21 +57,18 @@ const CATEGORIES: IntegrationCategory[] = [
                 id: "github",
                 name: "GitHub",
                 description: "Connect your GitHub repositories for CI/CD and code insights.",
-                status: "needs-review",
                 icon: GitHubIcon,
             },
             {
                 id: "gitlab",
                 name: "GitLab",
                 description: "Sync code changes and merge requests.",
-                status: "connected",
                 icon: GitLabIcon,
             },
             {
                 id: "bitbucket",
                 name: "Bitbucket",
                 description: "Manage your Bitbucket repositories and pipelines.",
-                status: "connected",
                 icon: BitbucketIcon,
             },
         ],
@@ -79,21 +81,18 @@ const CATEGORIES: IntegrationCategory[] = [
                 id: "figma",
                 name: "Figma",
                 description: "Share design assets and collaborate on UI.",
-                status: "connected",
                 icon: FigmaIcon,
             },
             {
                 id: "dribbble",
                 name: "Dribbble",
                 description: "Discover and share design inspiration.",
-                status: "needs-review",
                 icon: DribbbleIcon,
             },
             {
                 id: "pinterest",
                 name: "Pinterest",
                 description: "Discover and save design ideas.",
-                status: "connected",
                 icon: PinterestIcon,
             },
         ],
@@ -106,14 +105,12 @@ const CATEGORIES: IntegrationCategory[] = [
                 id: "discord",
                 name: "Discord",
                 description: "Connect your Discord server for real-time communication.",
-                status: "not-connected",
                 icon: DiscordIcon,
             },
             {
                 id: "notion",
                 name: "Notion",
                 description: "Create and manage notes and documentation.",
-                status: "not-connected",
                 icon: NotionIcon,
             },
         ],
@@ -146,13 +143,23 @@ const StatusBadge = ({ status }: { status: ConnectionStatus }) => {
 }
 
 const IntegrationRow = ({ integration }: { integration: Integration }) => {
-    const { id, name, description, status } = integration
+    const { id, name, description } = integration
+    const [status, setStatus] = useState("not-connected" as ConnectionStatus)
     const { isPending: isSigningIn, signIn } = useSignIn()
+    const { isPending: isIsProviderConnectedPending, isProviderConnected } = useIsProviderConnected()
     const { isPending: isRefreshing, refreshUserInfo } = useRefreshUserInfo()
     const { isPending: isRevokePending, revokeToken } = useRevokeToken()
     const { isPending: isDisconnecting, disconnectProvider } = useDisconnectProvider()
 
-    const isAnyPending = isSigningIn || isRefreshing || isRevokePending || isDisconnecting
+    const isAnyPending = isSigningIn || isRefreshing || isRevokePending || isIsProviderConnectedPending || isDisconnecting
+
+    useEffect(() => {
+        const checkStatus = async () => {
+            const connected = await isProviderConnected(id)
+            setStatus(connected ? "connected" : "not-connected")
+        }
+        checkStatus()
+    }, [isProviderConnected, id])
 
     return (
         <Item className="py-3.5 border-0 border-t border-border rounded-none first:border-t-0">
