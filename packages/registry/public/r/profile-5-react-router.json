@@ -1,20 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "profile-5-react-router",
-  "dependencies": [
-    "@aura-stack/react-router",
-    "lucide-react"
-  ],
-  "registryDependencies": [
-    "input",
-    "button",
-    "textarea",
-    "avatar",
-    "card",
-    "input-group",
-    "select",
-    "field"
-  ],
+  "dependencies": ["@aura-stack/react-router", "lucide-react"],
+  "registryDependencies": ["input", "button", "textarea", "avatar", "card", "input-group", "select", "field"],
   "files": [
     {
       "path": "src/registry/new-york/blocks/react-router/profile-5/profile.tsx",

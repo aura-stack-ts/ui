@@ -1,20 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "profile-5-next",
-  "dependencies": [
-    "@aura-stack/next",
-    "lucide-react"
-  ],
-  "registryDependencies": [
-    "input",
-    "button",
-    "textarea",
-    "avatar",
-    "card",
-    "input-group",
-    "select",
-    "field"
-  ],
+  "dependencies": ["@aura-stack/next", "lucide-react"],
+  "registryDependencies": ["input", "button", "textarea", "avatar", "card", "input-group", "select", "field"],
   "files": [
     {
       "path": "src/registry/new-york/blocks/next/app-router/profile-5/profile.tsx",

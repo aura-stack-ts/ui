@@ -1,3 +1,5 @@
+"use client"
+
 import { useEffect, useState } from "react"
 import { useIsProviderConnected, useProviderTokens, useRevokeToken, useSignIn } from "@aura-stack/next/pages/client"
 import { Badge } from "@/components/ui/badge"

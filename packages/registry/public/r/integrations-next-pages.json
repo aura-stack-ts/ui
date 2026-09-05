@@ -1,15 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "integrations-next-pages",
-  "dependencies": [
-    "@aura-stack/next"
-  ],
-  "registryDependencies": [
-    "badge",
-    "button",
-    "card",
-    "item"
-  ],
+  "dependencies": ["@aura-stack/next"],
+  "registryDependencies": ["badge", "button", "card", "item"],
   "files": [
     {
       "path": "src/registry/new-york/blocks/next/pages-router/integrations/integrations.tsx",

@@ -1,14 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "integrations-2-react",
-  "dependencies": [
-    "@aura-stack/react"
-  ],
-  "registryDependencies": [
-    "badge",
-    "button",
-    "card"
-  ],
+  "dependencies": ["@aura-stack/react"],
+  "registryDependencies": ["badge", "button", "card"],
   "files": [
     {
       "path": "src/registry/new-york/blocks/react/integrations-2/integrations.tsx",
