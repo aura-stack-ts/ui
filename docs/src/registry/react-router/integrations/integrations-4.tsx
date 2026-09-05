@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import { useIsProviderConnected, useRevokeToken, useSignIn } from "@aura-stack/react-router/client"
 import { Badge } from "@/components/ui/badge"
+import { Label } from "@/components/ui/label"
 import { Button } from "@/components/ui/button"
 import { Switch } from "@/components/ui/switch"
 import { DiscordIcon } from "@/components/icons/discord"
@@ -75,18 +76,24 @@ export const Integrations = () => {
      */
     const { isPending: isRevokeTokenPending, revokeToken } = useRevokeToken()
     const { isPending: isIsProviderConnectedPending, isProviderConnected } = useIsProviderConnected()
-    const [connectedProviders, setConnectedProviders] = useState(CONNECTED_PROVIDERS)
+    const [connectedProviders, setConnectedProviders] =
+        useState<Record<keyof typeof CONNECTED_PROVIDERS, boolean>>(CONNECTED_PROVIDERS)
 
     const isAnyPending = isSignInPending || isRevokeTokenPending || isIsProviderConnectedPending
 
     const handleIntegrationClick = async (provider: keyof typeof CONNECTED_PROVIDERS) => {
         const isConnected = connectedProviders[provider]
         if (isConnected) {
-            await revokeToken(provider)
-            setConnectedProviders((prev) => ({ ...prev, [provider]: false }))
+            const success = await revokeToken(provider)
+            if (success) {
+                setConnectedProviders((prev) => ({ ...prev, [provider]: false }))
+            }
         } else {
-            await signIn(provider)
-            setConnectedProviders((prev) => ({ ...prev, [provider]: true }))
+            // @ts-ignore
+            const { success } = await signIn(provider)
+            if (success) {
+                setConnectedProviders((prev) => ({ ...prev, [provider]: true }))
+            }
         }
     }
 
@@ -149,11 +156,13 @@ export const Integrations = () => {
                                     {integration.configs.map((config, index) => (
                                         <Item className="rounded-lg bg-muted/50" key={index}>
                                             <ItemContent>
-                                                <ItemTitle>{config.title}</ItemTitle>
+                                                <Label htmlFor={`switch-${integration.id}`}>
+                                                    <ItemTitle>{config.title}</ItemTitle>
+                                                </Label>
                                                 <ItemDescription>{config.description}</ItemDescription>
                                             </ItemContent>
                                             <ItemActions>
-                                                <Switch />
+                                                <Switch id={`switch-${integration.id}`} />
                                             </ItemActions>
                                         </Item>
                                     ))}

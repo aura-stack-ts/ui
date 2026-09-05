@@ -2612,6 +2612,7 @@
       ],
       "registryDependencies": [
         "badge",
+        "label",
         "button",
         "switch",
         "card",
@@ -2647,6 +2648,7 @@
       ],
       "registryDependencies": [
         "badge",
+        "label",
         "button",
         "switch",
         "card",
@@ -2682,6 +2684,7 @@
       ],
       "registryDependencies": [
         "badge",
+        "label",
         "button",
         "switch",
         "card",
@@ -2717,6 +2720,7 @@
       ],
       "registryDependencies": [
         "badge",
+        "label",
         "button",
         "switch",
         "card",
