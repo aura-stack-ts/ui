@@ -1415,6 +1415,214 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "integrations-3-react",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/react", "lucide-react"],
+      "registryDependencies": ["badge", "button", "card", "item", "dropdown-menu"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/react/integrations-3/integrations.tsx",
+          "type": "registry:block"
+        },
+        {
+          "path": "src/components/icons/figma.tsx",
+          "target": "@components/icons/figma.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/notion.tsx",
+          "target": "@components/icons/notion.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/github.tsx",
+          "target": "@components/icons/github.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/gitlab.tsx",
+          "target": "@components/icons/gitlab.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/discord.tsx",
+          "target": "@components/icons/discord.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/dribbble.tsx",
+          "target": "@components/icons/dribbble.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/pinterest.tsx",
+          "target": "@components/icons/pinterest.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/bitbucket.tsx",
+          "target": "@components/icons/bitbucket.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "integrations-3-next-app",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/next", "lucide-react"],
+      "registryDependencies": ["badge", "button", "card", "item", "dropdown-menu"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/app-router/integrations-3/integrations.tsx",
+          "type": "registry:block"
+        },
+        {
+          "path": "src/components/icons/figma.tsx",
+          "target": "@components/icons/figma.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/notion.tsx",
+          "target": "@components/icons/notion.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/github.tsx",
+          "target": "@components/icons/github.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/gitlab.tsx",
+          "target": "@components/icons/gitlab.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/discord.tsx",
+          "target": "@components/icons/discord.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/dribbble.tsx",
+          "target": "@components/icons/dribbble.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/pinterest.tsx",
+          "target": "@components/icons/pinterest.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/bitbucket.tsx",
+          "target": "@components/icons/bitbucket.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "integrations-3-next-pages",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/next", "lucide-react"],
+      "registryDependencies": ["badge", "button", "card", "item", "dropdown-menu"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/pages-router/integrations-3/integrations.tsx",
+          "type": "registry:block"
+        },
+        {
+          "path": "src/components/icons/figma.tsx",
+          "target": "@components/icons/figma.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/notion.tsx",
+          "target": "@components/icons/notion.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/github.tsx",
+          "target": "@components/icons/github.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/gitlab.tsx",
+          "target": "@components/icons/gitlab.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/discord.tsx",
+          "target": "@components/icons/discord.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/dribbble.tsx",
+          "target": "@components/icons/dribbble.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/pinterest.tsx",
+          "target": "@components/icons/pinterest.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/bitbucket.tsx",
+          "target": "@components/icons/bitbucket.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "integrations-3-react-router",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/react-router", "lucide-react"],
+      "registryDependencies": ["badge", "button", "card", "item", "dropdown-menu"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/react-router/integrations-3/integrations.tsx",
+          "type": "registry:block"
+        },
+        {
+          "path": "src/components/icons/figma.tsx",
+          "target": "@components/icons/figma.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/notion.tsx",
+          "target": "@components/icons/notion.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/github.tsx",
+          "target": "@components/icons/github.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/gitlab.tsx",
+          "target": "@components/icons/gitlab.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/discord.tsx",
+          "target": "@components/icons/discord.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/dribbble.tsx",
+          "target": "@components/icons/dribbble.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/pinterest.tsx",
+          "target": "@components/icons/pinterest.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/bitbucket.tsx",
+          "target": "@components/icons/bitbucket.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }
