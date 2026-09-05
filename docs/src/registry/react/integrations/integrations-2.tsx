@@ -10,7 +10,6 @@ import { GitHubIcon } from "@/components/icons/github"
 import { DiscordIcon } from "@/components/icons/discord"
 import { TwitchIcon } from "@/components/icons/twitch"
 import { AtlassianIcon } from "@/components/icons/atlassian"
-
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 
 const INTEGRATIONS = [
@@ -78,10 +77,10 @@ export const Integrations = () => {
      */
     const { isPending: isRevokeTokenPending, revokeToken } = useRevokeToken()
     const { isPending: isProviderTokensPending } = useProviderTokens()
-    const { isPending: isIsProviderConnectedPending, isProviderConnected } = useIsProviderConnected()
+    const { isProviderConnected } = useIsProviderConnected()
     const [connectedProviders, setConnectedProviders] = useState(CONNECTED_PROVIDERS)
 
-    const isAnyPending = isSignInPending || isRevokeTokenPending || isIsProviderConnectedPending || isProviderTokensPending
+    const isAnyPending = isSignInPending || isRevokeTokenPending || isProviderTokensPending
 
     const handleIntegrationClick = async (provider: keyof typeof CONNECTED_PROVIDERS) => {
         const isConnected = connectedProviders[provider]
@@ -95,8 +94,6 @@ export const Integrations = () => {
     }
 
     useEffect(() => {
-        if (!isIsProviderConnectedPending) return
-
         const fetchConnectedProviders = async () => {
             const providers = await Promise.all(
                 Object.keys(CONNECTED_PROVIDERS).map(async (provider) => {
@@ -104,10 +101,10 @@ export const Integrations = () => {
                     return { [provider]: isConnected }
                 })
             )
-            setConnectedProviders(Object.assign({}, ...providers))
+            setConnectedProviders(() => Object.assign({}, ...providers))
         }
         fetchConnectedProviders()
-    }, [isProviderConnected, isIsProviderConnectedPending])
+    }, [isProviderConnected])
 
     return (
         <Card className="w-full max-w-3xl pb-10 space-y-4 bg-card">

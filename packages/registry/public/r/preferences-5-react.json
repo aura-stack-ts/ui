@@ -1,8 +1,16 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "preferences-5-react",
-  "dependencies": ["@aura-stack/react"],
-  "registryDependencies": ["button", "switch", "card", "field", "select"],
+  "dependencies": [
+    "@aura-stack/react"
+  ],
+  "registryDependencies": [
+    "button",
+    "switch",
+    "card",
+    "field",
+    "select"
+  ],
   "files": [
     {
       "path": "src/registry/new-york/blocks/react/preferences-5/preferences.tsx",

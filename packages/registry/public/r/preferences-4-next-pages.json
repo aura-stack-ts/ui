@@ -1,8 +1,17 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "preferences-4-next-pages",
-  "dependencies": ["@aura-stack/next"],
-  "registryDependencies": ["button", "switch", "separator", "toggle-group", "card", "field"],
+  "dependencies": [
+    "@aura-stack/next"
+  ],
+  "registryDependencies": [
+    "button",
+    "switch",
+    "separator",
+    "toggle-group",
+    "card",
+    "field"
+  ],
   "files": [
     {
       "path": "src/registry/new-york/blocks/next/pages-router/preferences-4/preferences.tsx",
