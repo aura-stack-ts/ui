@@ -90,7 +90,10 @@ export const Integrations = () => {
                     {INTEGRATIONS.map((integration) => {
                         const isConnected = connectedProviders[integration.id]
                         return (
-                            <Item className="border-0 border-t border-border rounded-none first:border-t-0" key={integration.id}>
+                            <Item
+                                className="py-4 border-0 border-t border-border rounded-none first:border-t-0"
+                                key={integration.id}
+                            >
                                 <ItemMedia variant="default">
                                     <integration.icon className="size-8" />
                                 </ItemMedia>
