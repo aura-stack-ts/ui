@@ -66,17 +66,29 @@ import {
     PreferencesReactRouter4,
     PreferencesReactRouter5,
 } from "@/registry/react-router/preferences/index"
-import { IntegrationsReact1, IntegrationsReact2, IntegrationsReact3 } from "@/registry/react/integrations/index"
-import { IntegrationsNextApp1, IntegrationsNextApp2, IntegrationsNextApp3 } from "@/registry/next/app-router/integrations/index"
+import {
+    IntegrationsReact1,
+    IntegrationsReact2,
+    IntegrationsReact3,
+    IntegrationsReact4,
+} from "@/registry/react/integrations/index"
+import {
+    IntegrationsNextApp1,
+    IntegrationsNextApp2,
+    IntegrationsNextApp3,
+    IntegrationsNextApp4,
+} from "@/registry/next/app-router/integrations/index"
 import {
     IntegrationsNextPages1,
     IntegrationsNextPages2,
     IntegrationsNextPages3,
+    IntegrationsNextPages4,
 } from "@/registry/next/pages-router/integrations/index"
 import {
     IntegrationsReactRouter1,
     IntegrationsReactRouter2,
     IntegrationsReactRouter3,
+    IntegrationsReactRouter4,
 } from "@/registry/react-router/integrations/index"
 
 export const registry: Record<string, React.ComponentType> = {
@@ -160,4 +172,8 @@ export const registry: Record<string, React.ComponentType> = {
     "integrations-3-react-router": IntegrationsReactRouter3,
     "integrations-3-next-app": IntegrationsNextApp3,
     "integrations-3-next-pages": IntegrationsNextPages3,
+    "integrations-4-react": IntegrationsReact4,
+    "integrations-4-react-router": IntegrationsReactRouter4,
+    "integrations-4-next-app": IntegrationsNextApp4,
+    "integrations-4-next-pages": IntegrationsNextPages4,
 }

@@ -1623,6 +1623,115 @@
           "type": "registry:ui"
         }
       ]
+    },
+
+    {
+      "name": "integrations-4-react",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/react"],
+      "registryDependencies": ["badge", "label", "button", "switch", "card", "item"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/react/integrations-4/integrations.tsx",
+          "type": "registry:block"
+        },
+        {
+          "path": "src/components/icons/discord.tsx",
+          "target": "@components/icons/discord.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/notion.tsx",
+          "target": "@components/icons/notion.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/github.tsx",
+          "target": "@components/icons/github.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "integrations-4-next-app",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["badge", "label", "button", "switch", "card", "item"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/app-router/integrations-4/integrations.tsx",
+          "type": "registry:block"
+        },
+        {
+          "path": "src/components/icons/discord.tsx",
+          "target": "@components/icons/discord.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/notion.tsx",
+          "target": "@components/icons/notion.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/github.tsx",
+          "target": "@components/icons/github.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "integrations-4-next-pages",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/next"],
+      "registryDependencies": ["badge", "label", "button", "switch", "card", "item"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/pages-router/integrations-4/integrations.tsx",
+          "type": "registry:block"
+        },
+        {
+          "path": "src/components/icons/discord.tsx",
+          "target": "@components/icons/discord.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/notion.tsx",
+          "target": "@components/icons/notion.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/github.tsx",
+          "target": "@components/icons/github.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "integrations-4-react-router",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/react-router"],
+      "registryDependencies": ["badge", "label", "button", "switch", "card", "item"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/react-router/integrations-4/integrations.tsx",
+          "type": "registry:block"
+        },
+        {
+          "path": "src/components/icons/discord.tsx",
+          "target": "@components/icons/discord.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/notion.tsx",
+          "target": "@components/icons/notion.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/icons/github.tsx",
+          "target": "@components/icons/github.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }
