@@ -200,7 +200,7 @@ export function BlockPreviewClient({
                 {tab === "Preview" ? (
                     <div
                         key={refreshKey}
-                        className={`mx-auto flex max-w-full items-center justify-center overflow-hidden rounded-lg ${activeDevice.widthClass} not-prose`}
+                        className={`p-1 mx-auto flex max-w-full items-center justify-center overflow-hidden rounded-lg ${activeDevice.widthClass} not-prose`}
                     >
                         {children}
                     </div>

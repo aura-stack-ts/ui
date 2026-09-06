@@ -90,6 +90,10 @@ import {
     IntegrationsReactRouter3,
     IntegrationsReactRouter4,
 } from "@/registry/react-router/integrations/index"
+import { ActiveSessionsReact1 } from "@/registry/react/active-sessions/index"
+import { ActiveSessionsNextApp1 } from "@/registry/next/app-router/active-sessions/index"
+import { ActiveSessionsNextPages1 } from "@/registry/next/pages-router/active-sessions/index"
+import { ActiveSessionsReactRouter1 } from "@/registry/react-router/active-sessions/index"
 
 export const registry: Record<string, React.ComponentType> = {
     "sign-in-next-app": SignInNextApp1,
@@ -176,4 +180,8 @@ export const registry: Record<string, React.ComponentType> = {
     "integrations-4-react-router": IntegrationsReactRouter4,
     "integrations-4-next-app": IntegrationsNextApp4,
     "integrations-4-next-pages": IntegrationsNextPages4,
+    "active-sessions-react": ActiveSessionsReact1,
+    "active-sessions-next-app": ActiveSessionsNextApp1,
+    "active-sessions-next-pages": ActiveSessionsNextPages1,
+    "active-sessions-react-router": ActiveSessionsReactRouter1,
 }
