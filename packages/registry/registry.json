@@ -1732,6 +1732,103 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "active-sessions-react",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/react", "lucide-react"],
+      "registryDependencies": ["badge", "button", "card", "item"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/react/active-sessions/active-sessions.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "active-sessions-next-app",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/next", "lucide-react"],
+      "registryDependencies": ["badge", "button", "card", "item"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/app-router/active-sessions/active-sessions.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "active-sessions-next-pages",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/next", "lucide-react"],
+      "registryDependencies": ["badge", "button", "card", "item"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/pages-router/active-sessions/active-sessions.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "active-sessions-react-router",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/react-router", "lucide-react"],
+      "registryDependencies": ["badge", "button", "card", "item"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/react-router/active-sessions/active-sessions.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+
+    {
+      "name": "active-sessions-2-react",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/react", "lucide-react"],
+      "registryDependencies": ["badge", "button", "card", "item"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/react/active-sessions-2/active-sessions.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "active-sessions-2-next-app",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/next", "lucide-react"],
+      "registryDependencies": ["badge", "button", "card", "item"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/app-router/active-sessions-2/active-sessions.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "active-sessions-2-next-pages",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/next", "lucide-react"],
+      "registryDependencies": ["badge", "button", "card", "item"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/next/pages-router/active-sessions-2/active-sessions.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "active-sessions-2-react-router",
+      "type": "registry:block",
+      "dependencies": ["@aura-stack/react-router", "lucide-react"],
+      "registryDependencies": ["badge", "button", "card", "item"],
+      "files": [
+        {
+          "path": "src/registry/new-york/blocks/react-router/active-sessions-2/active-sessions.tsx",
+          "type": "registry:block"
+        }
+      ]
     }
   ]
 }
