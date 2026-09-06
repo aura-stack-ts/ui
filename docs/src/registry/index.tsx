@@ -90,10 +90,10 @@ import {
     IntegrationsReactRouter3,
     IntegrationsReactRouter4,
 } from "@/registry/react-router/integrations/index"
-import { ActiveSessionsReact1 } from "@/registry/react/active-sessions/index"
-import { ActiveSessionsNextApp1 } from "@/registry/next/app-router/active-sessions/index"
-import { ActiveSessionsNextPages1 } from "@/registry/next/pages-router/active-sessions/index"
-import { ActiveSessionsReactRouter1 } from "@/registry/react-router/active-sessions/index"
+import { ActiveSessionsReact1, ActiveSessionsReact2 } from "@/registry/react/active-sessions/index"
+import { ActiveSessionsNextApp1, ActiveSessionsNextApp2 } from "@/registry/next/app-router/active-sessions/index"
+import { ActiveSessionsNextPages1, ActiveSessionsNextPages2 } from "@/registry/next/pages-router/active-sessions/index"
+import { ActiveSessionsReactRouter1, ActiveSessionsReactRouter2 } from "@/registry/react-router/active-sessions/index"
 
 export const registry: Record<string, React.ComponentType> = {
     "sign-in-next-app": SignInNextApp1,
@@ -184,4 +184,8 @@ export const registry: Record<string, React.ComponentType> = {
     "active-sessions-next-app": ActiveSessionsNextApp1,
     "active-sessions-next-pages": ActiveSessionsNextPages1,
     "active-sessions-react-router": ActiveSessionsReactRouter1,
+    "active-sessions-2-react": ActiveSessionsReact2,
+    "active-sessions-2-react-router": ActiveSessionsReactRouter2,
+    "active-sessions-2-next-app": ActiveSessionsNextApp2,
+    "active-sessions-2-next-pages": ActiveSessionsNextPages2,
 }
