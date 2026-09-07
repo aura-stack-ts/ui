@@ -1,12 +1,19 @@
 "use client"
+
 import { AtlassianIcon } from "@/components/icons/atlassian"
+import { AuthentikIcon } from "@/components/icons/authentik"
 import { BitbucketIcon } from "@/components/icons/bitbucket"
+import { ClickUpIcon } from "@/components/icons/click-up"
 import { DiscordIcon } from "@/components/icons/discord"
 import { DribbbleIcon } from "@/components/icons/dribbble"
 import { DropboxIcon } from "@/components/icons/dropbox"
 import { FigmaIcon } from "@/components/icons/figma"
 import { GitHubIcon } from "@/components/icons/github"
 import { GitLabIcon } from "@/components/icons/gitlab"
+import { GoogleIcon } from "@/components/icons/google"
+import { HubspotIcon } from "@/components/icons/hubspot"
+import { HuggingFaceIcon } from "@/components/icons/huggingface"
+import { MailchimpIcon } from "@/components/icons/mailchimp"
 import { NotionIcon } from "@/components/icons/notion"
 import { PinterestIcon } from "@/components/icons/pinterest"
 import { SpotifyIcon } from "@/components/icons/spotify"
@@ -17,13 +24,19 @@ import type { ComponentType } from "react"
 
 export const icons: Record<string, ComponentType> = {
     atlassian: AtlassianIcon,
-    github: GitHubIcon,
+    authentik: AuthentikIcon,
+    clickup: ClickUpIcon,
     bitbucket: BitbucketIcon,
     discord: DiscordIcon,
     dribbble: DribbbleIcon,
     dropbox: DropboxIcon,
     figma: FigmaIcon,
+    github: GitHubIcon,
     gitlab: GitLabIcon,
+    google: GoogleIcon,
+    hubspot: HubspotIcon,
+    huggingface: HuggingFaceIcon,
+    mailchimp: MailchimpIcon,
     notion: NotionIcon,
     pinterest: PinterestIcon,
     spotify: SpotifyIcon,
