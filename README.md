@@ -10,7 +10,7 @@
 
 ## Documentation
 
-Visit the [**official documentation website**](https://aura-stack-ui.vercel.app).
+Visit the [**official documentation website**](https://aura-ui-docs.vercel.app).
 
 ## License
 

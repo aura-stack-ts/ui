@@ -15,12 +15,34 @@
       "type": "registry:ui"
     },
     {
+      "name": "authentik",
+      "files": [
+        {
+          "path": "src/components/icons/authentik.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/authentik.tsx"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
       "name": "bitbucket",
       "files": [
         {
           "path": "src/components/icons/bitbucket.tsx",
           "type": "registry:ui",
           "target": "@components/icons/bitbucket.tsx"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "click-up",
+      "files": [
+        {
+          "path": "src/components/icons/click-up.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/click-up.tsx"
         }
       ],
       "type": "registry:ui"
@@ -87,6 +109,50 @@
           "path": "src/components/icons/gitlab.tsx",
           "type": "registry:ui",
           "target": "@components/icons/gitlab.tsx"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "google",
+      "files": [
+        {
+          "path": "src/components/icons/google.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/google.tsx"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "hubspot",
+      "files": [
+        {
+          "path": "src/components/icons/hubspot.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/hubspot.tsx"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "huggingface",
+      "files": [
+        {
+          "path": "src/components/icons/huggingface.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/huggingface.tsx"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "mailchimp",
+      "files": [
+        {
+          "path": "src/components/icons/mailchimp.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/mailchimp.tsx"
         }
       ],
       "type": "registry:ui"

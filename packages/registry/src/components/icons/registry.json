@@ -15,6 +15,17 @@
       ]
     },
     {
+      "name": "authentik",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "authentik.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/authentik.tsx"
+        }
+      ]
+    },
+    {
       "name": "bitbucket",
       "type": "registry:ui",
       "files": [
@@ -22,6 +33,17 @@
           "path": "bitbucket.tsx",
           "type": "registry:ui",
           "target": "@components/icons/bitbucket.tsx"
+        }
+      ]
+    },
+    {
+      "name": "click-up",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "click-up.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/click-up.tsx"
         }
       ]
     },
@@ -88,6 +110,50 @@
           "path": "gitlab.tsx",
           "type": "registry:ui",
           "target": "@components/icons/gitlab.tsx"
+        }
+      ]
+    },
+    {
+      "name": "google",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "google.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/google.tsx"
+        }
+      ]
+    },
+    {
+      "name": "hubspot",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "hubspot.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/hubspot.tsx"
+        }
+      ]
+    },
+    {
+      "name": "huggingface",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "huggingface.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/huggingface.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mailchimp",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "mailchimp.tsx",
+          "type": "registry:ui",
+          "target": "@components/icons/mailchimp.tsx"
         }
       ]
     },
