@@ -2,18 +2,17 @@ import type { ComponentProps } from "react"
 
 export interface MailchimpIconProps extends Omit<ComponentProps<"svg">, "width" | "height" | "color"> {
     size?: number | string
-    color?: string
 }
 
-export const MailchimpIcon = ({ size = 24, color = "currentColor", ...props }: MailchimpIconProps) => {
+export const MailchimpIcon = ({ size = 24, ...props }: MailchimpIconProps) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
             style={{ display: "inline-block", flexShrink: 0, width: size, height: size, ...props.style }}
             viewBox="0 0 256 291"
-            width="0.8797250859106529em"
+            width={size}
+            height={size}
             aria-hidden="true"
-            height="1em"
             {...props}
         >
             <path
