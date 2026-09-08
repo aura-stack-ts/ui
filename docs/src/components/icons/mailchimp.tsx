@@ -90,4 +90,6 @@ export const MailchimpIcon = ({ size = 24, ...props }: MailchimpIconProps) => {
     )
 }
 
+MailchimpIcon.displayName = "MailchimpIcon"
+
 export default MailchimpIcon

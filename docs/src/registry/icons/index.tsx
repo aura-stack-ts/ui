@@ -1,5 +1,3 @@
-"use client"
-
 import { AtlassianIcon } from "@/components/icons/atlassian"
 import { AuthentikIcon } from "@/components/icons/authentik"
 import { BitbucketIcon } from "@/components/icons/bitbucket"

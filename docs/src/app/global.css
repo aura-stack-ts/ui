@@ -56,6 +56,17 @@ html > body[data-scroll-locked] {
     --radius-2xl: calc(var(--radius) * 1.8);
     --radius-3xl: calc(var(--radius) * 2.2);
     --radius-4xl: calc(var(--radius) * 2.6);
+
+    --animate-orbit: orbit calc(var(--duration) * 1s) linear infinite;
+    @keyframes orbit {
+        0% {
+            transform: rotate(calc(var(--angle) * 1deg)) translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg));
+        }
+        100% {
+            transform: rotate(calc(var(--angle) * 1deg + 360deg)) translateY(calc(var(--radius) * 1px))
+                rotate(calc((var(--angle) * -1deg) - 360deg));
+        }
+    }
 }
 
 :root {
@@ -139,5 +150,43 @@ html > body[data-scroll-locked] {
     }
     html {
         @apply font-sans;
+    }
+}
+
+.preview-column-left {
+    mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.2) 10%, black 60%);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 75%);
+}
+
+.preview-column-right {
+    mask-image: linear-gradient(to left, transparent 0%, rgba(0, 0, 0, 0.2) 10%, black 60%);
+    -webkit-mask-image: linear-gradient(to left, transparent, black 75%);
+}
+
+.preview-fade-bottom {
+    mask-image: linear-gradient(to bottom, black 0%, black 60%, rgba(0, 0, 0, 0.2) 90%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 60%, rgba(0, 0, 0, 0.2) 90%, transparent 100%);
+}
+
+.svg-icon:is(:nth-child(4), :nth-child(8), :nth-child(12), :nth-child(16), :nth-child(20)) {
+    @apply border-r-0 sm:border-r sm:border-border;
+}
+
+.svg-icon:is(:nth-child(5), :nth-child(10), :nth-child(15), :nth-child(20)) {
+    @apply sm:border-r-0 md:border-r;
+}
+
+.svg-icon:is(:nth-child(6), :nth-child(12), :nth-child(18)) {
+    @apply md:border-r-0 lg:border-r;
+}
+
+.svg-icon:is(:nth-child(10), :nth-child(20)) {
+    @apply lg:border-r-0;
+}
+
+.cli-fade {
+    @media (width >= 40rem) {
+        mask-image: linear-gradient(to bottom, black 0%, black 60%, rgba(0, 0, 0, 0.2) 90%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to bottom, black 0%, black 60%, rgba(0, 0, 0, 0.2) 90%, transparent 100%);
     }
 }

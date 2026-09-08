@@ -27,4 +27,6 @@ export const AuthentikIcon = ({ size = 24, color = "#fd4b2d", className, style, 
     )
 }
 
+AuthentikIcon.displayName = "AuthentikIcon"
+
 export default AuthentikIcon

@@ -27,4 +27,6 @@ export const HubspotIcon = ({ size = 24, color = "currentColor", className, styl
     )
 }
 
+HubspotIcon.displayName = "HubspotIcon"
+
 export default HubspotIcon

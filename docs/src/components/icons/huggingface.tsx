@@ -4,7 +4,7 @@ export interface HuggingFaceIconProps extends Omit<ComponentProps<"svg">, "width
     size?: number | string
 }
 
-export function HuggingFaceIcon({ size = 24, ...props }: HuggingFaceIconProps) {
+export const HuggingFaceIcon = ({ size = 24, ...props }: HuggingFaceIconProps) => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width={size} height={size} {...props}>
             <path
@@ -34,3 +34,7 @@ export function HuggingFaceIcon({ size = 24, ...props }: HuggingFaceIconProps) {
         </svg>
     )
 }
+
+HuggingFaceIcon.displayName = "HuggingFaceIcon"
+
+export default HuggingFaceIcon

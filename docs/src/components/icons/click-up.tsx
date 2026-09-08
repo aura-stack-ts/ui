@@ -27,4 +27,6 @@ export const ClickUpIcon = ({ size = 24, color = "currentColor", className, styl
     )
 }
 
+ClickUpIcon.displayName = "ClickUpIcon"
+
 export default ClickUpIcon

@@ -79,11 +79,11 @@ export function BlockPreviewClient({
     }
 
     return (
-        <div className="[&~.block-preview]:mt-20 overflow-hidden rounded-xl border border-neutral-800 bg-neutral-950 block-preview">
-            <div className="border-b border-neutral-900">
+        <div className="[&~.block-preview]:mt-20 overflow-hidden rounded-xl border border-border bg-background block-preview">
+            <div className="border-b border-border">
                 <div className="flex flex-col gap-2 p-3 lg:flex-row lg:items-center lg:justify-between 5xl:hidden">
                     <div className="lg:flex lg:items-center lg:gap-x-4">
-                        <span className="truncate text-lg font-medium text-neutral-200">{label}</span>
+                        <span className="truncate text-lg font-medium text-foreground">{label}</span>
                         <span className="hidden lg:text-border lg:block">|</span>
                         <div className="p-0.75 hidden border border-border rounded-lg bg-transparent lg:flex">
                             {(["Preview", "Code"] as const).map((text) => (
@@ -193,7 +193,7 @@ export function BlockPreviewClient({
             </div>
             <div
                 ref={frameRef}
-                className={`bg-neutral-950 ${tab === "Preview" ? "p-5" : ""} ${
+                className={`bg-background ${tab === "Preview" ? "p-5" : ""} ${
                     fullscreen ? "flex min-h-screen items-center justify-center" : ""
                 }`}
             >

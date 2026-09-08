@@ -1,4 +1,5 @@
 {
+  "root": true,
   "title": "Core",
   "description": "Shared primitives, configs, and icons",
   "pages": [
@@ -12,10 +13,8 @@
     "sign-up",
     "profile",
     "preferences",
-    "integrations",
     "active-sessions",
-    "ai-resources",
-    "api-reference"
-  ],
-  "root": true
+    "integrations",
+    "ai-resources"
+  ]
 }
