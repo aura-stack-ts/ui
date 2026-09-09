@@ -1,7 +1,6 @@
 "use client"
 
 import { createAuthClient, AuthProvider } from "@aura-stack/next/client"
-import { AuthPreviewInterceptor } from "@/components/preview-interceptor"
 import type { PropsWithChildren } from "react"
 
 const baseURL =
@@ -13,9 +12,5 @@ const authClient = createAuthClient({
 })
 
 export const AuthLayout = ({ children }: PropsWithChildren) => {
-    return (
-        <AuthPreviewInterceptor>
-            <AuthProvider client={authClient}>{children}</AuthProvider>
-        </AuthPreviewInterceptor>
-    )
+    return <AuthProvider client={authClient}>{children}</AuthProvider>
 }

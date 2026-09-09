@@ -3,13 +3,11 @@ import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
-import { AuthLayout } from "@/components/auth-layout"
 import { SignIn } from "@/registry/next/app-router/sign-in/sign-in"
 import { Profile } from "@/registry/next/app-router/profile/profile"
 import { Integrations } from "@/registry/next/app-router/integrations/integrations-3"
 import { Preferences } from "@/registry/next/app-router/preferences/preferences-2"
 import { ActiveSessions } from "@/registry/next/app-router/active-sessions/active-sessions"
-import { AuthPreviewInterceptor } from "@/components/preview-interceptor"
 
 export const Hero = () => {
     return (
@@ -57,23 +55,19 @@ export const Hero = () => {
                     src="/imgs/hero-preview-light.png"
                     alt="Hero Preview"
                 />
-                <AuthPreviewInterceptor>
-                    <AuthLayout>
-                        <div className="hidden md:grid md:items-start md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            <div className="flex flex-col gap-12 preview-column-left opacity-80 lg:mt-18">
-                                <SignIn />
-                                <Preferences />
-                            </div>
-                            <div className="hidden lg:flex lg:flex-col lg:gap-12">
-                                <Profile />
-                                <ActiveSessions />
-                            </div>
-                            <div className="flex flex-col gap-12 preview-column-right opacity-80 lg:mt-30">
-                                <Integrations />
-                            </div>
-                        </div>
-                    </AuthLayout>
-                </AuthPreviewInterceptor>
+                <div className="hidden md:grid md:items-start md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="flex flex-col gap-12 preview-column-left opacity-80 lg:mt-18">
+                        <SignIn />
+                        <Preferences />
+                    </div>
+                    <div className="hidden lg:flex lg:flex-col lg:gap-12">
+                        <Profile />
+                        <ActiveSessions />
+                    </div>
+                    <div className="flex flex-col gap-12 preview-column-right opacity-80 lg:mt-30">
+                        <Integrations />
+                    </div>
+                </div>
             </div>
         </section>
     )

@@ -166,7 +166,7 @@ export const Features = () => {
                 </div>
                 <div className="p-8 pb-0 border-b border-border lg:p-12 lg:pb-0">
                     <div className="space-y-3">
-                        <h3 className="text-lg font-semibold text-foreground">Seamless integration with Agnostic Stack</h3>
+                        <h3 className="text-lg font-semibold text-foreground">Seamless integration with Auth Stack</h3>
                         <p className="text-sm text-muted-foreground">
                             Integration components for frameworks and libraries supported by Aura Stack
                         </p>
@@ -193,7 +193,7 @@ export const Features = () => {
                         </p>
                     </div>
                     <Terminal className="mt-6">
-                        <TypingAnimation>&gt; pnpm dlx shadcn@latest add sign-in-react.json</TypingAnimation>
+                        <TypingAnimation>&gt; pnpm dlx shadcn@latest add component</TypingAnimation>
                         <AnimatedSpan className="flex gap-x-2">
                             <span className="text-green-500">✔</span>
                             Checking registry.
