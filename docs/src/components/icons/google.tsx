@@ -98,4 +98,6 @@ export const GoogleIcon = ({ size = 24, color = "currentColor", className, style
     )
 }
 
+GoogleIcon.displayName = "GoogleIcon"
+
 export default GoogleIcon

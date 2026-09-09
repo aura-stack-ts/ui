@@ -1,11 +1,9 @@
 "use client"
 
+import { useState } from "react"
 import { MemoryRouter } from "react-router"
 import { registry } from "@/registry/index"
-import { AuthProvider, createAuthClient } from "@aura-stack/react"
 import { BlockPreviewClient } from "@/components/block-preview-client"
-import { AuthPreviewInterceptor } from "@/components/preview-interceptor"
-import { useState } from "react"
 
 interface BlockPreviewProps {
     name: string
@@ -13,14 +11,6 @@ interface BlockPreviewProps {
     installCommand?: string
     lang?: string
 }
-
-const baseURL =
-    process.env.PUBLIC_NEXT_BASE_URL ?? (process.env.NEXT_URL && `https://${process.env.NEXT_URL}`) ?? "http://localhost:3000"
-
-const authClient = createAuthClient({
-    baseURL,
-    basePath: "/api/auth",
-})
 
 export const BlockPreview = ({ name, description, installCommand, lang = "tsx" }: BlockPreviewProps) => {
     const [framework, setFramework] = useState("react")
@@ -31,22 +21,18 @@ export const BlockPreview = ({ name, description, installCommand, lang = "tsx" }
         throw new Error(`BlockPreview: Component for "${registryKey}" or "${name}" not found in registry.`)
     }
     return (
-        <AuthPreviewInterceptor>
-            <BlockPreviewClient
-                name={name}
-                description={description}
-                installCommand={installCommand ?? `npx shadcn add ${name}`}
-                code={`import { source } from "@aura-ui/registry"`}
-                selectedFramework={framework}
-                onFrameworkChange={setFramework}
-                lang={lang}
-            >
-                <AuthProvider client={authClient}>
-                    <MemoryRouter>
-                        <Component />
-                    </MemoryRouter>
-                </AuthProvider>
-            </BlockPreviewClient>
-        </AuthPreviewInterceptor>
+        <BlockPreviewClient
+            name={name}
+            description={description}
+            installCommand={installCommand ?? `npx shadcn add ${name}`}
+            code={`import { source } from "@aura-ui/registry"`}
+            selectedFramework={framework}
+            onFrameworkChange={setFramework}
+            lang={lang}
+        >
+            <MemoryRouter>
+                <Component />
+            </MemoryRouter>
+        </BlockPreviewClient>
     )
 }
